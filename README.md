@@ -7,7 +7,8 @@
 
 - 🔭 I’m currently working on [dev-card-showcase](https://github.com/Jayanta2004/dev-card-showcase)
 
-- 🌱 I’m currently learning **JavaScript (from basics to advanced) and Data Structures & Algorithms.**
+- 🌱 🌱 I’m currently learning Backend development and Data Structures & Algorithms (DSA).
+
 
 - 👯 I’m looking to collaborate on [Ai_Customer_Service](https://github.com/namann5/Ai_Customer_Service)
 
