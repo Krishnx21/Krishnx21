@@ -61,12 +61,14 @@ Weather forecasting web application that fetches real-time weather data using a 
 
 ## 📊 GitHub Stats
 
+## 📊 GitHub Stats
+
 <p align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=krishnx21&show_icons=true&theme=tokyonight" />
+<img src="https://github-readme-stats.vercel.app/api?username=krishnx21&show_icons=true&theme=tokyonight" alt="stats" />
 </p>
 
 <p align="center">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=krishnx21&layout=compact&theme=tokyonight" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=krishnx21&layout=compact&theme=tokyonight" alt="languages" />
 </p>
 
 ---
