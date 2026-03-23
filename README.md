@@ -126,7 +126,7 @@ const krishna = {
 
 **📫** krishnakumarsharma8077@gmail.com  
 
-*⚡ Fun fact: I believe consistency beats talent — I code every day to improve.*
+*⚡ Fun fact: Building my skills in O(n) time—one commit every single day.
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0ea5e9&height=80&section=footer" width="100%"/>
 
