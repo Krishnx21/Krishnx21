@@ -49,7 +49,7 @@ const krishna = {
 |--------|-------------|
 | 🤖 **AI Resume Analyzer** | AI-powered web app that analyzes resumes and suggests improvements via AI API |
 | 🎯 **AI Interview Prep** | Role-based technical interview question generator for practice |
-| 📚 **DSA** | Daily problem-solving and algorithm practice |
+| 📚 **DSA** | Learning Daily problem-solving  
 
 ---
 
