@@ -90,6 +90,16 @@ const krishna = {
  
 ---
  
+## 🧊 3D Skills Showcase
+ 
+<div align="center">
+ 
+<img src="https://skillicons.dev/icons?i=js,react,redux,html,css,bootstrap,python,mysql,git,github,vscode,figma&theme=dark&perline=6" alt="Skills"/>
+ 
+</div>
+ 
+---
+ 
 ## 📊 GitHub Stats
  
 <div align="center">
@@ -105,86 +115,11 @@ const krishna = {
  
 </div>
  
-<div align="center">
- 
-<img src="https://github-profile-3d-contrib.vercel.app/profile-green-animate.svg" alt="3D GitHub Contribution Profile" width="100%"/>
- 
-</div>
- 
-> 💡 **3D Contribution Graph Setup:** To generate your own 3D graph, add this to `.github/workflows/profile-3d.yml`:
-> ```yaml
-> name: GitHub-Profile-3D-Contrib
-> on:
->   schedule: [{ cron: "0 18 * * *" }]
->   workflow_dispatch:
-> jobs:
->   build:
->     runs-on: ubuntu-latest
->     steps:
->       - uses: actions/checkout@v3
->       - uses: yoshi389111/github-profile-3d-contrib@0.7.1
->         env:
->           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
->           USERNAME: krishnx21
->       - run: |
->           git config user.email "action@github.com"
->           git config user.name "GitHub Action"
->           git add -A && git commit -m "Generated 3D profile" && git push
-> ```
- 
 ---
  
 ### 📈 Contribution Graph
  
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=krishnx21&theme=tokyo-night&hide_border=true&bg_color=0d1117&color=f97316&line=ec4899&point=10b981" width="100%" alt="Contribution graph"/>
- 
----
- 
-## 🐍 Contribution Snake
- 
-<div align="center">
- 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/krishnx21/krishnx21/output/github-snake-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/krishnx21/krishnx21/output/github-snake.svg"/>
-  <img alt="GitHub Snake" src="https://raw.githubusercontent.com/krishnx21/krishnx21/output/github-snake-dark.svg" width="100%"/>
-</picture>
- 
-</div>
- 
-> 💡 **Setup:** Add this GitHub Action to `.github/workflows/snake.yml` in your profile repo to auto-generate the snake animation:
-> ```yaml
-> name: Generate Snake
-> on:
->   schedule: [{ cron: "0 0 * * *" }]
->   workflow_dispatch:
-> jobs:
->   generate:
->     runs-on: ubuntu-latest
->     steps:
->       - uses: Platane/snk@v3
->         with:
->           github_user_name: krishnx21
->           outputs: |
->             dist/github-snake.svg
->             dist/github-snake-dark.svg?palette=github-dark
->       - uses: crazy-max/ghaction-github-pages@v3
->         with:
->           target_branch: output
->           build_dir: dist
->         env:
->           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-> ```
- 
----
- 
-## 🧊 3D Skills Showcase
- 
-<div align="center">
- 
-<img src="https://skillicons.dev/icons?i=js,ts,react,redux,html,css,bootstrap,python,mysql,git,github,vscode&theme=dark&perline=6" alt="3D Skill Icons"/>
- 
-</div>
  
 ---
  
@@ -216,3 +151,4 @@ const krishna = {
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%"/>
  
 </div>
+ 
