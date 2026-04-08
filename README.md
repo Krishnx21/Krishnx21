@@ -130,7 +130,7 @@ const krishna = {
  
 **📫** krishnakumarsharma8077@gmail.com
  
-**⚡ Fun fact: Building my skills in O(n) time — one commit every single day.**
+*⚡ Fun fact: Building my skills in O(n) time — one commit every single day.*
  
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%"/>
  
