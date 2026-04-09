@@ -1,137 +1,179 @@
 <div align="center">
- 
-<!-- Animated banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Krishna%20Kumar&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Aspiring%20Software%20Engineer%20%7C%20Web%20Developer%20%7C%20Open%20Source%20Enthusiast&descAlignY=55&descSize=16" width="100%"/>
- 
-<!-- Typing animation -->
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&duration=3500&pause=1500&color=F97316&center=true&vCenter=true&random=false&width=560&lines=Hi+%F0%9F%91%8B+I'm+Krishna+Kumar;Aspiring+Software+Engineer;Web+Developer+%26+Problem+Solver;Open+Source+Enthusiast;Consistency+beats+talent+%E2%9D%A4%EF%B8%8F" alt="Typing SVG" />
- 
+
+<img src="https://capsule-render.vercel.app/api?type=cylinder&color=0:0d0d0d,50:1a0a00,100:0d0d0d&height=200&section=header&text=Krishna%20Kumar&fontSize=50&fontColor=ffffff&animation=fadeIn&fontAlignY=50&desc=Software%20Engineer%20%E2%80%A2%20Web%20Developer%20%E2%80%A2%20Open%20Source%20Builder&descAlignY=68&descSize=15&descColor=fb923c" width="100%"/>
+
 <br/>
- 
-[![Profile Views](https://komarev.com/ghpvc/?username=krishnx21&label=Profile%20Views&color=f97316&style=for-the-badge)](https://github.com/krishnx21)
-[![GitHub followers](https://img.shields.io/github/followers/krishnx21?style=for-the-badge&label=Follow&color=ec4899)](https://github.com/krishnx21?tab=followers)
- 
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=4000&pause=1000&color=FB923C&center=true&vCenter=true&random=false&width=500&lines=const+dev+%3D+%22krishna%22+%2B+%22_builds%22%3B;while(true)+%7B+learn()%3B+ship()%3B+%7D;git+commit+-m+%22another+day%2C+another+win%22;%2F%2F+consistency+%3E+talent+%F0%9F%94%A5" alt="Typing SVG" />
+
+<br/><br/>
+
+<a href="https://github.com/krishnx21">
+  <img src="https://komarev.com/ghpvc/?username=krishnx21&label=PROFILE+VIEWS&color=ea580c&style=for-the-badge" />
+</a>
+&nbsp;
+<a href="https://github.com/krishnx21?tab=followers">
+  <img src="https://img.shields.io/github/followers/krishnx21?style=for-the-badge&label=FOLLOWERS&color=ea580c&labelColor=1c0a00" />
+</a>
+&nbsp;
+<img src="https://img.shields.io/badge/STATUS-OPEN%20TO%20WORK-22c55e?style=for-the-badge&labelColor=14532d" />
+
 </div>
- 
+
+<br/>
+
 ---
- 
-## ✨ About Me
- 
+
+<img align="right" width="360" src="https://github-readme-stats.vercel.app/api/top-langs/?username=krishnx21&layout=donut&theme=dark&hide_border=true&bg_color=0d0d0d&title_color=fb923c&text_color=e2e8f0&langs_count=8" />
+
+### ◈ `whoami`
+
+```yaml
+name     : Krishna Kumar
+role     : Aspiring Software Engineer
+location : India 🇮🇳
+degree   : B.Tech — Computer Science Engineering
+
+focus:
+  - Full-Stack Web Development
+  - DSA & Competitive Programming
+  - AI-Powered Applications
+  - System Design
+
+currently:
+  building  : AI Resume Analyzer + Interview Prep Tool
+  learning  : Node.js · Express · System Design
+  grinding  : LeetCode daily 🧠
+
+motto: "Ship fast. Break things. Fix them faster."
+```
+
+<br clear="right"/>
+
+---
+
+## ⚡ Tech Universe
+
+<div align="center">
+
+### → Languages
+<img src="https://skillicons.dev/icons?i=js,python,java,c,html,css&theme=dark&perline=6" />
+
+### → Frameworks & Libraries
+<img src="https://skillicons.dev/icons?i=react,redux,bootstrap,express,nodejs&theme=dark&perline=5" />
+
+### → Databases & Tools
+<img src="https://skillicons.dev/icons?i=mysql,mongodb,git,github,vscode,figma&theme=dark&perline=6" />
+
+</div>
+
+---
+
+## 🚀 Flagship Projects
+
+<div align="center">
 <table>
 <tr>
-<td width="60%">
- 
-🎓 **B.Tech CSE** · India
-💻 **Focus:** Web Development & Software Engineering
-🌱 **Learning:** Backend Development · DSA · System Design
-🤝 **Open to** collaborating on open-source projects
-⚡ **Philosophy:** Ship → Learn → Iterate. Every. Single. Day.
- 
-I believe in **shipping, learning, and iterating**. I code daily to sharpen my skills and contribute to projects that make a difference.
- 
+<td width="50%" valign="top">
+
+### 🤖 AI Resume Analyzer
+> *Your resume, battle-tested by AI*
+
+AI-powered web app that parses your resume, scores it against job descriptions, and delivers **targeted suggestions** to help you land interviews.
+
+**Stack →** `React` `Express` `Claude AI API` `MySQL`
+
+[![View Project](https://img.shields.io/badge/VIEW_PROJECT-ea580c?style=for-the-badge&logoColor=white)](.)
+[![Live Demo](https://img.shields.io/badge/LIVE_DEMO-22c55e?style=for-the-badge)](.)
+
 </td>
-<td width="40%">
- 
-```javascript
-const krishna = {
-  code: ["JavaScript", "Python", "HTML/CSS"],
-  stack: ["React", "Redux", "Bootstrap", "MySQL"],
-  learning: ["Backend", "DSA", "System Design"],
-  currently: "Building AI-powered tools 🤖",
-  funFact: "Consistency beats talent —
-            I code every single day. 🔥"
-};
-```
- 
+<td width="50%" valign="top">
+
+### 🎯 AI Interview Prep
+> *Practice like it's the real thing*
+
+Role-based technical interview question generator. Pick your target role, get curated questions, and **train smarter** — not harder.
+
+**Stack →** `React` `Node.js` `Claude AI API` `Bootstrap`
+
+[![View Project](https://img.shields.io/badge/VIEW_PROJECT-ea580c?style=for-the-badge&logoColor=white)](.)
+[![Live Demo](https://img.shields.io/badge/LIVE_DEMO-22c55e?style=for-the-badge)](.)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🌤️ Weather App
+> *Real-time forecasts, clean UI*
+
+Location-aware weather dashboard with 5-day forecasts, UV index, humidity, and animated weather states.
+
+**Stack →** `JavaScript` `OpenWeather API` `CSS3`
+
+[![View Project](https://img.shields.io/badge/VIEW_PROJECT-ea580c?style=for-the-badge&logoColor=white)](.)
+
+</td>
+<td width="50%" valign="top">
+
+### 📚 DSA Practice Vault
+> *Sharpening the blade, daily*
+
+Personal problem-solving journal organized by topic, tagged by difficulty, with pattern notes for common algorithmic strategies.
+
+**Stack →** `Python` `Markdown` `LeetCode`
+
+[![View Vault](https://img.shields.io/badge/VIEW_VAULT-ea580c?style=for-the-badge&logoColor=white)](.)
+
 </td>
 </tr>
 </table>
- 
----
- 
-## 🚀 What I'm Building
- 
-<div align="center">
- 
-| 🤖 **AI Resume Analyzer** | 🎯 **AI Interview Prep** | 📚 **DSA Practice** |
-|:---:|:---:|:---:|
-| AI-powered web app that analyzes resumes and suggests smart improvements via AI API | Role-based technical interview question generator for targeted practice | Daily problem-solving to sharpen algorithmic thinking |
- 
 </div>
- 
+
 ---
- 
-## ⭐ Featured Projects
- 
+
+## 📊 GitHub Command Center
+
 <div align="center">
- 
-[![AI Resume Analyzer](https://img.shields.io/badge/🤖_AI_Resume_Analyzer-f97316?style=for-the-badge&logoColor=white)](.)
-[![AI Interview Prep](https://img.shields.io/badge/🎯_AI_Interview_Prep-ec4899?style=for-the-badge&logoColor=white)](.)
-[![Weather App](https://img.shields.io/badge/🌤️_Weather_App-10b981?style=for-the-badge&logoColor=white)](.)
- 
+
+<img src="https://github-readme-stats.vercel.app/api?username=krishnx21&show_icons=true&theme=dark&hide_border=true&bg_color=0d0d0d&title_color=fb923c&icon_color=ea580c&text_color=e2e8f0&ring_color=fb923c&include_all_commits=true&count_private=true" width="49%" />
+<img src="https://streak-stats.demolab.com/?user=krishnx21&theme=dark&hide_border=true&background=0d0d0d&ring=fb923c&fire=ea580c&currStreakLabel=fb923c&sideLabels=ea580c&sideNums=e2e8f0&currStreakNum=ffffff&dates=64748b&stroke=fb923c" width="49%" />
+
+<br/><br/>
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=krishnx21&theme=github-compact&hide_border=true&bg_color=0d0d0d&color=fb923c&line=ea580c&point=ffffff&area=true&area_color=ea580c" width="98%" />
+
 </div>
- 
----
- 
- 
-## 🧊 3D Skills Showcase
- 
+
+
+
+## 🌐 Find Me Here
+
 <div align="center">
- 
-<img src="https://skillicons.dev/icons?i=c,java,js,react,redux,html,css,bootstrap,python,mysql,git,express,github,vscode,figma&theme=dark&perline=6" alt="Skills"/>
- 
-</div>
- 
----
- 
-## 📊 GitHub Stats
- 
-<div align="center">
- 
-<img src="https://github-readme-stats.vercel.app/api?username=krishnx21&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117&title_color=f97316&icon_color=ec4899&text_color=ffffff&ring_color=f97316" alt="GitHub Stats" width="48%"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=krishnx21&layout=compact&theme=radical&hide_border=true&bg_color=0d1117&title_color=f97316&text_color=ffffff" alt="Top Languages" width="48%"/>
- 
-</div>
- 
-<div align="center">
- 
-![GitHub Streak](https://streak-stats.demolab.com/?user=krishnx21&theme=radical&hide_border=true&background=0d1117&ring=f97316&fire=ec4899&currStreakLabel=f97316&sideLabels=ec4899&sideNums=ffffff&currStreakNum=ffffff&dates=888888)
- 
-</div>
- 
----
- 
-### 📈 Contribution Graph
- 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=krishnx21&theme=tokyo-night&hide_border=true&bg_color=0d1117&color=f97316&line=ec4899&point=10b981" width="100%" alt="Contribution graph"/>
- 
----
- 
-## 🌐 Let's Connect
- 
-<p align="center">
-  <a href="https://www.linkedin.com/in/krishna-kumar-89544b295" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
-  </a>
-  <a href="https://leetcode.com/u/krishnx_21/" target="_blank">
-    <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black"/>
-  </a>
-  <a href="https://www.instagram.com/krishnx_21/" target="_blank">
-    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/>
-  </a>
-  <a href="mailto:krishnakumarsharma8077@gmail.com">
-    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
-  </a>
-</p>
- 
----
- 
-<div align="center">
- 
-**📫** krishnakumarsharma8077@gmail.com
- 
-*⚡ Fun fact: Building my skills in O(n) time — one commit every single day.*
- 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%"/>
- 
+
+<a href="https://www.linkedin.com/in/krishna-kumar-89544b295">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+&nbsp;
+<a href="https://leetcode.com/u/krishnx_21/">
+  <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" />
+</a>
+&nbsp;
+<a href="https://www.instagram.com/krishnx_21/">
+  <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
+</a>
+&nbsp;
+<a href="mailto:krishnakumarsharma8077@gmail.com">
+  <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
+</a>
+
+<br/><br/>
+
+> *"Every expert was once a beginner. Every pro was once an amateur."*
+> **Keep coding. Keep shipping.** 🚀
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d0d0d,50:1a0a00,100:0d0d0d&height=120&section=footer&text=krishnx21&fontSize=24&fontColor=fb923c&fontAlignY=65&animation=fadeIn" width="100%"/>
+
 </div>
