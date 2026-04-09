@@ -78,7 +78,7 @@ const krishna = {
  
 <div align="center">
  
-<img src="https://skillicons.dev/icons?i=c,java,js,react,redux,html,css,bootstrap,python,mysql,git,github,vscode,figma&theme=dark&perline=6" alt="Skills"/>
+<img src="https://skillicons.dev/icons?i=c,java,js,react,redux,html,css,bootstrap,python,mysql,git,mongoose,Express js,github,vscode,figma&theme=dark&perline=6" alt="Skills"/>
  
 </div>
  
