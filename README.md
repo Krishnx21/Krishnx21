@@ -78,7 +78,7 @@ const krishna = {
  
 <div align="center">
  
-<img src="https://skillicons.dev/icons?i=c,java,js,react,redux,html,css,bootstrap,python,mysql,git,mongoose,Express js,github,vscode,figma&theme=dark&perline=6" alt="Skills"/>
+<img src="https://skillicons.dev/icons?i=c,java,js,react,redux,html,css,bootstrap,python,mysql,git,express,github,vscode,figma&theme=dark&perline=6" alt="Skills"/>
  
 </div>
  
@@ -95,7 +95,7 @@ const krishna = {
  
 <div align="center">
  
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=krishnx21&theme=radical&hide_border=true&background=0d1117&ring=f97316&fire=ec4899&currStreakLabel=f97316&sideLabels=ec4899&sideNums=ffffff&currStreakNum=ffffff&dates=888888)
+![GitHub Streak](https://streak-stats.demolab.com/?user=krishnx21&theme=radical&hide_border=true&background=0d1117&ring=f97316&fire=ec4899&currStreakLabel=f97316&sideLabels=ec4899&sideNums=ffffff&currStreakNum=ffffff&dates=888888)
  
 </div>
  
@@ -135,4 +135,3 @@ const krishna = {
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%"/>
  
 </div>
- 
