@@ -170,7 +170,7 @@ Personal problem-solving journal organized by topic, tagged by difficulty, with 
 <br/><br/>
 
 > *"Every expert was once a beginner. Every pro was once an amateur."*
-> **Keep coding. Keep shipping.** 💫🌟
+> **Keep coding. Keep shipping.* 💫🌟
 
 <br/>
 
