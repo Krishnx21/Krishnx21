@@ -1,138 +1,77 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=cylinder&color=0:0d0d0d,50:1a0a00,100:0d0d0d&height=200&section=header&text=Krishna%20Kumar&fontSize=50&fontColor=ffffff&animation=fadeIn&fontAlignY=50&desc=Software%20Engineer%20%E2%80%A2%20Web%20Developer%20%E2%80%A2%20Open%20Source%20Builder&descAlignY=68&descSize=15&descColor=fb923c" width="100%"/>
-
-<br/>
-
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=4000&pause=1000&color=FB923C&center=true&vCenter=true&random=false&width=500&lines=const+dev+%3D+%22krishna%22+%2B+%22_builds%22%3B;while(true)+%7B+learn()%3B+ship()%3B+%7D;git+commit+-m+%22another+day%2C+another+win%22;%2F%2F+consistency+%3E+talent+%F0%9F%94%A5" alt="Typing SVG" />
-
-<br/><br/>
-
-<a href="https://github.com/krishnx21">
-  <img src="https://komarev.com/ghpvc/?username=krishnx21&label=PROFILE+VIEWS&color=ea580c&style=for-the-badge" />
-</a>
-&nbsp;
-<a href="https://github.com/krishnx21?tab=followers">
-  <img src="https://img.shields.io/github/followers/krishnx21?style=for-the-badge&label=FOLLOWERS&color=ea580c&labelColor=1c0a00" />
-</a>
-&nbsp;
-<img src="https://img.shields.io/badge/STATUS-OPEN%20TO%20WORK-22c55e?style=for-the-badge&labelColor=14532d" />
-
-</div>
-
-<br/>
-
----
-
-<img align="right" width="360" src="https://github-readme-stats.vercel.app/api/top-langs/?username=krishnx21&layout=donut&theme=dark&hide_border=true&bg_color=0d0d0d&title_color=fb923c&text_color=e2e8f0&langs_count=8" />
-
-### ◈ `whoami`
-
-```yaml
-name     : Krishna Kumar
-role     : Aspiring Software Engineer
-location : India 🇮🇳
-degree   : B.Tech — Computer Science Engineering
-
-focus:
-  - Full-Stack Web Development
-  - DSA & Competitive Programming
-  - AI-Powered Applications
-  - System Design
-
-currently:
-  building  : AI Resume Analyzer + Interview Prep Tool
-  learning  : Node.js · Express · System Design
-  grinding  : LeetCode daily 🧠
-
-motto: "Ship fast. Break things. Fix them faster."
-```
-
-<br clear="right"/>
-
----
-
-## ⚡ Tech Universe
-
-<div align="center">
-
-### → Languages
-<img src="https://skillicons.dev/icons?i=js,python,java,c,html,css&theme=dark&perline=6" />
-
-### → Frameworks & Libraries
-<img src="https://skillicons.dev/icons?i=react,redux,bootstrap,express,nodejs&theme=dark&perline=5" />
-
-### → Databases & Tools
-<img src="https://skillicons.dev/icons?i=mysql,mongodb,git,github,vscode,figma&theme=dark&perline=6" />
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=15&duration=3000&pause=1000&color=FB923C&center=true&vCenter=true&width=560&lines=Full-Stack+Developer+%7C+React+%2B+Node.js;Building+AI-powered+web+applications;LeetCode+grinder+%E2%80%94+DSA+daily;git+commit+-m+%22consistency+beats+talent%22)](https://git.io/typing-svg)
 
 </div>
 
 ---
 
-## 🚀 Flagship Projects
+# Krishna Kumar
 
-<div align="center">
-<table>
-<tr>
-<td width="50%" valign="top">
+**Full-Stack Developer** · India 🇮🇳 · Open to Internships
 
-### 🤖 AI Resume Analyzer
-> *Your resume, battle-tested by AI*
-
-AI-powered web app that parses your resume, scores it against job descriptions, and delivers **targeted suggestions** to help you land interviews.
-
-**Stack →** `React` `Express` `Claude AI API` `MySQL`
-
-[![View Project](https://img.shields.io/badge/VIEW_PROJECT-ea580c?style=for-the-badge&logoColor=white)](.)
-[![Live Demo](https://img.shields.io/badge/LIVE_DEMO-22c55e?style=for-the-badge)](.)
-
-</td>
-<td width="50%" valign="top">
-
-### 🎯 AI Interview Prep
-> *Practice like it's the real thing*
-
-Role-based technical interview question generator. Pick your target role, get curated questions, and **train smarter** — not harder.
-
-**Stack →** `React` `Node.js` `Claude AI API` `Bootstrap`
-
-[![View Project](https://img.shields.io/badge/VIEW_PROJECT-ea580c?style=for-the-badge&logoColor=white)](.)
-[![Live Demo](https://img.shields.io/badge/LIVE_DEMO-22c55e?style=for-the-badge)](.)
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🌤️ Weather App
-> *Real-time forecasts, clean UI*
-
-Location-aware weather dashboard with 5-day forecasts, UV index, humidity, and animated weather states.
-
-**Stack →** `JavaScript` `OpenWeather API` `CSS3`
-
-[![View Project](https://img.shields.io/badge/VIEW_PROJECT-ea580c?style=for-the-badge&logoColor=white)](.)
-
-</td>
-<td width="50%" valign="top">
-
-### 📚 DSA Practice Vault
-> *Sharpening the blade, daily*
-
-Personal problem-solving journal organized by topic, tagged by difficulty, with pattern notes for common algorithmic strategies.
-
-**Stack →** `Python` `Markdown` `LeetCode`
-
-[![View Vault](https://img.shields.io/badge/VIEW_VAULT-ea580c?style=for-the-badge&logoColor=white)](.)
-
-</td>
-</tr>
-</table>
-</div>
+B.Tech CSE · AI-Powered App Builder · LeetCode Daily Grinder
 
 ---
 
-## 📊 GitHub Command Center
+## About
+
+
+I build full-stack web apps — from clean React frontends to REST APIs with Node.js + Express + MySQL/MongoDB. I'm especially drawn to **AI-integrated products** where a good prompt and a good UI come together.
+
+Currently building an **AI Resume Analyzer** and an **AI Interview Prep Tool** — both powered by Claude's API.
+
+Outside of projects, I grind DSA on LeetCode daily and am actively deepening my grasp of system design and backend architecture.
+
+I care about shipping things that actually work — clean code, consistent effort, and steady improvement over time.
+
+---
+
+## Projects
+
+### AI Resume Analyzer
+> React · Express · Claude AI API · MySQL
+
+Parses your resume, scores it against a target job description, and returns **targeted improvement suggestions**. Built the full pipeline — file parsing, AI scoring via Claude, and a clean result dashboard in React.
+
+---
+
+### AI Interview Prep Tool
+> React · Node.js · Claude AI API · Bootstrap
+
+Role-based technical question generator. Select your target role, get curated interview questions, and track your practice. Built for focused, deliberate prep — not random grinding.
+
+---
+
+### Weather Dashboard
+> JavaScript · OpenWeather API · CSS3
+
+Location-aware weather app with 5-day forecasts, UV index, humidity, and animated weather states. Clean UI, zero frameworks.
+
+---
+
+### DSA Practice Vault
+> Python · Markdown · LeetCode
+
+Personal problem-solving journal — organized by topic, tagged by difficulty, with pattern notes for common algorithmic approaches. Built for myself, useful for anyone reviewing fundamentals.
+
+---
+
+## Stack
+
+**Languages** — JavaScript · Python · Java · C · HTML · CSS
+
+**Frontend** — React · Redux · Bootstrap
+
+**Backend** — Node.js · Express · REST APIs
+
+**Databases** — MySQL · MongoDB
+
+**AI/Tools** — Claude AI API · Git · GitHub · VS Code · Figma
+
+---
+
+## Stats
 
 <div align="center">
 
@@ -145,35 +84,26 @@ Personal problem-solving journal organized by topic, tagged by difficulty, with 
 
 </div>
 
+---
 
+## Contact
 
-## 🌐 Find Me Here
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/krishna-kumar-89544b295)
+[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=flat-square&logo=leetcode&logoColor=black)](https://leetcode.com/u/krishnx_21/)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/krishnx_21/)
+[![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:krishnakumarsharma8077@gmail.com)
+
+---
 
 <div align="center">
 
-<a href="https://www.linkedin.com/in/krishna-kumar-89544b295">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-</a>
-&nbsp;
-<a href="https://leetcode.com/u/krishnx_21/">
-  <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" />
-</a>
-&nbsp;
-<a href="https://www.instagram.com/krishnx_21/">
-  <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
-</a>
-&nbsp;
-<a href="mailto:krishnakumarsharma8077@gmail.com">
-  <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
-</a>
+<img src="https://komarev.com/ghpvc/?username=krishnx21&style=flat-square&color=ea580c&label=profile+views" />
 
 <br/><br/>
 
-> *"Every expert was once a beginner. Every pro was once an amateur."*
-> **Keep coding. Keep shipping.* 💫🌟
+> *"Every expert was once a beginner. Ship fast, fix faster, keep going."*
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d0d0d,50:1a0a00,100:0d0d0d&height=120&section=footer&text=krishnx21&fontSize=24&fontColor=fb923c&fontAlignY=65&animation=fadeIn" width="100%"/>
 
 </div>
