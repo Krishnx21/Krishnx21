@@ -1,123 +1,106 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0f0f,50:1a1a2e,100:16213e&height=120&section=header&text=&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,2,5,30&height=140&section=header&text=Krishna%20Kumar&fontSize=42&fontColor=ffffff&fontAlignY=55&desc=Full-Stack%20Developer%20%C2%B7%20AI%20Builder%20%C2%B7%20CSE%20Student&descAlignY=75&descSize=14&animation=fadeIn" width="100%"/>
 
 </div>
 
 <div align="center">
 
-```
-╔═══════════════════════════════════════════════════════╗
-║                                                       ║
-║   K R I S H N A   K U M A R                          ║
-║   Full-Stack Developer  ·  AI Builder  ·  CSE         ║
-║                                                       ║
-╚═══════════════════════════════════════════════════════╝
-```
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=15&duration=3000&pause=800&color=38BDF8&center=true&vCenter=true&width=520&lines=Building+AI-powered+web+apps+🚀;React+·+Node.js+·+Express+·+Claude+API;LeetCode+daily+—+no+excuses;Open+to+work+%F0%9F%9F%A2)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=14&duration=3000&pause=1000&color=FB923C&center=true&vCenter=true&width=480&lines=Building+AI-powered+full-stack+apps;React+%C2%B7+Node.js+%C2%B7+Express+%C2%B7+Claude+API;Grinding+DSA+daily+%E2%80%94+no+days+off;Open+to+internships+%26+collaborations+%F0%9F%9F%A2)](https://git.io/typing-svg)
 
 <br/>
 
-![Open to Work](https://img.shields.io/badge/🟢%20OPEN%20TO%20WORK-0f172a?style=for-the-badge&labelColor=0f172a&color=22c55e)
-&nbsp;
-![India](https://img.shields.io/badge/India%20🇮🇳-0f172a?style=for-the-badge)
-&nbsp;
-[![Views](https://komarev.com/ghpvc/?username=krishnx21&style=for-the-badge&color=38bdf8&label=PROFILE+VIEWS)](https://github.com/krishnx21)
+[![Open to Work](https://img.shields.io/badge/%F0%9F%9F%A2%20Open%20to%20Work-1a1a1a?style=flat-square)](https://www.linkedin.com/in/krishna-kumar-89544b295)
+[![India](https://img.shields.io/badge/India%20%F0%9F%87%AE%F0%9F%87%B3-1a1a1a?style=flat-square)]()
+[![Profile Views](https://komarev.com/ghpvc/?username=krishnx21&style=flat-square&color=fb923c&label=views)](https://github.com/krishnx21)
 
 </div>
 
 ---
 
-## 👨‍💻 About Me
+### `$ whoami`
 
-```yaml
-name       : Krishna Kumar
-role       : Full-Stack Developer → Aspiring SWE
-education  : B.Tech · Computer Science Engineering
-location   : India 🇮🇳
+I'm a Computer Science student building full-stack web apps with a focus on AI integration. I write clean, functional code — no fluff. Currently mastering backend architecture, system design, and LeetCode.
 
-currently  :
-  - Building AI Resume Analyzer   (React · Express · Claude API · MySQL)
-  - Building AI Interview Prep    (React · Node.js · Claude API · Bootstrap)
-
-learning   : Node.js · System Design · Backend Architecture
-grinding   : LeetCode — daily, no excuses
-
-mindset    : "Ship it. Fix it. Repeat."
-```
+- 🔭 &nbsp;Working on **AI Resume Analyzer** and **AI Interview Prep Tool**
+- 🌱 &nbsp;Deep-diving into **Node.js · System Design · DSA**
+- 🤖 &nbsp;Obsessed with building **AI-powered developer tools**
+- 💼 &nbsp;Looking for **internships / freelance / collaborations**
+- ⚡ &nbsp;Principle: *ship it, fix it, repeat*
 
 ---
 
-## 🛠️ Tech Stack
+### `$ stack`
+
+**Frontend**
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+
+**Backend**
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
+![REST API](https://img.shields.io/badge/REST%20API-FB923C?style=flat-square&logoColor=white)
+
+**Database**
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
 
 **Languages**
-
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
 ![C](https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-
-**Frontend**
-
-![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![Redux](https://img.shields.io/badge/Redux-593D88?style=flat-square&logo=redux&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=flat-square&logo=bootstrap&logoColor=white)
-
-**Backend & Database**
-
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white)
 
 **AI & Tools**
-
 ![Claude API](https://img.shields.io/badge/Claude%20API-D97757?style=flat-square&logo=anthropic&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white)
 
 ---
 
-## 🚀 Projects
+### `$ ls ./projects`
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### 🤖 AI Resume Analyzer
-`React` `Express` `Claude API` `MySQL`
+**🤖 AI Resume Analyzer**
 
-Parses your resume, scores it against a job description, and returns **targeted improvement suggestions** — not generic tips. Built the full pipeline: file parsing → AI scoring → result dashboard.
+Parses resumes, scores them against job descriptions, and returns targeted improvement suggestions. Full pipeline — upload → Claude AI scoring → React dashboard.
+
+`React` `Express` `Claude API` `MySQL`
 
 </td>
 <td width="50%" valign="top">
 
-### 🎯 AI Interview Prep Tool
-`React` `Node.js` `Claude API` `Bootstrap`
+**🎯 AI Interview Prep Tool**
 
-Role-based **technical question generator**. Pick your target role, get curated questions, prepare deliberately. Structured prep — not random grinding.
+Role-based technical question generator. Select your target role, get curated questions, prepare with intent — not random grinding.
+
+`React` `Node.js` `Claude API`
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### 🌤️ Weather Dashboard
-`JavaScript` `OpenWeather API` `CSS3`
+**🌤️ Weather Dashboard**
 
-Location-aware weather app with **5-day forecasts**, UV index, humidity & animated weather states. Zero frameworks — clean vanilla JS.
+Location-aware weather app with 5-day forecast, UV index, humidity, and animated states. Zero frameworks — pure vanilla JS.
+
+`JavaScript` `CSS3` `OpenWeather API`
 
 </td>
 <td width="50%" valign="top">
 
-### 📚 DSA Practice Vault
-`Python` `Markdown` `LeetCode`
+**📚 DSA Practice Vault**
 
-Personal problem-solving journal organized by topic, tagged by difficulty, with **pattern notes** on common algorithmic strategies.
+Personal problem-solving journal organized by topic and difficulty — with pattern notes on algorithms and data structures.
+
+`Python` `Markdown` `LeetCode`
 
 </td>
 </tr>
@@ -125,28 +108,34 @@ Personal problem-solving journal organized by topic, tagged by difficulty, with 
 
 ---
 
-## 📊 GitHub Stats
+### `$ top` — GitHub Stats
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=krishnx21&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=38bdf8&icon_color=38bdf8&text_color=c9d1d9&ring_color=38bdf8&include_all_commits=true&count_private=true" width="49%" />
-<img src="https://streak-stats.demolab.com/?user=krishnx21&theme=tokyonight&hide_border=true&background=0d1117&ring=38bdf8&fire=f97316&currStreakLabel=38bdf8&sideLabels=38bdf8&sideNums=c9d1d9&currStreakNum=ffffff&dates=64748b" width="49%" />
+<img src="https://github-readme-stats.vercel.app/api?username=krishnx21&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117&title_color=fb923c&icon_color=fb923c&text_color=c9d1d9&ring_color=fb923c&include_all_commits=true&count_private=true" width="49%"/>
+<img src="https://streak-stats.demolab.com/?user=krishnx21&theme=dark&hide_border=true&background=0d1117&ring=fb923c&fire=fb923c&currStreakLabel=fb923c&sideLabels=fb923c&sideNums=c9d1d9&currStreakNum=ffffff&dates=64748b" width="49%"/>
 
 <br/><br/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=krishnx21&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=38bdf8&text_color=c9d1d9" width="40%" />
-
-<br/><br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=krishnx21&theme=tokyo-night&hide_border=true&bg_color=0d1117&color=38bdf8&line=38bdf8&point=ffffff&area=true" width="98%" />
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=krishnx21&theme=github-compact&hide_border=true&bg_color=0d1117&color=fb923c&line=fb923c&point=ffffff&area=true" width="98%"/>
 
 </div>
 
+---
 
+### `$ focus --current`
+
+```
+[▓▓▓▓▓▓▓░░░]  DSA — grinding LeetCode daily
+[▓▓▓▓▓░░░░░]  Backend architecture & system design
+[▓▓▓▓▓▓▓▓░░]  Full-stack projects with AI integration
+[▓▓▓░░░░░░░]  Open source contributions
+[▓▓▓▓▓▓░░░░]  Targeting SWE internships 2025
+```
 
 ---
 
-## 🤝 Connect
+### `$ ping`
 
 <div align="center">
 
@@ -155,20 +144,14 @@ Personal problem-solving journal organized by topic, tagged by difficulty, with 
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/krishnx_21/)
 [![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:krishnakumarsharma8077@gmail.com)
 
-<br/>
-
-**📬 krishnakumarsharma8077@gmail.com**
-
 </div>
 
 ---
 
 <div align="center">
 
-*"Consistency beats talent when talent doesn't stay consistent."*
+<sub>Designed with intent · Built with purpose · <b>krishnx21</b></sub>
 
-⭐ **If you find my work useful, drop a star!** ⭐
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:16213e,50:1a1a2e,100:0f0f0f&height=80&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,2,5,30&height=80&section=footer" width="100%"/>
 
 </div>
