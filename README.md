@@ -148,7 +148,7 @@ My favorite projects are the ones that feel alive: upload a file, process it, an
 ```text
 Current Energy
 
-AI Tools       ███████████████████░░  90%
+
 Backend APIs   ██████████████████░░░  85%
 React UI       █████████████████░░░░  80%
 DSA Practice   ███████████████░░░░░░  70%
