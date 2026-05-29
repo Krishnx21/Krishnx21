@@ -104,18 +104,18 @@ My favorite projects are the ones that feel alive: upload a file, process it, an
       <h3>📄 Smart Document Management & Verification Platform</h3>
       <p>
         <img src="https://img.shields.io/badge/Status-Working-ffb703?style=for-the-badge">
-        <img src="https://img.shields.io/badge/Type-Cloud%20Platform-2563eb?style=for-the-badge">
+        <img src="https://img.shields.io/badge/Private-Project-e91e63?style=for-the-badge">
       </p>
-      <p>A secure document platform inspired by Google Drive, DigiLocker, and document verification systems. It is planned around upload, search, secure sharing, verification, access history, expiry reminders, and cloud deployment.</p>
+      <p>A private secure document platform inspired by Google Drive, DigiLocker, and document verification systems. It is planned around upload, search, secure sharing, verification, access history, expiry reminders, and cloud deployment.</p>
       <p><b>Stack Direction:</b> Docker · Kubernetes · Redis · S3/Cloudinary · MongoDB/PostgreSQL · GitHub Actions</p>
     </td>
     <td width="50%">
       <h3>☁️ Cloud-File-Sharing-System</h3>
       <p>
         <img src="https://img.shields.io/badge/Status-Working-ffb703?style=for-the-badge">
-        <img src="https://img.shields.io/badge/Private-Project-e91e63?style=for-the-badge">
+        <img src="https://img.shields.io/badge/Public-Repository-22c55e?style=for-the-badge">
       </p>
-      <p>A private project focused on secure cloud file uploads, protected share links, access control, storage handling, and backend-first file management workflows.</p>
+      <p>A public project focused on secure cloud file uploads, protected share links, access control, storage handling, and backend-first file management workflows.</p>
       <p><b>Focus:</b> Uploads · Secure Links · Access Control · Cloud Storage · Backend APIs</p>
     </td>
   </tr>
