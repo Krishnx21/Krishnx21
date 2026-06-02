@@ -5,8 +5,8 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Playfair+Display&weight=700&size=22&duration=3200&pause=900&color=E91E8C&center=true&vCenter=true&width=780&lines=I+build+AI-powered+full-stack+products;React+%C2%B7+Node.js+%C2%B7+Express+%C2%B7+Claude+API;Cloud-ready+apps+with+clean+backend+architecture;DSA+daily+%C2%B7+Backend+daily+%C2%B7+Build+daily;Open+to+internships+%26+collaborations)](https://git.io/typing-svg)
 
 <br/>
-GSSOC2026
 
+[![GSSoC 2026](https://img.shields.io/badge/GSSoC-2026-FF6B35?style=for-the-badge&logo=github&logoColor=white)](https://gssoc.girlscript.tech)
 [![Open to Work](https://img.shields.io/badge/%F0%9F%9F%A2%20Open%20to%20Work-e91e8c?style=for-the-badge)](https://www.linkedin.com/in/krishna-kumar-89544b295)
 [![India](https://img.shields.io/badge/India%20%F0%9F%87%AE%F0%9F%87%B3-ff6b35?style=for-the-badge)]()
 [![Profile Views](https://komarev.com/ghpvc/?username=krishnx21&style=for-the-badge&color=e91e8c&label=profile+views)](https://github.com/krishnx21)
@@ -186,6 +186,16 @@ Consistency    ████████████████████░  
 
 ---
 
+## 📈 Contribution Graph
+
+<div align="center">
+
+[![Krishna's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=krishnx21&theme=react-dark&hide_border=true&area=true&color=e91e8c&line=e91e8c&point=ffffff)](https://github.com/krishnx21)
+
+</div>
+
+---
+
 ## 🏆 GitHub Trophies
 
 <div align="center">
@@ -206,7 +216,7 @@ Consistency    ████████████████████░  
 
 ---
 
-## 🔍 Krishna's Contribution Graph
+## 🔍 Krishna's Contribution Snake
 
 <div align="center">
 
