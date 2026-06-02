@@ -76,29 +76,98 @@
 
 ---
 
-## 📊 GitHub Intelligence Dashboard
+<!-- ✨ UNIQUE FEATURE: STREAK ONLY — CLEAN & WORKING -->
+## 🔥 GitHub Streak
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=krishnx21&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&border_radius=15&title_color=ff6b35&icon_color=e91e8c&text_color=ffffff&bg_color=0d1117)
-
-<br/>
-
 ![GitHub Streak](https://streak-stats.demolab.com/?user=krishnx21&theme=tokyonight&hide_border=true&border_radius=15&background=0d1117&ring=ff6b35&fire=e91e8c&currStreakLabel=ff6b35&sideLabels=6a0dad&dates=aaaaaa)
-
-<br/>
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=krishnx21&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&layout=compact&border_radius=15&title_color=ff6b35&text_color=ffffff&bg_color=0d1117)
 
 </div>
 
 ---
 
+<!-- ✨ UNIQUE FEATURE #1: ISOMETRIC CONTRIBUTION CALENDAR -->
+## 🗓️ Isometric Contribution Calendar
+
+<div align="center">
+
+[![Krishna's Isometric Contribution Calendar](https://github-readme-stats.vercel.app/api/wakatime?username=krishnx21&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=ff6b35&text_color=ffffff&border_radius=15)](https://github.com/krishnx21)
+
+![3D Contributions](https://raw.githubusercontent.com/Krishnx21/Krishnx21/main/profile-3d-contrib/profile-night-rainbow.svg)
+
+</div>
+
+---
+
+<!-- ✨ UNIQUE FEATURE #2: CONTRIBUTION ACTIVITY GRAPH -->
 ## 📈 Contribution Activity Graph
 
 <div align="center">
 
 [![Krishna's Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=krishnx21&theme=tokyo-night&hide_border=true&area=true&color=ff6b35&line=e91e8c&point=ffffff&area_color=6a0dad&bg_color=0d1117&radius=8)](https://github.com/krishnx21)
+
+</div>
+
+---
+
+<!-- ✨ UNIQUE FEATURE #3: SPOTIFY NOW PLAYING — SHOWS WHAT YOU'RE LISTENING TO LIVE -->
+## 🎵 Vibe While I Code
+
+<div align="center">
+
+[![Spotify](https://novatorem-krishnx21.vercel.app/api/spotify)](https://open.spotify.com)
+
+> 🎧 *Music fuels every build session. Code tastes better with a beat.*
+
+</div>
+
+---
+
+<!-- ✨ UNIQUE FEATURE #4: ANIMATED SKILL BADGES WITH LEVELS -->
+## 🎮 Skill Level Unlocked
+
+<div align="center">
+
+| Skill | Level | XP Bar |
+|-------|-------|--------|
+| 🟠 Node.js / Express | `EXPERT` | ████████████░ 95% |
+| 🩷 React.js | `ADVANCED` | ███████████░░ 88% |
+| 🟣 Claude API / AI | `ADVANCED` | █████████░░░ 85% |
+| 🔵 MySQL / MongoDB | `ADVANCED` | ██████████░░ 82% |
+| 🟢 Docker / Cloud | `INTERMEDIATE` | ████████░░░░ 75% |
+| 🟡 System Design | `INTERMEDIATE` | ████████░░░░ 72% |
+| 🔴 DSA / Algorithms | `INTERMEDIATE` | ███████░░░░░ 70% |
+
+</div>
+
+---
+
+<!-- ✨ UNIQUE FEATURE #5: ANIMATED METRICS COUNTERS -->
+## ⚡ Live Dev Metrics
+
+<div align="center">
+
+<table>
+<tr>
+<td align="center" width="25%">
+<img src="https://img.shields.io/badge/☕%20Coffees-∞-FF6B35?style=for-the-badge&labelColor=0d1117"/>
+<br/><sub><b>Fuel Consumed</b></sub>
+</td>
+<td align="center" width="25%">
+<img src="https://img.shields.io/badge/💻%20Hours%20Coded-1200%2B-E91E8C?style=for-the-badge&labelColor=0d1117"/>
+<br/><sub><b>Since Jan 2025</b></sub>
+</td>
+<td align="center" width="25%">
+<img src="https://img.shields.io/badge/🐛%20Bugs%20Squashed-999%2B-6A0DAD?style=for-the-badge&labelColor=0d1117"/>
+<br/><sub><b>And Counting</b></sub>
+</td>
+<td align="center" width="25%">
+<img src="https://img.shields.io/badge/🚀%20Projects%20Shipped-4-22C55E?style=for-the-badge&labelColor=0d1117"/>
+<br/><sub><b>Real Products</b></sub>
+</td>
+</tr>
+</table>
 
 </div>
 
@@ -115,6 +184,32 @@
 + refactor: turn messy thoughts into clean APIs
 - remove: excuses from the codebase
 ! breaking change: becoming better than yesterday
+```
+
+</div>
+
+---
+
+<!-- ✨ UNIQUE FEATURE #6: CURRENTLY LEARNING ROADMAP -->
+## 🗺️ Current Learning Roadmap
+
+<div align="center">
+
+```
+  2025 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━▶ 2026
+
+  [✅] Node.js + Express APIs
+  [✅] React Frontend
+  [✅] MySQL + MongoDB
+  [✅] JWT Auth & Security
+  [✅] Claude API Integration
+  [✅] Docker Basics
+  [🔄] System Design Patterns ← YOU ARE HERE
+  [🔄] Kubernetes & Orchestration
+  [⏳] Redis Caching Strategies
+  [⏳] CI/CD with GitHub Actions
+  [⏳] AWS / Cloud Deployment
+  [⏳] Microservices Architecture
 ```
 
 </div>
@@ -162,7 +257,7 @@
         <img src="https://img.shields.io/badge/Status-Shipped%20✓-22c55e?style=for-the-badge">
         <img src="https://img.shields.io/badge/AI-Powered-e91e8c?style=for-the-badge">
       </p>
-      <p>Analyzes resumes against job descriptions, scores candidate fit, and gives practical improvement suggestions. Powered by Claude API for deep, contextual analysis beyond keyword matching.</p>
+      <p>Analyzes resumes against job descriptions, scores candidate fit, and gives practical improvement suggestions. Powered by Claude API for deep contextual analysis beyond keyword matching.</p>
       <p>
         <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB">
         <img src="https://img.shields.io/badge/Claude%20API-D97757?style=flat-square&logo=anthropic&logoColor=white">
@@ -228,6 +323,17 @@
 
 ---
 
+<!-- ✨ UNIQUE FEATURE #7: RANDOM DEV JOKE GENERATOR -->
+## 😂 Random Dev Joke — Refreshes Every Visit
+
+<div align="center">
+
+![Jokes Card](https://readme-jokes.vercel.app/api?theme=tokyonight&qColor=%23ff6b35&aColor=%23e91e8c&bgColor=%230d1117&borderColor=%236a0dad&codeColor=%2300c853)
+
+</div>
+
+---
+
 ## 🧬 Developer DNA
 
 <div align="center">
@@ -245,6 +351,24 @@
 
 ---
 
+<!-- ✨ UNIQUE FEATURE #8: QUOTE + TWITTER/X SHARE BUTTON -->
+## 💬 Words I Build By
+
+<div align="center">
+
+> *"The best code I ever wrote is the one I write tomorrow."*
+> — **Krishna Kumar**
+
+> *"Ship it, fix it, repeat — but always with purpose and passion."*
+
+> *"Don't just learn to code. Build something that matters."*
+
+[![Share on X](https://img.shields.io/badge/Share%20this%20profile%20on%20X-000000?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/intent/tweet?text=Check%20out%20Krishna%20Kumar%27s%20awesome%20GitHub%20profile!%20%F0%9F%9A%80%20https%3A%2F%2Fgithub.com%2Fkrishnx21)
+
+</div>
+
+---
+
 ## 📡 Signal Board
 
 <div align="center">
@@ -253,30 +377,6 @@
 [![GitHub stars](https://img.shields.io/github/stars/krishnx21?label=TOTAL%20STARS&style=for-the-badge&color=ff6b35&logo=github)](https://github.com/krishnx21)
 [![LeetCode](https://img.shields.io/badge/LeetCode-Solving%20Daily-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/krishnx_21/)
 [![Last Commit](https://img.shields.io/github/last-commit/krishnx21/krishnx21?label=LAST%20COMMIT&style=for-the-badge&color=22c55e&logo=git&logoColor=white)](https://github.com/krishnx21)
-
-</div>
-
----
-
-## 🎯 Mission Board — 2026
-
-<div align="center">
-
-```
-  ╔═══════════════════════════════════════════════════════════╗
-  ║              KRISHNA'S 2026 MISSION CONTROL               ║
-  ╠═══════════════════════════════════════════════════════════╣
-  ║                                                           ║
-  ║  [ ▶ ] Ship 3 production-grade full-stack projects        ║
-  ║  [ ▶ ] Master system design + advanced backend patterns   ║
-  ║  [ ▶ ] Solve 300+ LeetCode problems with clear patterns   ║
-  ║  [ ▶ ] Build AI tools that solve real user problems       ║
-  ║  [ ▶ ] Land a strong dev internship or opportunity        ║
-  ║  [ ▶ ] Contribute to open source  (GSSoC 2026 🔥)         ║
-  ║  [ ▶ ] Grow a dev presence worth remembering              ║
-  ║                                                           ║
-  ╚═══════════════════════════════════════════════════════════╝
-```
 
 </div>
 
@@ -330,15 +430,6 @@
 ---
 
 <div align="center">
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║    "The best code I ever wrote is the one I write tomorrow."     ║
-║                                              — Krishna Kumar     ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,30:6a0dad,60:e91e8c,100:ff6b35&height=140&section=footer&animation=fadeIn" width="100%"/>
 
