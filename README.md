@@ -87,16 +87,6 @@
 
 ---
 
-<!-- ✨ UNIQUE FEATURE #1: ISOMETRIC CONTRIBUTION CALENDAR -->
-## 🗓️ Isometric Contribution Calendar
-
-<div align="center">
-
-[![Krishna's Isometric Contribution Calendar](https://github-readme-stats.vercel.app/api/wakatime?username=krishnx21&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=ff6b35&text_color=ffffff&border_radius=15)](https://github.com/krishnx21)
-
-![3D Contributions](https://raw.githubusercontent.com/Krishnx21/Krishnx21/main/profile-3d-contrib/profile-night-rainbow.svg)
-
-</div>
 
 ---
 
@@ -111,16 +101,7 @@
 
 ---
 
-<!-- ✨ UNIQUE FEATURE #3: SPOTIFY NOW PLAYING — SHOWS WHAT YOU'RE LISTENING TO LIVE -->
-## 🎵 Vibe While I Code
 
-<div align="center">
-
-[![Spotify](https://novatorem-krishnx21.vercel.app/api/spotify)](https://open.spotify.com)
-
-> 🎧 *Music fuels every build session. Code tastes better with a beat.*
-
-</div>
 
 ---
 
