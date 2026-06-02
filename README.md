@@ -1,97 +1,121 @@
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d0221,30:6a0dad,60:e91e8c,100:ff6b35&height=300&section=header&text=Krishna%20Kumar&fontSize=70&fontColor=ffffff&fontAlignY=40&desc=⚡%20Full-Stack%20Engineer%20·%20AI%20Architect%20·%20CSE%20Student&descAlignY=60&descSize=19&animation=fadeIn&stroke=e91e8c&strokeWidth=2" width="100%"/>
+
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24,30&height=260&section=header&text=Krishna%20Kumar&fontSize=60&fontColor=ffffff&fontAlignY=36&desc=Full-Stack%20Developer%20%C2%B7%20AI%20Builder%20%C2%B7%20CSE%20Student&descAlignY=58&descSize=18&animation=twinkling" width="100%"/>
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Playfair+Display&weight=700&size=22&duration=3200&pause=900&color=E91E8C&center=true&vCenter=true&width=780&lines=I+build+AI-powered+full-stack+products;React+%C2%B7+Node.js+%C2%B7+Express+%C2%B7+Claude+API;Cloud-ready+apps+with+clean+backend+architecture;DSA+daily+%C2%B7+Backend+daily+%C2%B7+Build+daily;Open+to+internships+%26+collaborations)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Playfair+Display&weight=700&size=24&duration=3000&pause=800&color=FF6B35&center=true&vCenter=true&width=820&lines=I+don%27t+just+write+code+—+I+build+experiences;React+·+Node.js+·+Express+·+Claude+API;Every+commit+is+a+step+closer+to+something+real;Open+to+internships+%26+dream+collaborations;AI+%2B+Backend+%2B+Frontend+%3D+My+Stack)](https://git.io/typing-svg)
 
 <br/>
 
 [![GSSoC 2026](https://img.shields.io/badge/GSSoC-2026-FF6B35?style=for-the-badge&logo=github&logoColor=white)](https://gssoc.girlscript.tech)
-[![Open to Work](https://img.shields.io/badge/%F0%9F%9F%A2%20Open%20to%20Work-e91e8c?style=for-the-badge)](https://www.linkedin.com/in/krishna-kumar-89544b295)
+[![Open to Work](https://img.shields.io/badge/%F0%9F%9F%A2%20Open%20to%20Work-00c853?style=for-the-badge)](https://www.linkedin.com/in/krishna-kumar-89544b295)
 [![India](https://img.shields.io/badge/India%20%F0%9F%87%AE%F0%9F%87%B3-ff6b35?style=for-the-badge)]()
-[![Profile Views](https://komarev.com/ghpvc/?username=krishnx21&style=for-the-badge&color=e91e8c&label=profile+views)](https://github.com/krishnx21)
+[![Profile Views](https://komarev.com/ghpvc/?username=krishnx21&style=for-the-badge&color=6a0dad&label=PROFILE+VIEWS)](https://github.com/krishnx21)
 
 </div>
 
 ---
 
+## 🖥️ `~/krishna » whoami`
+
 <div align="center">
 
-## ⚡ Developer Console
-
-| Identity | Current Signal |
-| --- | --- |
-| 👋 Name | **Krishna Kumar** |
-| 🎓 Role | Computer Science Student |
-| 🧠 Focus | Full-stack apps, backend APIs, DSA, AI-powered workflows |
-| 🚀 Mission | Turn raw ideas into real products that people can use |
-| 💼 Status | Open to internships, freelance work, and collaborations |
+```bash
+╔══════════════════════════════════════════════════════════════════╗
+║  $ cat developer.json                                            ║
+╠══════════════════════════════════════════════════════════════════╣
+║                                                                  ║
+║  {                                                               ║
+║    "name"        : "Krishna Kumar",                              ║
+║    "role"        : "Full-Stack Developer + AI Builder",          ║
+║    "location"    : "India 🇮🇳",                                   ║
+║    "university"  : "CSE Student",                                ║
+║    "mission"     : "Turn raw ideas into real products",          ║
+║    "superpower"  : "Backend APIs that don't break at 3AM",       ║
+║    "currently"   : ["Building", "Learning", "Shipping"],         ║
+║    "available"   : true,                                         ║
+║    "coffee"      : "undefined  (runs on passion)"                ║
+║  }                                                               ║
+║                                                                  ║
+║  $ echo $STATUS                                                  ║
+║  > Open to internships, freelance & collabs  🟢                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
 
 </div>
 
 ---
 
-## 💫 About Me
-
-I am a **full-stack developer** who enjoys building products with clean interfaces, useful backend logic, and AI that actually improves the workflow.
-
-My favorite projects are the ones that feel alive: upload a file, process it, analyze it, store it, secure it, and show the user something valuable. I am currently sharpening **Node.js**, **Express**, **React**, **database design**, **DSA**, and cloud-ready project structure.
-
-> *"Ship it, fix it, repeat — but always with purpose and passion."*
-
----
-
-## 🌐 Connect With Me
+## 🧠 Neural Stack Map
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/krishna-kumar-89544b295)
-[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/krishnx_21/)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/krishnx_21/)
-[![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:krishnakumarsharma8077@gmail.com)
+```
+                         ★ BACKEND
+                            ▲
+                           ███
+                          █████
+                 ◄ DB   ███████   FRONTEND ►
+                       ████████
+                      █████████
+                     ██████████
+                           ▼
+                         ★ AI/ML
+
+  ┌─────────────────────────────────────────┐
+  │  Node.js / Express    ████████████  95% │
+  │  React / UI           ███████████   88% │
+  │  MySQL / MongoDB      ██████████    82% │
+  │  Docker / Cloud       ████████      75% │
+  │  Claude API / AI      █████████     85% │
+  │  DSA / Algorithms     ███████       70% │
+  │  System Design        ████████      72% │
+  └─────────────────────────────────────────┘
+```
 
 </div>
 
 ---
 
-## 🧰 Tech Arsenal
+## 📊 GitHub Intelligence Dashboard
 
 <div align="center">
 
-### Frontend Craft
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=krishnx21&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&border_radius=15&title_color=ff6b35&icon_color=e91e8c&text_color=ffffff&bg_color=0d1117)
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Responsive UI](https://img.shields.io/badge/Responsive%20UI-E91E8C?style=for-the-badge)
+<br/>
 
-### Backend Power
+![GitHub Streak](https://streak-stats.demolab.com/?user=krishnx21&theme=tokyonight&hide_border=true&border_radius=15&background=0d1117&ring=ff6b35&fire=e91e8c&currStreakLabel=ff6b35&sideLabels=6a0dad&dates=aaaaaa)
 
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
-![REST API](https://img.shields.io/badge/REST%20API-E91E8C?style=for-the-badge)
-![JWT](https://img.shields.io/badge/JWT-111827?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
-![Auth](https://img.shields.io/badge/Auth%20Flows-7C3AED?style=for-the-badge)
+<br/>
 
-### Data, Cloud & Dev Tools
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=krishnx21&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&layout=compact&border_radius=15&title_color=ff6b35&text_color=ffffff&bg_color=0d1117)
 
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Cloud Ready](https://img.shields.io/badge/Cloud%20Ready-0F766E?style=for-the-badge)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+</div>
 
-### Languages, AI & Workflow
+---
 
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
-![Claude API](https://img.shields.io/badge/Claude%20API-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+## 📈 Contribution Activity Graph
+
+<div align="center">
+
+[![Krishna's Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=krishnx21&theme=tokyo-night&hide_border=true&area=true&color=ff6b35&line=e91e8c&point=ffffff&area_color=6a0dad&bg_color=0d1117&radius=8)](https://github.com/krishnx21)
+
+</div>
+
+---
+
+## 📜 My Commit Philosophy
+
+<div align="center">
+
+```diff
++ feat: add soul to every function written
++ fix: remove fear, replace with consistency
++ chore: water the DSA streak every single day
++ refactor: turn messy thoughts into clean APIs
+- remove: excuses from the codebase
+! breaking change: becoming better than yesterday
+```
 
 </div>
 
@@ -101,96 +125,158 @@ My favorite projects are the ones that feel alive: upload a file, process it, an
 
 <table>
   <tr>
-    <td width="50%">
+    <td width="50%" valign="top">
       <h3>📄 Smart Document Management & Verification Platform</h3>
       <p>
-        <img src="https://img.shields.io/badge/Status-Working-ffb703?style=for-the-badge">
-        <img src="https://img.shields.io/badge/Private-Project-e91e63?style=for-the-badge">
+        <img src="https://img.shields.io/badge/Status-In%20Progress-ffb703?style=for-the-badge">
+        <img src="https://img.shields.io/badge/Scope-Enterprise-6a0dad?style=for-the-badge">
       </p>
-      <p>A private secure document platform inspired by Google Drive, DigiLocker, and document verification systems. It is planned around upload, search, secure sharing, verification, access history, expiry reminders, and cloud deployment.</p>
-      <p><b>Stack Direction:</b> Docker · Kubernetes · Redis · S3/Cloudinary · MongoDB/PostgreSQL · GitHub Actions</p>
+      <p>A private secure document platform inspired by Google Drive, DigiLocker, and document verification systems. Built around upload, search, secure sharing, verification, access history, expiry reminders, and cloud deployment.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white">
+        <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white">
+        <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white">
+        <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white">
+        <img src="https://img.shields.io/badge/S3-FF9900?style=flat-square&logo=amazon-s3&logoColor=white">
+      </p>
     </td>
-    <td width="50%">
+    <td width="50%" valign="top">
       <h3>☁️ Cloud-File-Sharing-System</h3>
       <p>
-        <img src="https://img.shields.io/badge/Status-Working-ffb703?style=for-the-badge">
-        <img src="https://img.shields.io/badge/Public-Repository-22c55e?style=for-the-badge">
+        <img src="https://img.shields.io/badge/Status-In%20Progress-ffb703?style=for-the-badge">
+        <img src="https://img.shields.io/badge/Public-Open%20Source-22c55e?style=for-the-badge">
       </p>
-      <p>A public project focused on secure cloud file uploads, protected share links, access control, storage handling, and backend-first file management workflows.</p>
-      <p><b>Focus:</b> Uploads · Secure Links · Access Control · Cloud Storage · Backend APIs</p>
+      <p>Secure cloud file uploads, protected share links, access control, storage handling, and backend-first file management workflows. Designed for real-world usage from day one.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white">
+        <img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white">
+        <img src="https://img.shields.io/badge/JWT-111827?style=flat-square&logo=jsonwebtokens&logoColor=white">
+        <img src="https://img.shields.io/badge/Cloudinary-3448C5?style=flat-square&logo=cloudinary&logoColor=white">
+      </p>
     </td>
   </tr>
   <tr>
-    <td width="50%">
+    <td width="50%" valign="top">
       <h3>🤖 AI-Resume-Analyzer</h3>
       <p>
-        <img src="https://img.shields.io/badge/Status-Done-22c55e?style=for-the-badge">
-        <img src="https://img.shields.io/badge/AI-Powered-7c3aed?style=for-the-badge">
+        <img src="https://img.shields.io/badge/Status-Shipped%20✓-22c55e?style=for-the-badge">
+        <img src="https://img.shields.io/badge/AI-Powered-e91e8c?style=for-the-badge">
       </p>
-      <p>Analyzes resumes against job descriptions, scores candidate fit, and gives practical improvement suggestions through an AI-assisted workflow.</p>
-      <p><b>Stack:</b> React · Express · Claude API · MySQL</p>
-    </td>
-    <td width="50%">
-      <h3>🌤️ Weather</h3>
+      <p>Analyzes resumes against job descriptions, scores candidate fit, and gives practical improvement suggestions. Powered by Claude API for deep, contextual analysis beyond keyword matching.</p>
       <p>
-        <img src="https://img.shields.io/badge/Status-Done-22c55e?style=for-the-badge">
-        <img src="https://img.shields.io/badge/Frontend-App-0284c7?style=for-the-badge">
+        <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB">
+        <img src="https://img.shields.io/badge/Claude%20API-D97757?style=flat-square&logo=anthropic&logoColor=white">
+        <img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white">
+        <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white">
       </p>
-      <p>A clean weather dashboard with forecast data, location-based results, humidity, weather states, and smooth frontend interactions.</p>
-      <p><b>Stack:</b> JavaScript · CSS3 · Weather API</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🌤️ Weather Dashboard</h3>
+      <p>
+        <img src="https://img.shields.io/badge/Status-Shipped%20✓-22c55e?style=for-the-badge">
+        <img src="https://img.shields.io/badge/Frontend-Polished-0284c7?style=for-the-badge">
+      </p>
+      <p>A clean weather dashboard with forecast data, location-based results, humidity tracking, weather states, and smooth frontend interactions. Precision UI with live data.</p>
+      <p>
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black">
+        <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white">
+        <img src="https://img.shields.io/badge/Weather%20API-00BCD4?style=flat-square&logo=icloud&logoColor=white">
+      </p>
     </td>
   </tr>
 </table>
 
 ---
 
-## 🧪 Build Lab
+## 🧰 Tech Arsenal
 
-```text
-Current Energy
+<div align="center">
 
+### ⚡ Frontend
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Responsive UI](https://img.shields.io/badge/Responsive%20UI-FF6B35?style=for-the-badge)
 
-Backend APIs   ██████████████████░░░  85%
-React UI       █████████████████░░░░  80%
-DSA Practice   ███████████████░░░░░░  70%
-Consistency    ████████████████████░  95%
+### 🛠️ Backend
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-404040?style=for-the-badge&logo=express&logoColor=white)
+![REST API](https://img.shields.io/badge/REST%20API-E91E8C?style=for-the-badge)
+![JWT](https://img.shields.io/badge/JWT-6A0DAD?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
+![Auth Flows](https://img.shields.io/badge/Auth%20Flows-FF6B35?style=for-the-badge)
+
+### 🗄️ Data & Cloud
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![Cloud Ready](https://img.shields.io/badge/Cloud%20Ready-00BCD4?style=for-the-badge)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+
+### 🤖 Languages & AI
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+![Claude API](https://img.shields.io/badge/Claude%20API-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-6A0DAD?style=for-the-badge&logo=github&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+
+</div>
+
+---
+
+## 🧬 Developer DNA
+
+<div align="center">
+
+| Trait | Expression |
+|-------|------------|
+| 🔴 Problem Solver | Breaks big problems into small, solvable pieces |
+| 🟠 Ship Fast | Ships MVPs first, iterates on real feedback |
+| 🟡 AI Curious | Builds AI-first whenever possible |
+| 🟢 Clean Coder | Readable code always beats clever code |
+| 🔵 Consistent | Daily commits, daily growth, no excuses |
+| 🟣 Builder | Real products over endless tutorial loops |
+
+</div>
+
+---
+
+## 📡 Signal Board
+
+<div align="center">
+
+[![GitHub followers](https://img.shields.io/github/followers/krishnx21?label=FOLLOWERS&style=for-the-badge&color=e91e8c&logo=github)](https://github.com/krishnx21?tab=followers)
+[![GitHub stars](https://img.shields.io/github/stars/krishnx21?label=TOTAL%20STARS&style=for-the-badge&color=ff6b35&logo=github)](https://github.com/krishnx21)
+[![LeetCode](https://img.shields.io/badge/LeetCode-Solving%20Daily-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/krishnx_21/)
+[![Last Commit](https://img.shields.io/github/last-commit/krishnx21/krishnx21?label=LAST%20COMMIT&style=for-the-badge&color=22c55e&logo=git&logoColor=white)](https://github.com/krishnx21)
+
+</div>
+
+---
+
+## 🎯 Mission Board — 2026
+
+<div align="center">
+
 ```
-
----
-
-## 🎯 2026 Targets
-
-<div align="center">
-
-| Target | Direction |
-| --- | --- |
-| Product Building | Finish and polish real full-stack projects |
-| Backend Strength | Build stronger APIs, auth, validation, and database flows |
-| DSA | Practice consistently with patterns and revision |
-| AI Integration | Build tools where AI improves real user tasks |
-| Career | Land a strong internship or developer opportunity |
-
-</div>
-
----
-
-## 📊 GitHub Stats
-
-<div align="center">
-
-![](https://github-readme-stats.vercel.app/api?username=krishnx21&show_icons=true&theme=radical&hide_border=false&include_all_commits=true&count_private=true)<br/>
-![](https://streak-stats.demolab.com/?user=krishnx21&theme=radical&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=krishnx21&theme=radical&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
-
-</div>
-
----
-
-## 📈 Contribution Graph
-
-<div align="center">
-
-[![Krishna's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=krishnx21&theme=react-dark&hide_border=true&area=true&color=e91e8c&line=e91e8c&point=ffffff)](https://github.com/krishnx21)
+  ╔═══════════════════════════════════════════════════════════╗
+  ║              KRISHNA'S 2026 MISSION CONTROL               ║
+  ╠═══════════════════════════════════════════════════════════╣
+  ║                                                           ║
+  ║  [ ▶ ] Ship 3 production-grade full-stack projects        ║
+  ║  [ ▶ ] Master system design + advanced backend patterns   ║
+  ║  [ ▶ ] Solve 300+ LeetCode problems with clear patterns   ║
+  ║  [ ▶ ] Build AI tools that solve real user problems       ║
+  ║  [ ▶ ] Land a strong dev internship or opportunity        ║
+  ║  [ ▶ ] Contribute to open source  (GSSoC 2026 🔥)         ║
+  ║  [ ▶ ] Grow a dev presence worth remembering              ║
+  ║                                                           ║
+  ╚═══════════════════════════════════════════════════════════╝
+```
 
 </div>
 
@@ -200,13 +286,13 @@ Consistency    ████████████████████░  
 
 <div align="center">
 
-![](https://github-trophies.vercel.app/?username=krishnx21&theme=radical&no-frame=true&no-bg=true&margin-w=8)
+[![trophy](https://github-trophies.vercel.app/?username=krishnx21&theme=radical&no-frame=true&no-bg=true&margin-w=8&column=7)](https://github.com/krishnx21)
 
 </div>
 
 ---
 
-## ✍️ Random Dev Quote
+## ✍️ Today's Dev Fuel
 
 <div align="center">
 
@@ -216,7 +302,20 @@ Consistency    ████████████████████░  
 
 ---
 
-## 🔍 Krishna's Contribution Snake
+## 🌐 Find Me Everywhere
+
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Let's%20Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/krishna-kumar-89544b295)
+[![LeetCode](https://img.shields.io/badge/LeetCode-Daily%20Grind-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/krishnx_21/)
+[![Instagram](https://img.shields.io/badge/Instagram-Dev%20Life-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/krishnx_21/)
+[![Gmail](https://img.shields.io/badge/Gmail-Hire%20Me%20👋-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:krishnakumarsharma8077@gmail.com)
+
+</div>
+
+---
+
+## 🐍 Watch My Contributions Get Eaten
 
 <div align="center">
 
@@ -232,8 +331,19 @@ Consistency    ████████████████████░  
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24,30&height=130&section=footer" width="100%"/>
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║    "The best code I ever wrote is the one I write tomorrow."     ║
+║                                              — Krishna Kumar     ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
 
-<sub>Made with 💖 · Building AI tools, one commit at a time · <b>krishnx21</b></sub>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,30:6a0dad,60:e91e8c,100:ff6b35&height=140&section=footer&animation=fadeIn" width="100%"/>
+
+**krishnx21** · Building AI tools, one commit at a time · Made with 💖 & too much passion
+
+![Wave](https://img.shields.io/badge/Thanks%20for%20visiting!-FF6B35?style=for-the-badge&logo=github&logoColor=white)
 
 </div>
