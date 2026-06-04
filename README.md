@@ -76,21 +76,18 @@
 
 ---
 
-<!-- ✨ UNIQUE FEATURE: STREAK ONLY — CLEAN & WORKING -->
 ## 🔥 GitHub Streak
 
 <div align="center">
 
-![GitHub Streak](https://streak-stats.demolab.com/?user=krishnx21&theme=tokyonight&hide_border=true&border_radius=15&background=0d1117&ring=ff6b35&fire=e91e8c&currStreakLabel=ff6b35&sideLabels=6a0dad&dates=aaaaaa)
+[![GitHub Streak](https://streak-stats.demolab.com/?user=krishnx21&theme=tokyonight&hide_border=true&border_radius=15&background=0D1117&ring=ff6b35&fire=e91e8c&currStreakLabel=ff6b35&sideLabels=6a0dad&dates=aaaaaa&stroke=6a0dad)](https://github.com/krishnx21)
 
 </div>
 
 ---
 
-
 ---
 
-<!-- ✨ UNIQUE FEATURE #2: CONTRIBUTION ACTIVITY GRAPH -->
 ## 📈 Contribution Activity Graph
 
 <div align="center">
@@ -101,56 +98,6 @@
 
 ---
 
-
-
----
-
-<!-- ✨ UNIQUE FEATURE #4: ANIMATED SKILL BADGES WITH LEVELS -->
-## 🎮 Skill Level Unlocked
-
-<div align="center">
-
-| Skill | Level | XP Bar |
-|-------|-------|--------|
-| 🟠 Node.js / Express | `EXPERT` | ████████████░ 95% |
-| 🩷 React.js | `ADVANCED` | ███████████░░ 88% |
-| 🟣 Claude API / AI | `ADVANCED` | █████████░░░ 85% |
-| 🔵 MySQL / MongoDB | `ADVANCED` | ██████████░░ 82% |
-| 🟢 Docker / Cloud | `INTERMEDIATE` | ████████░░░░ 75% |
-| 🟡 System Design | `INTERMEDIATE` | ████████░░░░ 72% |
-| 🔴 DSA / Algorithms | `INTERMEDIATE` | ███████░░░░░ 70% |
-
-</div>
-
----
-
-<!-- ✨ UNIQUE FEATURE #5: ANIMATED METRICS COUNTERS -->
-## ⚡ Live Dev Metrics
-
-<div align="center">
-
-<table>
-<tr>
-<td align="center" width="25%">
-<img src="https://img.shields.io/badge/☕%20Coffees-∞-FF6B35?style=for-the-badge&labelColor=0d1117"/>
-<br/><sub><b>Fuel Consumed</b></sub>
-</td>
-<td align="center" width="25%">
-<img src="https://img.shields.io/badge/💻%20Hours%20Coded-1200%2B-E91E8C?style=for-the-badge&labelColor=0d1117"/>
-<br/><sub><b>Since Jan 2025</b></sub>
-</td>
-<td align="center" width="25%">
-<img src="https://img.shields.io/badge/🐛%20Bugs%20Squashed-999%2B-6A0DAD?style=for-the-badge&labelColor=0d1117"/>
-<br/><sub><b>And Counting</b></sub>
-</td>
-<td align="center" width="25%">
-<img src="https://img.shields.io/badge/🚀%20Projects%20Shipped-4-22C55E?style=for-the-badge&labelColor=0d1117"/>
-<br/><sub><b>Real Products</b></sub>
-</td>
-</tr>
-</table>
-
-</div>
 
 ---
 
@@ -165,32 +112,6 @@
 + refactor: turn messy thoughts into clean APIs
 - remove: excuses from the codebase
 ! breaking change: becoming better than yesterday
-```
-
-</div>
-
----
-
-<!-- ✨ UNIQUE FEATURE #6: CURRENTLY LEARNING ROADMAP -->
-## 🗺️ Current Learning Roadmap
-
-<div align="center">
-
-```
-  2025 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━▶ 2026
-
-  [✅] Node.js + Express APIs
-  [✅] React Frontend
-  [✅] MySQL + MongoDB
-  [✅] JWT Auth & Security
-  [✅] Claude API Integration
-  [✅] Docker Basics
-  [🔄] System Design Patterns ← YOU ARE HERE
-  [🔄] Kubernetes & Orchestration
-  [⏳] Redis Caching Strategies
-  [⏳] CI/CD with GitHub Actions
-  [⏳] AWS / Cloud Deployment
-  [⏳] Microservices Architecture
 ```
 
 </div>
@@ -304,7 +225,6 @@
 
 ---
 
-<!-- ✨ UNIQUE FEATURE #7: RANDOM DEV JOKE GENERATOR -->
 ## 😂 Random Dev Joke — Refreshes Every Visit
 
 <div align="center">
@@ -332,7 +252,6 @@
 
 ---
 
-<!-- ✨ UNIQUE FEATURE #8: QUOTE + TWITTER/X SHARE BUTTON -->
 ## 💬 Words I Build By
 
 <div align="center">
