@@ -7,6 +7,7 @@
 <br/>
 
 [![GSSoC 2026](https://img.shields.io/badge/GSSoC-2026-FF6B35?style=for-the-badge&logo=github&logoColor=white)](https://gssoc.girlscript.tech)
+[![SSOC Mentor](https://img.shields.io/badge/SSOC-Mentor-6a0dad?style=for-the-badge&logo=github&logoColor=white)](https://ssoc.devfolio.co)
 [![Open to Work](https://img.shields.io/badge/%F0%9F%9F%A2%20Open%20to%20Work-00c853?style=for-the-badge)](https://www.linkedin.com/in/krishna-kumar-89544b295)
 [![India](https://img.shields.io/badge/Based%20in%20Agra%20India%20%F0%9F%87%AE%F0%9F%87%B3-ff6b35?style=for-the-badge)]()
 [![Profile Views](https://komarev.com/ghpvc/?username=krishnx21&style=for-the-badge&color=6a0dad&label=PROFILE+VIEWS)](https://github.com/krishnx21)
