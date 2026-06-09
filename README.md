@@ -105,7 +105,7 @@ I enjoy the entire journey from a rough idea to a working product: shaping the e
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3>Smart Document Management Platform</h3>
+      <h3>CertiValut</h3>
       <p>A secure document workspace inspired by modern cloud drives and digital lockers, with upload, search, sharing, verification, access history, and expiry reminders.</p>
       <p><strong>Building with:</strong> Docker, Kubernetes, Redis, MongoDB, S3</p>
     </td>
