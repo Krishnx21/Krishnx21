@@ -181,7 +181,7 @@ I enjoy the entire journey from a rough idea to a working product: shaping the e
     <img src="https://img.shields.io/badge/Connect_On_LinkedIn-7C3AED?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn" />
   </a>
 
-  <br /><br />
+  <br /><br /> 
 
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,45:5B21B6,75:2563EB,100:FF6B35&height=120&section=footer" width="100%" alt="" />
 </div>
