@@ -171,7 +171,7 @@ I enjoy the entire journey from a rough idea to a working product: shaping the e
 ---
 
 <div align="center">
-  <h2>Let's build something worth remembering..</h2>
+  <h2>Let's build something worth remembering.</h2>
   <p>I am always happy to discuss software, open source, internships, and ambitious product ideas.</p>
 
   <a href="mailto:krishnakumarsharma8077@gmail.com">
