@@ -3,7 +3,7 @@
 
   <br />
 
-  <h1> here it is </h1>
+  <h1> here </h1>
 
   <a href="https://git.io/typing-svg">
     <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&duration=3000&pause=900&color=9D7BFF&center=true&vCenter=true&width=820&lines=I+turn+ideas+into+products+people+can+use.;Full-Stack+Engineer+%7C+AI+Builder+%7C+Open-Source+Contributor;Building+reliable+backends+and+delightful+interfaces.;Always+learning.+Always+shipping." alt="Typing introduction" />
