@@ -3,7 +3,8 @@
 
   <br />
 
-  <h1> <img width="400" height="200" alt="TomHanksHelloGIF (2)" src="https://github.com/user-attachments/assets/7ac0f7e1-7628-4565-9091-b9489690cf5d" />
+  <h1> <img width="480" height="480" alt="TechTechnologyGIFbyTheCodingSpaceRD" src="https://github.com/user-attachments/assets/d705fa36-cc15-4f3f-b540-c5f9a6c93d22" />
+
 
 
  </h1>
