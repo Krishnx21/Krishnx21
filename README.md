@@ -51,7 +51,7 @@ I enjoy the entire journey from a rough idea to a working product: shaping the e
 
 ---
 
-## What I Bring
+## What I Bring BY @KRISHNA
 
 <table>
   <tr>
