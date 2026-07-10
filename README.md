@@ -43,9 +43,9 @@
 
 <div align="center">
 
-![GSSoC Admin](https://img.shields.io/badge/GSSoC%202026-PROJECT%20ADMIN-FF6B35?style=for-the-badge&logo=git&logoColor=white)
+![ECSoC 2026 Admin](https://img.shields.io/badge/GSSoC%202026-PROJECT%20ADMIN-FF6B35?style=for-the-badge&logo=git&logoColor=white)
 &nbsp;
-![SSOC Mentor](https://img.shields.io/badge/SSOC%202026-MENTOR-9D7BFF?style=for-the-badge&logo=github&logoColor=white)
+![SSOC 2026 Mentor](https://img.shields.io/badge/SSOC%202026-MENTOR-9D7BFF?style=for-the-badge&logo=github&logoColor=white)
 
 </div>
 
