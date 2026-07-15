@@ -1,4 +1,4 @@
-<img src="./assets/developer-hero.png" width="100%" alt="Krishna Kumar" />
+ <img src="./assets/developer-hero.png" width="100%" alt="Krishna Kumar" />
 
 <br/>
 
@@ -158,7 +158,7 @@ stack    Node.js · Express · JWT · Cloudinary
 
 **`[PID 003]`  🤖 AI Resume Analyzer** `— exited(0)`
 
-Resume vs JD scorer via Claude API. The interesting problem wasn't the AI call — it was building the prompt layer that returns consistent structured JSON you can render in a real UI.
+Resume vs JD scorer via Claude API. The interesting problem wasn't the AI call — it was building the prompt layer that returns consistent structured JSON you can render in a real UI. 
 
 ```
 status   ██████████  complete
@@ -208,7 +208,7 @@ stack    JavaScript · CSS · Weather API
 
 ---
 
-## `[BENCHMARKS]` performance data
+## `[BENCHMARKS]` performance data HERE IT IS
 
 
 
