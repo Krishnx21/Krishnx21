@@ -106,7 +106,7 @@ system ready.
 │  WIS  AI Integration      █████████████████░░░░░  77   B            │
 │  SPD  DevOps / Docker     ██████████████░░░░░░░░  65   C  ↑         │
 │                                                                      │
-│  XP  ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱  8,400 / 15,000  →  GOLD      │
+│  XP  ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱  8,400/15,000→GOLD │
 │                                                                      │
 ├──────────────────────────────────────────────────────────────────────┤
 │                    ACTIVE  LOADOUT                                   │
@@ -135,7 +135,7 @@ system ready.
 Document management ++ verification platform. Not "upload a file" — this has Redis TTL expiring share links, BullMQ async queues, hash-based integrity verification, full-text search, and CI/CD. I'm building it the way I'd want a real product built.
 
 ```
-status   ▓▓▓▓▓▓░░░░  43%  in progress
+status   ▓▓▓▓▓▓░░░░  67%  in progress
 stack    MERN · S3 · Redis · BullMQ · Docker
 ```
 
