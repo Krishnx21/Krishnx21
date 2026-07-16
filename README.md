@@ -23,7 +23,7 @@
 
 <br/>
 
-<div align="center">
+<div align="center"  >
   <a href="https://git.io/typing-svg">
     <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=14&duration=2400&pause=800&color=9D7BFF&center=true&vCenter=true&width=700&lines=booting+krishnOS+v21.0...;loading+full-stack-engine.service......+%5B+OK+%5D;loading+gssoc-2026-admin.service.....+%5B+OK+%5D;loading+certivault-v1.service.........+%5B+43%25+%5D;system+ready.+handle%3A+%40krishnx21" alt="Boot sequence" />
   </a>
