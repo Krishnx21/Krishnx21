@@ -96,7 +96,6 @@ I'm looking for a backend or infrastructure internship, with Microsoft as the lo
 
 <br/>
 
-**Next up:** SecretSentinel, a self-hosted secret scanner built solo on a different stack (Postgres, Kubernetes, Terraform) so I'm not just repeating what already worked. Then PipelineGuard and OpsPilot.
 
 <br/>
 
