@@ -1,8 +1,7 @@
- <img src="./assets/developer-hero.png" width="100%" alt="Krishna Kumar" />
 
 
 
-<div align="center">
+
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
