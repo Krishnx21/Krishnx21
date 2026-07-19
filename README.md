@@ -1,332 +1,220 @@
-
-
-
-
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║        ██╗  ██╗██████╗ ██╗███████╗██╗  ██╗███╗  ██╗ █████╗     ║
-║        ██║ ██╔╝██╔══██╗██║██╔════╝██║  ██║████╗ ██║██╔══██╗    ║
-║        █████╔╝ ██████╔╝██║███████╗███████║██╔██╗██║███████║    ║
-║        ██╔═██╗ ██╔══██╗██║╚════██║██╔══██║██║╚████║██╔══██║    ║
-║        ██║  ██╗██║  ██║██║███████║██║  ██║██║  ███║██║  ██║    ║
-║        ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚══╝╚═╝  ╚═╝    ║
-║                                                                  ║
-║                     O  S     v  2  1  .  0                      ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
-</div>
+<div align="center">
 
 <br/>
 
-<div align="center"  >
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=14&duration=2400&pause=800&color=9D7BFF&center=true&vCenter=true&width=700&lines=booting+krishnOS+v21.0...;loading+full-stack-engine.service......+%5B+OK+%5D;loading+gssoc-2026-admin.service.....+%5B+OK+%5D;loading+certivault-v1.service.........+%5B+43%25+%5D;system+ready.+handle%3A+%40krishnx21" alt="Boot sequence" />
-  </a>
-</div>
+# Krishna Kumar
+
+<sub>Backend Engineer, in progress</sub>
 
 <br/>
 
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/_%40krishna--kumar-0A66C2?style=flat-square&logo=linkedin&logoColor=white&label=linkedin)](https://www.linkedin.com/in/krishna-kumar-89544b295)
-[![Gmail](https://img.shields.io/badge/_krishnakumarsharma8077%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white&label=mail)](mailto:krishnakumarsharma8077@gmail.com)
-[![LeetCode](https://img.shields.io/badge/_krishnx__21-FFA116?style=flat-square&logo=leetcode&logoColor=black&label=leetcode)](https://leetcode.com/u/krishnx_21/)
-[![GitHub](https://img.shields.io/badge/_@krishnx21-181717?style=flat-square&logo=github&logoColor=white&label=github)](https://github.com/krishnx21)
-![Visitors](https://komarev.com/ghpvc/?username=krishnx21&style=flat-square&color=7c3aed&label=visitors)
-
-</div>
-
-<div align="center">
-
-![ECSoC 2026 Admin](https://img.shields.io/badge/ECSoC%202026-PROJECT%20ADMIN-FF6B35?style=for-the-badge&logo=git&logoColor=white)
-&nbsp;
-![SSOC 2026 Mentor](https://img.shields.io/badge/SSOC%202026-MENTOR-9D7BFF?style=for-the-badge&logo=github&logoColor=white)
-&nbsp;
-![GSSOC 2026 CONTRIBUTOR](https://img.shields.io/badge/GSSOC%202026-CONTRIBUTOR-FF6B35?style=for-the-badge&logo=git&logoColor=white)
-
-</div>
-
-<br/>
-
----
-
-## `[BOOT]` system initialising
-
-```bash
-krishnOS v21.0 — full-stack developer environment
-copyright (c) 2024–2028 · krishna kumar · agra, india
-
-[  OK  ] kernel     full-stack-engine.service ............ loaded
-[  OK  ] service    backend-reliability.module ........... active
-[  OK  ] service    ai-integration.daemon ................ running
-[  OK  ] role       gssoc-2026-project-admin ............. verified  ★
-[  OK  ] role       ssoc-2026-mentor ..................... confirmed
-[ WARN ] skill      devops-docker.module ................. upgrading
-[ INFO ] quest      certivault-v1.0.service .............. 43% done
-
-———————————————————————————————————————————————————————————
-  I'm a third-year CSE student who prefers shipping over
-  studying theory. My interest is in how backends actually
-  hold together — auth flows, cache layers, job queues,
-  the invisible machinery most people never think about.
-
-  This year: Project Admin at GSSoC 2026. I run a project,
-  review PRs, and mentor contributors. Still catches me
-  off guard that I'm doing this as a 2nd year.
-———————————————————————————————————————————————————————————
-
-system ready.
-```
-
----
-
-## `[SPECS]` hardware
-
-```
-┌──────────────────────────────────────────────────────────────────────┐
-│                    SYSTEM  SPECIFICATIONS                            │
-├──────────────────────────────────────────────────────────────────────┤
-│  MODEL      Krishna Kumar  (unit: KK-21)                            │
-│  CLASS      Full-Stack Engineer  +  AI Builder                      │
-│  BUILD      B.Tech CSE  ·  HCST, Agra  ·  2024–2028                │
-│  REGION     Agra, India  🌏                                          │
-├──────────────────────────────────────────────────────────────────────┤
-│                    PERFORMANCE  METRICS                              │
-├──────────────────────────────────────────────────────────────────────┤
-│                                                                      │
-│  STR  Backend & APIs      ██████████████████░░░░  83   A            │
-│  INT  Problem Solving     ████████████████████░░  89   A            │
-│  DEX  Frontend / UI       ███████████████░░░░░░░  69   C            │
-│  CON  System Design       ████████████████░░░░░░  74   B            │
-│  WIS  AI Integration      █████████████████░░░░░  77   B            │
-│  SPD  DevOps / Docker     ██████████████░░░░░░░░  65   C  ↑         │
-│                                                                      │
-│  XP  ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱  8,400/15,000→GOLD │
-│                                                                      │
-├──────────────────────────────────────────────────────────────────────┤
-│                    ACTIVE  LOADOUT                                   │
-├──────────────────────────────────────────────────────────────────────┤
-│                                                                      │
-│  ⚔   PRIMARY     Node.js + Express + MongoDB    Backend Blade  Lv.3 │
-│  🛡   SHIELD      Docker · Redis · AWS S3        Infra Guard   Lv.2 │
-│  📖   TOME        Claude API · Python            AI Grimoire   Lv.2 │
-│  🎯   QUEST       CertiVault v1.0  ──────────────  [ ACTIVE ]       │
-│                                                                      │
-└──────────────────────────────────────────────────────────────────────┘
-```
-
----
-
-## `[PROCESSES]` active & completed
-
-<br/>
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-**`[PID 001]`  🏗 CertiVault** `— running`
-
-Document management ++ verification platform. Not "upload a file" — this has Redis TTL expiring share links, BullMQ async queues, hash-based integrity verification, full-text search, and CI/CD. I'm building it the way I'd want a real product built.
-
-```
-status   ▓▓▓▓▓▓░░░░  67%  in progress
-stack    MERN · S3 · Redis · BullMQ · Docker
-```
-
-</td>
-<td width="50%" valign="top">
-
-**`[PID 002]`  ☁️ Cloud File Sharing** `— exited(0)`
-
-Backend-first file platform with JWT-protected links and Cloudinary storage. Built to genuinely understand access control — there's a lot between "add a password" and actually secure.
-
-```
-status   ██████████  complete
-stack    Node.js · Express · JWT · Cloudinary
-```
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-**`[PID 003]`  🤖 AI Resume Analyzer** `— exited(0)`
-
-Resume vs JD scorer via Claude API. The interesting problem wasn't the AI call — it was building the prompt layer that returns consistent structured JSON you can render in a real UI. 
-
-```
-status   ██████████  complete
-stack    React · Express · MySQL · Claude API
-```
-
-</td>
-<td width="50%" valign="top">
-
-**`[PID 004]`  🌤 Weather Dashboard** `— exited(0)`
-
-Live forecasts, location search, humidity breakdowns. My first project where I cared about UX as much as whether it ran.
-
-```
-status   ██████████  complete
-stack    JavaScript · CSS · Weather API
-```
-
-</td>
-</tr>
-</table>
-
-<div align="center">
-  <a href="https://github.com/krishnx21?tab=repositories">
-    <img src="https://img.shields.io/badge/ls%20-la%20~/repos%20→-7C3AED?style=for-the-badge&logo=github&logoColor=white"/>
-  </a>
-</div>
-
----
-
-## `[PACKAGES]` installed drivers
-
-<div align="center">
-
-[![Tech](https://skillicons.dev/icons?i=js,ts,react,html,css,tailwind,nodejs,express,mongodb,mysql,redis,docker,python,java,c,git,aws,github,postman,vscode&theme=dark&perline=10)](https://skillicons.dev)
-
-<br/>
-
-![Claude API](https://img.shields.io/badge/Claude%20API-0D1117?style=flat-square&logo=anthropic&logoColor=D97757)
-![BullMQ](https://img.shields.io/badge/BullMQ-0D1117?style=flat-square&logoColor=FF4438)
-![JWT](https://img.shields.io/badge/JWT-0D1117?style=flat-square&logo=jsonwebtokens&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-0D1117?style=flat-square&logo=githubactions&logoColor=2088FF)
-![AWS S3](https://img.shields.io/badge/AWS%20S3-0D1117?style=flat-square&logo=amazons3&logoColor=FF9900)
-![Cloudinary](https://img.shields.io/badge/Cloudinary-0D1117?style=flat-square&logo=cloudinary&logoColor=3448C5)
-
-</div>
-
----
-
-## `[BENCHMARKS]` performance data HERE IT IS
-
-
-
-<div align="center">
-  <img src="https://streak-stats.demolab.com/?user=krishnx21&hide_border=false&background=0K1353&stroke=5B21B6&ring=9D7BFF&fire=FF6B35&text_color=C6D1D9&currStreakLabel=9D7BFF&sideLabels=9D7BFF&dates=C9D1D9" width="56%"/>
-</div>
-
-<br/>
-
----
-
-
-
-## `[ROLES]` elevated permissions
-
-<div align="center">
-
-```
-┌──────────────────────────────────────────────────────────────────┐
-│                   OPEN SOURCE  ACCESS LOG                        │
-├──────────────┬───────────────┬──────────────────────────────────┤
-│  PROGRAM     │  YEAR / ROLE  │  SCOPE                           │
-├──────────────┼───────────────┼──────────────────────────────────┤
-│  ECSoC       │  2026         │  PROJECT ADMIN  ─  I own a       │
-│              │               │  project. Review PRs, define     │
-│              │               │  scope, guide contributors.      │
-├──────────────┼───────────────┼──────────────────────────────────┤
-│  SSOC        │  2026         │  MENTOR  ─  I help developers    │
-│              │               │  ship their first open source    │
-│              │               │  contributions.                  │
-└──────────────┴───────────────┴──────────────────────────────────┘
-```
-
-</div>
-
----
-
-## `[NETWORK]` commit activity
-
-<div align="center">
-  <img src="https://ghchart.rshah.org/9D7BFF/krishnx21" width="100%" alt="contribution heatmap"/>
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=krishnx21&bg_color=0D1117&color=9D7BFF&line=5B21B6&point=FF6B35&area=true&hide_border=true&radius=8" width="96%"/>
-</div>
-
----
-
-## `[HISTORY]` process trail
-
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/krishnx21/krishnx21/output/snake-dark.svg"/>
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/krishnx21/krishnx21/output/snake.svg"/>
-    <img src="https://raw.githubusercontent.com/krishnx21/krishnx21/output/snake.svg" width="100%" alt="snake"/>
-  </picture>
-</div>
-
----
-
-## `[LOGS]` system philosophy
-
-```diff
-# /etc/krishna/core.conf
-
-+ ship something imperfect rather than perfect nothing
-+ understand why before understanding how
-+ if it fails silently, it isn't done
-+ the next developer is you at 3am — be kind to them
-+ boring infrastructure is a feature, not a failure
-
-- don't add complexity to feel productive
-- don't optimize what you haven't measured
-- don't call it done until edge cases have names
-```
-
----
-
-## `[STDOUT]` random output
-
-<div align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" width="76%"/>
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="https://readme-jokes.vercel.app/api?theme=tokyonight&hideBorder" width="56%"/>
-</div>
-
----
-
-```bash
-krishnOS v21.0 — shutdown sequence initiated
-
-[  OK  ] saved session state
-[  OK  ] flushed commit buffer
-[  OK  ] all quests checkpointed
-
-if you read this far — we should probably build something.
-
-$ contact --email   krishnakumarsharma8077@gmail.com
-$ contact --linkedin  /in/krishna-kumar-89544b295
-$ contact --github    @krishnx21
-
-— shutting down.  see you in the commits.
-```
-
-<div align="center">
-
-[![Email](https://img.shields.io/badge/send%20message-FF6B35?style=for-the-badge&logo=gmail&logoColor=white)](mailto:krishnakumarsharma8077@gmail.com)
-&nbsp;
-[![LinkedIn](https://img.shields.io/badge/connect-7C3AED?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/krishna-kumar-89544b295)
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=400&size=15&pause=1200&color=6E6E80&center=true&vCenter=true&width=460&lines=I+read+the+stack+trace+before+I+read+the+docs." alt="typing" />
 
 <br/><br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,35:2D1B69,65:5B21B6,85:9D7BFF,100:FF6B35&height=120&section=footer" width="100%"/>
+[LinkedIn](https://www.linkedin.com/in/krishna-kumar-89544b295) · [Email](mailto:krishnakumarsharma8077@gmail.com) · [GitHub](https://github.com/krishnx21)
+
+<br/>
+
+</div>
+
+---
+
+<br/>
+
+### Who I am
+
+Third-year Computer Science student in India. I work across the stack when I have to, but I'd rather be in the backend — the auth layer, the queue, the cache, the part of the system that either holds up under load or doesn't.
+
+<br/>
+
+### What I build
+
+**CertiVault** — a document management and verification platform. It handles authentication, hash-based integrity checks on uploaded files, expiring share links, and background processing for the heavier work, so the API doesn't sit around waiting on it.
+
+The interesting part wasn't any single feature. It was deciding what happens outside the happy path: what if the job queue backs up, what if a share link outlives its intended use, what if two requests hit the same document at once.
+
+<br/>
+
+### Why I build it
+
+I like understanding why something works, not just getting it to run. A frontend bug is visible immediately. A backend bug can sit quietly for weeks before it costs someone data or trust — that gap is what I find worth studying.
+
+<br/>
+
+### What's different about how I work
+
+I run an open-source project rather than just contribute to one. As Project Admin for ECSoC 2026, I set scope and review every pull request that comes in. As a mentor for SSOC 2026, I spend time getting first-time contributors to a merged PR — which mostly means explaining *why* a change should look a certain way, not just approving or rejecting it.
+
+That's the same instinct that shows up in my projects: I'd rather explain a decision than just list a technology.
+
+<br/>
+
+### Why work with me
+
+I'm looking for a backend or infrastructure internship, with Microsoft as the long-term target. I don't have production incidents behind me yet — what I have is a habit of asking what happens when things go wrong, before they do, and a track record of finishing what I start.
+
+<br/>
+
+---
+
+<br/>
+
+## Projects
+
+<table>
+<tr>
+<td width="70%"><b>CertiVault</b><br/><sub>Document verification platform — currently building</sub></td>
+<td width="30%" align="right"><a href="https://github.com/krishnx21">GitHub →</a></td>
+</tr>
+<tr><td colspan="2">Hardest part: making sure verification and notification work happens off the request path without losing jobs if a worker dies mid-run.<br/><sub><code>Node.js · Express · MongoDB · Redis · BullMQ · Docker</code></sub></td></tr>
+</table>
+
+<table>
+<tr>
+<td width="70%"><b>Cloud File Sharing</b><br/><sub>JWT-protected file sharing</sub></td>
+<td width="30%" align="right"><a href="https://github.com/krishnx21">GitHub →</a></td>
+</tr>
+<tr><td colspan="2">Hardest part: scoping access properly — the difference between a shared link and a secure one.<br/><sub><code>Node.js · Express · JWT · Cloudinary</code></sub></td></tr>
+</table>
+
+<table>
+<tr>
+<td width="70%"><b>AI Resume Analyzer</b><br/><sub>Scores a resume against a job description</sub></td>
+<td width="30%" align="right"><a href="https://github.com/krishnx21">GitHub →</a></td>
+</tr>
+<tr><td colspan="2">Hardest part: getting the Claude API to return consistent, structured JSON the UI could render without breaking.<br/><sub><code>React · Express · MySQL · Claude API</code></sub></td></tr>
+</table>
+
+<table>
+<tr>
+<td width="70%"><b>Weather Dashboard</b><br/><sub>Live forecasts with location search</sub></td>
+<td width="30%" align="right"><a href="https://github.com/krishnx21">GitHub →</a></td>
+</tr>
+<tr><td colspan="2">Hardest part: none, technically — first project where I cared about interface quality as much as function.<br/><sub><code>JavaScript · CSS · Weather API</code></sub></td></tr>
+</table>
+
+<br/>
+
+**Next up:** SecretSentinel, a self-hosted secret scanner built solo on a different stack (Postgres, Kubernetes, Terraform) so I'm not just repeating what already worked. Then PipelineGuard and OpsPilot.
+
+<br/>
+
+---
+
+<br/>
+## 🛠️ Tech Stack
+
+<table>
+<tr>
+<td width="22%"><b>Languages</b></td>
+<td>
+<img src="https://skillicons.dev/icons?i=js,ts,python,java,c&theme=dark"/>
+</td>
+</tr>
+
+<tr>
+<td><b>Frontend</b></td>
+<td>
+<img src="https://skillicons.dev/icons?i=react,html,css,tailwind,bootstrap&theme=dark"/>
+<img src="https://img.shields.io/badge/MUI-007FFF?style=flat-square&logo=mui&logoColor=white"/>
+</td>
+</tr>
+
+<tr>
+<td><b>Backend</b></td>
+<td>
+<img src="https://skillicons.dev/icons?i=nodejs&theme=dark"/>
+<img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white"/>
+<img src="https://img.shields.io/badge/REST_API-009688?style=flat-square"/>
+<img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white"/>
+<img src="https://img.shields.io/badge/OAuth_2.0-4285F4?style=flat-square"/>
+</td>
+</tr>
+
+<tr>
+<td><b>Databases</b></td>
+<td>
+<img src="https://skillicons.dev/icons?i=mongodb,mysql&theme=dark"/>
+<img src="https://img.shields.io/badge/Mongoose-880000?style=flat-square"/>
+</td>
+</tr>
+
+<tr>
+<td><b>Caching & Queues</b></td>
+<td>
+<img src="https://skillicons.dev/icons?i=redis&theme=dark"/>
+<img src="https://img.shields.io/badge/BullMQ-EAB308?style=flat-square"/>
+</td>
+</tr>
+
+<tr>
+<td><b>Cloud & Storage</b></td>
+<td>
+<img src="https://skillicons.dev/icons?i=aws&theme=dark"/>
+<img src="https://img.shields.io/badge/Cloudinary-3448C5?style=flat-square&logo=cloudinary&logoColor=white"/>
+<img src="https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=000000"/>
+<img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white"/>
+</td>
+</tr>
+
+<tr>
+<td><b>Infrastructure</b></td>
+<td>
+<img src="https://skillicons.dev/icons?i=docker,githubactions&theme=dark"/>
+</td>
+</tr>
+
+<tr>
+<td><b>Testing</b></td>
+<td>
+<img src="https://skillicons.dev/icons?i=jest&theme=dark"/>
+</td>
+</tr>
+
+<tr>
+<td><b>Developer Tools</b></td>
+<td>
+<img src="https://skillicons.dev/icons?i=git,github,vscode,postman,npm,eslint,prettier&theme=dark"/>
+</td>
+</tr>
+
+<tr>
+<td><b>Currently Exploring</b></td>
+<td>
+<img src="https://skillicons.dev/icons?i=kubernetes,terraform,prometheus,grafana&theme=dark"/>
+</td>
+</tr>
+
+</table>
+
+**Not covered by icons:** REST APIs, Multer, Mongoose · JWT, Google OAuth · BullMQ, Upstash · Claude API · Resend · Supertest, Nodemon
+| **Currently learning** | Kubernetes, Terraform, Prometheus, Grafana, distributed systems, system design |
+
+<br/>
+
+---
+
+<br/>
+
+## Open source
+
+| | |
+|---|---|
+| **ECSoC 2026** | Project Admin — own the project, review pull requests, set scope |
+| **SSOC 2026** | Mentor — help first-time contributors get a PR merged |
+| **GSSoC 2026** | Contributor — active across issues and PRs |
+
+<br/>
+
+---
+
+<br/>
+
+<div align="center">
+
+<sub>Open to backend and infrastructure internships.</sub>
+
+[Email me](mailto:krishnakumarsharma8077@gmail.com) · [LinkedIn](https://www.linkedin.com/in/krishna-kumar-89544b295) · [GitHub](https://github.com/krishnx21)
 
 </div>
