@@ -4,7 +4,7 @@
 
 # Krishna Kumar
 
-<sub>Backend Engineer, in progress</sub>
+<sub>OPEN TO INTERNSHIP</sub>
 
 <br/>
 
