@@ -1,8 +1,8 @@
 <div align="center">
 
-<br/>
 
-# Krishna Kumar
+
+# Krishna Kumar sharma
 
 <sub>OPEN TO INTERNSHIP</sub>
 
