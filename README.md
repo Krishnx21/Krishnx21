@@ -1,7 +1,7 @@
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,100:1E293B&height=220&section=header&text=Krishna%20Kumar%20Sharma&fontSize=44&fontColor=E2E8F0&fontAlignY=35&desc=Backend%20Engineer%20%C2%B7%20Infrastructure%20%C2%B7%20Open%20Source&descAlignY=52&descSize=16&descColor=94A3B8" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,100:1E293B&height=220&section=header&text=Krishna%20Kumar&fontSize=44&fontColor=E2E8F0&fontAlignY=35&desc=Backend%20Engineer%20%C2%B7%20Infrastructure%20%C2%B7%20Open%20Source&descAlignY=52&descSize=16&descColor=94A3B8" width="100%"/>
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=16&pause=1400&color=94A3B8&center=true&vCenter=true&width=560&lines=systems+that+fail+gracefully%2C+not+silently.;queues+over+blocking+calls.;reads+the+stack+trace+before+the+docs." alt="typing" />
 
@@ -24,11 +24,11 @@ krishna@backend:~$ whoami
 ```
 
 ```
-> Third-year CS student. Backend-leaning, infra-curious.
+> Third-year CS student. Backend-leaning, infra-curious.Ai Engineer
 > Currently building: CertiVault (document verification platform)
 > Currently learning: Kubernetes, Terraform, distributed systems
 > Looking for: Backend / Platform / Infrastructure internship
-> Long-term target: Software Engineer, Microsoft
+> Long-term target: Software Engineer
 ```
 
 <br/>
