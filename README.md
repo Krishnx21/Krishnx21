@@ -1,8 +1,9 @@
+
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,100:1E293B&height=200&section=header&text=Krishna%20Kumar%20Sharma&fontSize=42&fontColor=E2E8F0&fontAlignY=38&desc=Backend%20%26%20Infrastructure%20%7C%20Open%20to%20Internship&descAlignY=58&descSize=16&descColor=94A3B8" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,100:1E293B&height=220&section=header&text=Krishna%20Kumar%20Sharma&fontSize=44&fontColor=E2E8F0&fontAlignY=35&desc=Backend%20Engineer%20%C2%B7%20Infrastructure%20%C2%B7%20Open%20Source&descAlignY=52&descSize=16&descColor=94A3B8" width="100%"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=16&pause=1200&color=94A3B8&center=true&vCenter=true&width=520&lines=I+read+the+stack+trace+before+I+read+the+docs.;Backend+%7C+Infra+%7C+AI+Engineering" alt="typing" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=16&pause=1400&color=94A3B8&center=true&vCenter=true&width=560&lines=systems+that+fail+gracefully%2C+not+silently.;queues+over+blocking+calls.;reads+the+stack+trace+before+the+docs." alt="typing" />
 
 <br/><br/>
 
@@ -10,47 +11,25 @@
 <a href="mailto:krishnakumarsharma8077@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
 <a href="https://github.com/krishnx21"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
 
+<br/><br/>
+
+<img src="https://komarev.com/ghpvc/?username=krishnx21&label=Profile%20Views&color=1E293B&style=flat-square" alt="profile views" />
+
 </div>
 
 <br/>
 
-## 👋 Who I am
+```bash
+krishna@backend:~$ whoami
+```
 
-Third-year Computer Science student in India. I work across the stack when I have to, but I'd rather be in the backend — the auth layer, the queue, the cache, the part of the system that either holds up under load or doesn't.
-
-<br/>
-
-## 🔧 What I build
-
-**CertiVault** — a document management and verification platform. It handles authentication, hash-based integrity checks on uploaded files, expiring share links, and background processing for the heavier work, so the API doesn't sit around waiting on it.
-
-> The interesting part wasn't any single feature. It was deciding what happens outside the happy path: what if the job queue backs up, what if a share link outlives its intended use, what if two requests hit the same document at once.
-
-<br/>
-
-## 🧠 Why I build it
-
-I like understanding why something works, not just getting it to run. A frontend bug is visible immediately. A backend bug can sit quietly for weeks before it costs someone data or trust — that gap is what I find worth studying.
-
-<br/>
-
-## 🧭 What's different about how I work
-
-I run an open-source project rather than just contribute to one.
-
-| Role | Program | What it means |
-|---|---|---|
-| **Project Admin** | ECSoC 2026 | Own the project — set scope, review every PR |
-| **Mentor** | SSOC 2026 | Get first-time contributors to a merged PR |
-| **Contributor** | GSSoC 2026 | Active across issues and PRs |
-
-That's the same instinct that shows up in my projects: I'd rather explain a decision than just list a technology.
-
-<br/>
-
-## 🎯 Why work with me
-
-I'm looking for a backend or infrastructure internship, with Microsoft as the long-term target. I don't have production incidents behind me yet — what I have is a habit of asking what happens when things go wrong, before they do, and a track record of finishing what I start.
+```
+> Third-year CS student. Backend-leaning, infra-curious.
+> Currently building: CertiVault (document verification platform)
+> Currently learning: Kubernetes, Terraform, distributed systems
+> Looking for: Backend / Platform / Infrastructure internship
+> Long-term target: Software Engineer, Microsoft
+```
 
 <br/>
 
@@ -58,67 +37,108 @@ I'm looking for a backend or infrastructure internship, with Microsoft as the lo
 
 <br/>
 
-## 🚀 Projects
+## About Me
 
-<table width="100%">
-<tr>
-<td width="75%">
+I'm a third-year Computer Science student who spends more time in the backend than the frontend — the auth layer, the queue, the cache, the part of a system that either holds up under load or quietly doesn't.
 
-### [CertiVault](https://github.com/krishnx21)
-Document verification platform — *currently building*
+Frontend bugs are visible immediately: something looks wrong, someone notices. Backend bugs are patient. A race condition, a queue that silently drops a job, a token that never expires — these can sit for weeks before they cost someone data or trust. That asymmetry is what pulled me toward backend and infrastructure work in the first place, and it's the lens I build every project through: what happens when this fails, and does the system know it failed?
 
-Hardest part: making sure verification and notification work happens off the request path without losing jobs if a worker dies mid-run.
+I care about systems that are:
 
-`Node.js` `Express` `MongoDB` `Redis` `BullMQ` `Docker`
+- **Reliable** — they keep working when a dependency doesn't
+- **Secure** — access is scoped, not just authenticated
+- **Observable** — failure is visible before a user reports it
+- **Maintainable** — the next person (often me, in six months) can reason about it
+- **Scalable** — the design doesn't assume load stays where it is today
 
-</td>
-</tr>
-</table>
+<br/>
 
-<table width="100%">
-<tr>
-<td width="75%">
+---
 
-### [Cloud File Sharing](https://github.com/krishnx21)
-JWT-protected file sharing
+<br/>
 
-Hardest part: scoping access properly — the difference between a shared link and a secure one.
+## Engineering Philosophy
+
+**Reliability is a design decision, not a bugfix.** A system that works in the demo and falls over under concurrent writes isn't reliable, it's untested. I try to design for the failure case first — what happens if the worker dies mid-job, what happens if the same request arrives twice — and treat the happy path as the easy part.
+
+**Queues over blocking calls, whenever the work can wait.** If a request doesn't need to be answered synchronously, making the caller wait for it is a cost with no benefit. Offloading it to a queue means the API stays responsive under load and a slow downstream dependency doesn't become the whole system's problem.
+
+**Caching is a trade-off, not a default.** Every cache is a promise to keep two copies of the truth in sync. I reach for it when the read cost is real and the staleness window is acceptable — not as a reflex for "making things faster."
+
+**Software should fail loud, not silent.** A try/catch that swallows an error is a bug wearing a disguise. If something fails, I want a log line, a retry policy, or a dead-letter queue — not a silent no-op that looks like success from the outside.
+
+**Observability is what turns "it's slow" into an actionable ticket.** Without logs, metrics, or traces, debugging production is guesswork with extra steps. I'd rather spend time instrumenting a system than debugging it blind.
+
+<br/>
+
+---
+
+<br/>
+
+## Flagship Project — CertiVault
+
+A secure document management and verification platform: authentication, role-based access, hash-based integrity checks on every uploaded file, expiring share links, and background processing for anything that doesn't need to block the request.
+
+**Problem.** Document-sharing tools tend to get one of two things wrong: they either trust the client too much (anyone with a link has permanent access) or they do too much synchronous work on upload (hashing, notification, thumbnailing) and the API becomes only as fast as its slowest side-effect.
+
+**Solution.** Separate the request path from the work path. The API's job is to accept the upload, persist it, and enqueue everything else. A pool of background workers does the actual verification and notification work, so a slow hash computation or a flaky email provider never makes a user wait on their upload request.
+
+**Engineering challenges:**
+- *Why BullMQ* — I needed a job queue with retries, backoff, and visibility into failed jobs, backed by something I already had in the stack (Redis), rather than standing up a separate broker for a project this size.
+- *Why Redis* — it's doing two jobs here: backing the BullMQ queue, and caching share-link validation so a hot link doesn't hit MongoDB on every access.
+- *Why background workers* — verification (hashing, integrity checks) and notification (email) are both variable-latency and both tolerant of a few seconds of delay. Neither belongs on the request path.
+- *Why hashing* — every uploaded file gets a SHA-256 checksum computed and stored at upload time. Verification later means recomputing the hash and comparing, not trusting a stored "verified" flag that could be stale or tampered with.
+- *Maintaining reliability* — jobs are idempotent where possible, failed jobs go to a dead-letter queue instead of disappearing, and share links carry their own expiry rather than relying on a cleanup cron to catch them in time.
+
+**Lessons learned.** The hardest part wasn't any single feature — it was the coordination problems that only show up outside the happy path: two requests hitting the same document at once, a share link that outlives its intended use, a worker that dies mid-job and needs its work picked back up rather than lost.
+
+`Node.js` `Express` `MongoDB` `Redis` `BullMQ` `Docker` `JWT` `Google OAuth` `Cloudinary`
+
+<br/>
+
+---
+
+<br/>
+
+## Other Projects
+
+### Cloud File Sharing
+
+**Problem.** Sharing a file via a link is easy; sharing it *safely* is the hard part — a link that works for anyone forever isn't sharing, it's a leak with a delay.
+
+**Solution.** JWT-scoped share links with defined access windows, backed by Cloudinary for storage so the app isn't managing raw file I/O itself.
+
+**Engineering challenge.** Getting the scope right: a token needs to prove *what* it grants access to and *until when*, without requiring a database round-trip on every single access check.
+
+**Lessons learned.** Authorization is a much easier problem to get wrong quietly than authentication is — a missing expiry check doesn't throw an error, it just works forever.
 
 `Node.js` `Express` `JWT` `Cloudinary`
 
-</td>
-</tr>
-</table>
+<br/>
 
-<table width="100%">
-<tr>
-<td width="75%">
+### AI Resume Analyzer
 
-### [AI Resume Analyzer](https://github.com/krishnx21)
-Scores a resume against a job description
+**Problem.** Resume feedback tools are either too generic (keyword matching) or require a human reviewer that doesn't scale.
 
-Hardest part: getting the Claude API to return consistent, structured JSON the UI could render without breaking.
+**Solution.** Score a resume against a specific job description using the Claude API, returning structured feedback the UI can render as sections, not a wall of text.
+
+**Engineering challenge.** LLM output isn't naturally structured — getting consistent, parseable JSON back on every call (not just most calls) meant being explicit about output format and handling the cases where it wasn't.
+
+**Lessons learned.** Prompting an LLM for a UI-facing feature is an API contract problem as much as a prompting problem — the schema has to hold even when the input resume is messy.
 
 `React` `Express` `MySQL` `Claude API`
 
-</td>
-</tr>
-</table>
+<br/>
 
-<table width="100%">
-<tr>
-<td width="75%">
+### Weather Dashboard
 
-### [Weather Dashboard](https://github.com/krishnx21)
-Live forecasts with location search
+**Problem / Solution.** Live forecasts with location search — the most straightforward project on the list.
 
-Hardest part: none, technically — first project where I cared about interface quality as much as function.
+**Engineering challenge.** Honestly, none technically. This was the first project where I cared about interface quality as much as function, which was its own useful exercise.
+
+**Lessons learned.** Not every project needs a hard backend problem to be worth building — this one taught me frontend polish instead.
 
 `JavaScript` `CSS` `Weather API`
-
-</td>
-</tr>
-</table>
 
 <br/>
 
@@ -126,125 +146,96 @@ Hardest part: none, technically — first project where I cared about interface 
 
 <br/>
 
-## 📊 GitHub Stats
+## Open Source Leadership
+
+| Program | Role | What I actually do |
+|---|---|---|
+| **ECSoC 2026** | Project Admin | Own the project end to end — set scope, define the roadmap, and review every pull request that comes in before it merges |
+| **SSOC 2026** | Mentor | Get first-time contributors to a merged PR — mostly explaining *why* a change should look a certain way, not just approving or rejecting it |
+| **GSSoC 2026** | Contributor | Active across issues and PRs on other maintainers' projects |
+
+Running a project rather than just contributing to one changes what you're responsible for. Reviewing a PR isn't just "does this work" — it's judging whether a contributor's approach fits the project's direction, and being able to explain that clearly enough that a first-time contributor learns something instead of just getting a rejection.
+
+<br/>
+
+---
+
+<br/>
+
+## Tech Stack
+
+**Languages**
+
+`JavaScript` · `TypeScript` · `Python` · `Java` · `C`
+
+**Backend**
+
+`Node.js` · `Express` · `REST APIs` · `JWT` · `OAuth 2.0` · `Redis` · `BullMQ`
+
+**Data**
+
+`MongoDB` · `Mongoose` · `MySQL`
+
+**Infrastructure & Delivery**
+
+`Docker` · `GitHub Actions` · `AWS` · `Render` · `Vercel` · `Cloudinary`
+
+**Testing**
+
+`Jest` · `Supertest`
+
+**Tooling**
+
+`Git` · `GitHub` · `VS Code` · `Postman` · `ESLint` · `Prettier` · `npm`
+
+<br/>
+
+---
+
+<br/>
+
+
+<sub>Self-assessed, updated as I go — not a certification tracker.</sub>
+
+<br/>
+
+---
+
+<br/>
+
+## GitHub Metrics
 
 <div align="center">
 
 <img height="165" src="https://github-readme-stats.vercel.app/api?username=krishnx21&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
-<img height="165" src="https://github-readme-streak-stats.herokuapp.com/?user=krishnx21&theme=tokyonight&hide_border=true" />
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=krishnx21&layout=compact&theme=tokyonight&hide_border=true" />
 
 <br/>
 
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=krishnx21&layout=compact&theme=tokyonight&hide_border=true" />
+<img height="180" src="https://github-readme-streak-stats-eight.vercel.app/?user=krishnx21&theme=tokyonight&hide_border=true" />
+
+<br/>
+
 
 </div>
 
-<br/>
 
----
 
-<br/>
 
-## 🛠️ Tech Stack
-
-<table>
-<tr>
-<td width="22%"><b>Languages</b></td>
-<td>
-<img src="https://skillicons.dev/icons?i=js,ts,python,java,c&theme=dark"/>
-</td>
-</tr>
-
-<tr>
-<td><b>Frontend</b></td>
-<td>
-<img src="https://skillicons.dev/icons?i=react,html,css,tailwind,bootstrap&theme=dark"/>
-<img src="https://img.shields.io/badge/MUI-007FFF?style=flat-square&logo=mui&logoColor=white"/>
-</td>
-</tr>
-
-<tr>
-<td><b>Backend</b></td>
-<td>
-<img src="https://skillicons.dev/icons?i=nodejs&theme=dark"/>
-<img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white"/>
-<img src="https://img.shields.io/badge/REST_API-009688?style=flat-square"/>
-<img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white"/>
-<img src="https://img.shields.io/badge/OAuth_2.0-4285F4?style=flat-square"/>
-</td>
-</tr>
-
-<tr>
-<td><b>Databases</b></td>
-<td>
-<img src="https://skillicons.dev/icons?i=mongodb,mysql&theme=dark"/>
-<img src="https://img.shields.io/badge/Mongoose-880000?style=flat-square"/>
-</td>
-</tr>
-
-<tr>
-<td><b>Caching & Queues</b></td>
-<td>
-<img src="https://skillicons.dev/icons?i=redis&theme=dark"/>
-<img src="https://img.shields.io/badge/BullMQ-EAB308?style=flat-square"/>
-</td>
-</tr>
-
-<tr>
-<td><b>Cloud & Storage</b></td>
-<td>
-<img src="https://skillicons.dev/icons?i=aws&theme=dark"/>
-<img src="https://img.shields.io/badge/Cloudinary-3448C5?style=flat-square&logo=cloudinary&logoColor=white"/>
-<img src="https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=000000"/>
-<img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white"/>
-</td>
-</tr>
-
-<tr>
-<td><b>Infrastructure</b></td>
-<td>
-<img src="https://skillicons.dev/icons?i=docker,githubactions&theme=dark"/>
-</td>
-</tr>
-
-<tr>
-<td><b>Testing</b></td>
-<td>
-<img src="https://skillicons.dev/icons?i=jest&theme=dark"/>
-</td>
-</tr>
-
-<tr>
-<td><b>Developer Tools</b></td>
-<td>
-<img src="https://skillicons.dev/icons?i=git,github,vscode,postman,npm,eslint,prettier&theme=dark"/>
-</td>
-</tr>
-
-<tr>
-<td><b>Currently Exploring</b></td>
-<td>
-<img src="https://skillicons.dev/icons?i=kubernetes,terraform,prometheus,grafana&theme=dark"/>
-</td>
-</tr>
-
-</table>
-
-**Not covered by icons:** REST APIs, Multer, Mongoose · JWT, Google OAuth · BullMQ, Upstash · Claude API · Resend · Supertest, Nodemon
-
-**Currently learning:** Kubernetes · Terraform · Prometheus · Grafana · distributed systems · system design
 
 <br/>
 
 ---
 
 <br/>
+
+## Contact
 
 <div align="center">
 
-<sub>Open to backend and infrastructure internships.</sub>
+Open to backend and infrastructure internships.
 
-<br/><br/>
+<br/>
 
 <a href="mailto:krishnakumarsharma8077@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
 <a href="https://www.linkedin.com/in/krishna-kumar-89544b295"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
@@ -255,3 +246,5 @@ Hardest part: none, technically — first project where I cared about interface 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,100:1E293B&height=100&section=footer" width="100%"/>
 
 </div>
+EOF
+echo done
