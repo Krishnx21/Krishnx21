@@ -162,7 +162,7 @@ I care about systems that are:
 
 Next up in the roadmap after CertiVault ships: a self-hosted **secret scanning and rotation intelligence** platform — deliberately built on a different stack, with the scan engine (regex + entropy detection) as the core engineering problem.
 
-
+<br>
 
 </td>
 </tr>
