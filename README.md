@@ -11,7 +11,7 @@
 <a href="https://github.com/krishnx21"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
 
 <br/><br/>
-
+<br>
 <img src="https://komarev.com/ghpvc/?username=krishnx21&label=Profile%20Views&color=1E293B&style=flat-square" alt="profile views" />
 
 </div>
