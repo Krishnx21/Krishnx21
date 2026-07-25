@@ -19,7 +19,7 @@
 <br/>
 
 ```bash
-krishna@backend:~$ whoami
+krishnaSHARMA@backend:~$ whoami
 ```
 
 ```text
@@ -277,7 +277,7 @@ Running a project rather than just contributing to one changes what you're respo
 
 <div align="center">
 
-Open to backend and infrastructure internships.
+Open to backend and infrastructure internships. 
 
 <br/>
 
