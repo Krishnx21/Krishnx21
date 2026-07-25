@@ -24,7 +24,7 @@ krishna@backend:~$ whoami
 
 ```text
 > Third-year CS student. Backend-leaning, infra-curious, AI-assisted where it counts.
-> Currently building : CertiVault — document verification platform
+> Currently building : CertiVault — document  platform
 > Currently learning  : Kubernetes, Terraform, distributed systems
 > Looking for         : Backend / Platform / Infrastructure internship
 > Long-term target    : Software Engineer
@@ -182,7 +182,7 @@ Next up in the roadmap after CertiVault ships: a self-hosted **secret scanning a
 | **SSOC 2026** | Mentor | Get first-time contributors to a merged PR — mostly explaining *why* a change should look a certain way, not just approving or rejecting it |
 | **GSSoC 2026** | Contributor | Active across issues and PRs on other maintainers' projects |
 
-Running a project rather than just contributing to one changes what you're responsible for. Reviewing a PR isn't just "does this work" — it's judging whether a contributor's approach fits the project's direction, and being able to explain that clearly enough that a first-time contributor learns something instead of just getting a rejection.
+Running a project rather than just contributing to one changes what you're responsible for. Reviewing a PR isn't just "does this work" — it's judging whether a contributor's approach fits the project's direction, and being able to explain that clearly enough that a first-time contributor learns something instead of just getting a rejection. 
 
 <br/>
 
