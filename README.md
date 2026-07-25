@@ -119,7 +119,7 @@ I care about systems that are:
 
 **Solution.** JWT-scoped share links with defined access windows, backed by Cloudinary for storage so the app isn't managing raw file I/O itself.
 
-**Challenge.** Getting the scope right: a token needs to prove *what* it grants access to and *until when*, without requiring a database round-trip on every access check.
+**Challenge.** Getting the scope right: A token needs to prove *what* it grants access to and *until when*, without requiring a database round-trip on every access check..
 
 **Lesson.** Authorization is much easier to get wrong quietly than authentication is — a missing expiry check doesn't throw an error, it just works forever.
 
