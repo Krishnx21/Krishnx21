@@ -113,7 +113,7 @@ I care about systems that are:
 <tr>
 <td width="50%" valign="top">
 
-### 📤 Cloud File Sharing
+### 📤 Cloud File Sharing URL
 
 **Problem.** Sharing a file via a link is easy; sharing it *safely* is the hard part — a link that works for anyone forever isn't sharing, it's a leak with a delay.
 
