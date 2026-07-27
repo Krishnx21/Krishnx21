@@ -38,7 +38,7 @@ krishnaSHARMA@backend:~$ whoami
 
 ## About Me
 
-I'm a third-year Computer Science student who spends more time in the backend than the frontend — the auth layer, the queue, the cache, the part of a system that either holds up under load or quietly doesn't.
+I'm a third-year Computer Science student who spends more time in the backend than the frontend — the auth layer, the queue, the cache, the part of a system that either holds up under load or quietly.
 
 Frontend bugs are visible immediately: something looks wrong, someone notices. Backend bugs are patient. A race condition, a queue that silently drops a job, a token that never expires — these can sit for weeks before they cost someone data or trust. That asymmetry is what pulled me toward backend and infrastructure work in the first place, and it's the lens I build every project through: **what happens when this fails, and does the system know it failed?**
 
