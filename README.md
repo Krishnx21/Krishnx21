@@ -1,4 +1,4 @@
-<div align="center">
+
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,100:1E293B&height=220&section=header&text=Krishna%20Kumar&fontSize=44&fontColor=E2E8F0&fontAlignY=35&desc=Backend%20Engineer%20%C2%B7%20Infrastructure%20%C2%B7%20Open%20Source&descAlignY=52&descSize=16&descColor=94A3B8" width="100%"/>
 
