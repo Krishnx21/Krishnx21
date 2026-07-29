@@ -47,7 +47,6 @@ I care about systems that are:
 | | |
 |---|---|
 | 🛡️ **Reliable** | keep working when a dependency doesn't |
-| 🔐 **Secure** | access is scoped, not just authenticated |
 | 👁️ **Observable** | failure is visible before a user reports it |
 | 🧩 **Maintainable** | the next person (often me, in six months) can reason about it |
 | 📈 **Scalable** | the design doesn't assume load stays where it is today |
