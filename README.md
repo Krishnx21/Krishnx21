@@ -19,7 +19,7 @@
 <br/>
 
 ```bash
-krishnaSHARMA@backend:~$ whoami
+krishnaSHARMA@backend:~
 ```
 
 ```text
