@@ -18,17 +18,12 @@
 
 <br/>
 
-```bash
-krishna@backend:~$ whoami
-```
+# Changelog
 
-```text
-> Third-year CS student. Backend-leaning, infra-curious, AI-assisted where it counts.
-> Currently building : CertiVault — document verification platform
-> Currently learning  : Kubernetes, Terraform, distributed systems
-> Looking for         : Backend / Platform / Infrastructure internship
-> Long-term target    : Software Engineer
-```
+All notable changes to **krishna-kumar** are documented in this file — a system doesn't get to skip its own logging practices just because the system is a person.
+
+The format loosely follows [Keep a Changelog](https://keepachangelog.com/).
+Status used below: 🟢 shipped · 🟡 in progress · ⚪ planned
 
 <br/>
 
@@ -36,29 +31,7 @@ krishna@backend:~$ whoami
 
 <br/>
 
-## About Me
-
-I'm a third-year Computer Science student who spends more time in the backend than the frontend — the auth layer, the queue, the cache, the part of a system that either holds up under load or quietly doesn't.
-
-Frontend bugs are visible immediately: something looks wrong, someone notices. Backend bugs are patient. A race condition, a queue that silently drops a job, a token that never expires — these can sit for weeks before they cost someone data or trust. That asymmetry is what pulled me toward backend and infrastructure work in the first place, and it's the lens I build every project through: **what happens when this fails, and does the system know it failed?**
-
-I care about systems that are:
-
-| | |
-|---|---|
-| 🛡️ **Reliable** | keep working when a dependency doesn't |
-| 🔐 **Secure** | access is scoped, not just authenticated |
-| 👁️ **Observable** | failure is visible before a user reports it |
-| 🧩 **Maintainable** | the next person (often me, in six months) can reason about it |
-| 📈 **Scalable** | the design doesn't assume load stays where it is today |
-
-<br/>
-
----
-
-<br/>
-
-## Engineering Philosophy
+## Design Principles
 
 > **Reliability is a design decision, not a bugfix.**
 > A system that works in the demo and falls over under concurrent writes isn't reliable, it's untested. I design for the failure case first — what happens if the worker dies mid-job, what happens if the same request arrives twice — and treat the happy path as the easy part.
@@ -81,57 +54,22 @@ I care about systems that are:
 
 <br/>
 
-## 📡 Status Board
+## [Unreleased]
 
-<div align="center">
+### CertiVault — smart document verification platform 🟡
 
-| Project | Status | Core Challenge |
-|---|:---:|---|
-| **CertiVault** | 🟡 `in progress` | queues, integrity checks, expiring access |
-| **SecretSentinel** | ⚪ `planned` | entropy-based secret detection |
-| **Cloud File Sharing** | 🟢 `built` | scoped, self-expiring JWTs |
-| **AI Resume Analyzer** | 🟢 `built` | reliable structured LLM output |
-| **Weather Dashboard** | 🟢 `built` | interface polish |
+*In plain terms: people can upload and share documents with confidence — every file is verified, every share link expires on its own, and nothing fails without someone finding out.*
 
-![Silent failures reaching prod](https://img.shields.io/badge/silent_failures_reaching_prod-0-brightgreen?style=flat-square)
-![Dead letter queues](https://img.shields.io/badge/dead--letter_queues-configured-2563EB?style=flat-square)
+**Added**
+- Document upload with SHA-256 integrity verification, computed and stored at upload time
+- Role-based access control
+- Expiring, JWT-scoped share links
+- Background job processing via BullMQ + Redis — hashing, notifications, and a dead-letter queue for failed jobs
 
-</div>
+**Changed**
+- Verification and notification moved off the request path entirely. The API's job now is just: persist the file, enqueue the work, respond. A slow hash computation or a flaky email provider no longer makes anyone wait.
 
-<sub>📟 If this were a real status page: no open incidents, one active deployment in progress, one on the roadmap.</sub>
-
-<br/>
-
----
-
-<br/>
-
-## 🚀 Flagship Project — CertiVault
-
-**Smart document management and verification platform** — authentication, role-based access, hash-based integrity checks on every uploaded file, expiring share links, and background processing for anything that doesn't need to block the request.
-
-**Problem.** Document-sharing tools tend to get one of two things wrong: they either trust the client too much (anyone with a link has permanent access) or they do too much synchronous work on upload (hashing, notification, thumbnailing), so the API becomes only as fast as its slowest side-effect.
-
-**Solution.** Separate the request path from the work path. The API's job is to accept the upload, persist it, and enqueue everything else. A pool of background workers does the actual verification and notification work, so a slow hash computation or a flaky email provider never makes a user wait on their upload request.
-
-<table>
-<tr>
-<th width="50%">🗣️ In plain terms</th>
-<th width="50%">🛠️ Under the hood</th>
-</tr>
-<tr>
-<td valign="top">
-
-People can upload and share documents with confidence — every file is verified, every share link expires on its own, and nothing about the system fails silently without someone finding out.
-
-</td>
-<td valign="top">
-
-Upload requests return immediately; a Redis-backed BullMQ queue handles SHA-256 verification and email notification asynchronously. Failed jobs land in a dead-letter queue instead of vanishing, and share-link checks are cached in Redis to avoid a Mongo round-trip on every access.
-
-</td>
-</tr>
-</table>
+**Architecture**
 
 ```mermaid
 flowchart LR
@@ -145,195 +83,107 @@ flowchart LR
     W -->|on failure| X[[Dead-Letter Queue]]
 ```
 
-<sub>The upload request returns immediately — verification and notification happen entirely off the request path.</sub>
+*The upload request returns immediately — verification and notification happen entirely off the request path.*
 
-**Engineering decisions:**
-
-- **Why BullMQ** — a job queue with retries, backoff, and visibility into failed jobs, backed by something already in the stack (Redis), rather than standing up a separate broker for a project this size.
-- **Why Redis** — doing two jobs here: backing the BullMQ queue, and caching share-link validation so a hot link doesn't hit MongoDB on every access.
-- **Why background workers** — verification (hashing, integrity checks) and notification (email) are both variable-latency and both tolerant of a few seconds of delay. Neither belongs on the request path.
-- **Why hashing** — every uploaded file gets a SHA-256 checksum computed and stored at upload time. Verification later means recomputing the hash and comparing, not trusting a stored "verified" flag that could be stale or tampered with.
-- **Maintaining reliability** — jobs are idempotent where possible, failed jobs go to a dead-letter queue instead of disappearing, and share links carry their own expiry rather than relying on a cleanup cron to catch them in time.
-
-**Lessons learned.** The hardest part wasn't any single feature — it was the coordination problems that only show up outside the happy path: two requests hitting the same document at once, a share link that outlives its intended use, a worker that dies mid-job and needs its work picked back up rather than lost.
+**Notes**
+The hardest part wasn't any single feature — it was the coordination problems that only show up outside the happy path: two requests hitting the same document at once, a share link that outlives its intended use, a worker that dies mid-job and needs its work picked back up rather than lost.
 
 `Node.js` `Express` `MongoDB` `Redis` `BullMQ` `Docker` `JWT` `Google OAuth` `Cloudinary`
 
 <br/>
 
+### Planned
+
+- **SecretSentinel** — self-hosted secret scanning + rotation intelligence. Deliberately different stack from CertiVault (PostgreSQL, Kubernetes, Terraform) — the scan engine (regex + Shannon entropy detection) is the core problem. Starts once CertiVault ships.
+- Kubernetes, Terraform, distributed systems — in progress, not yet stable
+
+<br/>
+
 ---
 
 <br/>
 
-## Other Projects
+## [2.0.0] — Cloud File Sharing 🟢
 
-<table>
-<tr>
-<td width="50%" valign="top">
+**Added**
+- JWT-scoped share links with defined access windows
+- Cloudinary-backed storage, so the app isn't managing raw file I/O itself
 
-### 📤 Cloud File Sharing
+**Security**
+- *Issue:* a share link's expiry was meant to be enforced by a downstream check that, in one code path, wasn't wired up — so the link never expired. Nothing crashed. Nothing logged. It just worked, for anyone who had the link, forever.
+- *Root cause:* authorization gaps don't announce themselves the way authentication gaps do. A missing `401` shows up in five seconds of testing. A missing expiry check only shows up if someone thinks to test the *invalid* case, not just the valid one.
+- *Fix:* expiry moved into the token's own claims, checked at verification time — not left to a separate, easy-to-forget cleanup step.
 
-**Problem.** Sharing a file via a link is easy; sharing it *safely* is the hard part — a link that works for anyone forever isn't sharing, it's a leak with a delay.
-
-**Solution.** JWT-scoped share links with defined access windows, backed by Cloudinary for storage so the app isn't managing raw file I/O itself.
-
-**Challenge.** Getting the scope right: a token needs to prove *what* it grants access to and *until when*, without requiring a database round-trip on every access check.
-
-**Lesson.** Authorization is much easier to get wrong quietly than authentication is — a missing expiry check doesn't throw an error, it just works forever.
+**Notes**
+Authorization is much easier to get wrong quietly than authentication is. I now test "does this correctly reject" with the same care as "does this correctly accept."
 
 `Node.js` `Express` `JWT` `Cloudinary`
 
-</td>
-<td width="50%" valign="top">
+<br/>
 
-### 🧠 AI Resume Analyzer
+---
 
-**Problem.** Resume feedback tools are either too generic (keyword matching) or require a human reviewer that doesn't scale.
+<br/>
 
-**Solution.** Score a resume against a specific job description using the Claude API, returning structured feedback the UI can render as sections, not a wall of text.
+## [1.1.0] — AI Resume Analyzer 🟢
 
-**Challenge.** LLM output isn't naturally structured — getting consistent, parseable JSON back on every call (not just most) meant being explicit about output format and handling the cases where it wasn't.
+**Added**
+- Resume scoring against a specific job description via the Claude API
+- Structured, UI-renderable feedback instead of a wall of text
 
-**Lesson.** Prompting an LLM for a UI-facing feature is an API contract problem as much as a prompting problem — the schema has to hold even when the input resume is messy.
+**Fixed**
+- Inconsistent LLM output shape — enforced an explicit output schema so parsing succeeds on every call, not just most, even when the input resume is messy
+
+**Notes**
+Prompting an LLM for a UI-facing feature is an API contract problem as much as a prompting problem.
 
 `React` `Express` `MySQL` `Claude API`
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+<br/>
 
-### 🌤️ Weather Dashboard
+---
 
-**Problem / Solution.** Live forecasts with location search — the most straightforward project on the list.
+<br/>
 
-**Challenge.** Honestly, none technically. This was the first project where I cared about interface quality as much as function, which was its own useful exercise.
+## [1.0.0] — Weather Dashboard 🟢
 
-**Lesson.** Not every project needs a hard backend problem to be worth building — this one taught me frontend polish instead.
+**Added**
+- Live forecasts with location search — initial release
+
+**Notes**
+No hard backend problem here by design — this was the first project where interface quality mattered as much as function, and that was its own useful exercise. Not every project needs to be the hard one.
 
 `JavaScript` `CSS` `Weather API`
 
-</td>
-<td width="50%" valign="top">
-
-### 🔭 Coming Next — SecretSentinel
-
-A self-hosted **secret scanning and rotation intelligence** platform — deliberately built on a different stack from CertiVault, with the scan engine (regex + Shannon entropy detection) as the core engineering problem.
-
-More on this once CertiVault ships.
-
-</td>
-</tr>
-</table>
-
 <br/>
 
 ---
 
 <br/>
 
-## 🔍 Postmortem: The Expiry Check That Wasn't There
+## Dependencies
 
-<table>
-<tr>
-<td>
-
-**System:** Cloud File Sharing · **Severity:** Medium — no error thrown, no alert fired · **Status:** Resolved ✅
-
-**Impact.** A share link's access window was meant to be enforced by a downstream check. In one code path, that check wasn't wired up — so the link simply never expired. Nothing crashed. Nothing logged. It just worked, for anyone who had the link, forever.
-
-**Root cause.** Authorization gaps don't announce themselves the way authentication gaps do. A missing `401` shows up in five seconds of testing. A missing expiry check only shows up if someone thinks to test the *invalid* case, not just the valid one.
-
-**Fix.** Expiry moved into the token's own claims, checked at verification time — not left to a separate, easy-to-forget cleanup step.
-
-**Takeaway.** I now test "does this correctly reject" with the same care as "does this correctly accept." The second one is what demos well. The first one is what matters at 2 AM.
-
-</td>
-</tr>
-</table>
-
-<br/>
-
----
-
-<br/>
-
-## Open Source Leadership
-
-| Program | Role | What I actually do |
-|---|---|---|
-| **ECSoC 2026** | Project Admin | Own the project end to end — set scope, define the roadmap, and review every pull request before it merges |
-| **SSOC 2026** | Mentor | Get first-time contributors to a merged PR — mostly explaining *why* a change should look a certain way, not just approving or rejecting it |
-| **GSSoC 2026** | Contributor | Active across issues and PRs on other maintainers' projects |
-
-Running a project rather than just contributing to one changes what you're responsible for. Reviewing a PR isn't just "does this work" — it's judging whether a contributor's approach fits the project's direction, and being able to explain that clearly enough that a first-time contributor learns something instead of just getting a rejection.
-
-> **What I'm actually checking in a review:**
-> - Does this handle the failure case, or just the happy path?
-> - Will the next contributor understand *why*, not just *what*?
-> - Does this fit the project's direction — or does it just "work"?
-
-<br/>
-
----
-
-<br/>
-
-## Tech Stack
-
-<div align="center">
-
-**Languages**
-<br/>
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white"/>
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
-<img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white"/>
-<img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black"/>
-
-<br/><br/>
-
-**Backend**
-<br/>
-<img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white"/>
-<img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white"/>
-<img src="https://img.shields.io/badge/REST_APIs-005571?style=flat-square&logo=fastapi&logoColor=white"/>
-<img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white"/>
-<img src="https://img.shields.io/badge/OAuth_2.0-000000?style=flat-square&logo=auth0&logoColor=white"/>
-<img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white"/>
-<img src="https://img.shields.io/badge/BullMQ-DC382D?style=flat-square&logo=redis&logoColor=white"/>
-
-<br/><br/>
-
-**Data**
-<br/>
-<img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white"/>
-<img src="https://img.shields.io/badge/Mongoose-880000?style=flat-square&logo=mongoose&logoColor=white"/>
-<img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white"/>
-
-<br/><br/>
-
-**Infrastructure & Delivery**
-<br/>
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
-<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white"/>
-<img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white"/>
-<img src="https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=white"/>
-<img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white"/>
-<img src="https://img.shields.io/badge/Cloudinary-3448C5?style=flat-square&logo=cloudinary&logoColor=white"/>
-
-<br/><br/>
-
-**Testing & Tooling**
-<br/>
-<img src="https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white"/>
-<img src="https://img.shields.io/badge/Supertest-1F1F1F?style=flat-square"/>
-<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white"/>
-<img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white"/>
-<img src="https://img.shields.io/badge/ESLint-4B32C3?style=flat-square&logo=eslint&logoColor=white"/>
-<img src="https://img.shields.io/badge/Prettier-F7B93E?style=flat-square&logo=prettier&logoColor=black"/>
-
-</div>
+```json
+{
+  "name": "krishna-kumar",
+  "status": "open-to-internship-offers",
+  "languages": ["JavaScript", "TypeScript", "Python", "Java", "C"],
+  "dependencies": {
+    "backend": ["Node.js", "Express", "REST APIs", "JWT", "OAuth 2.0", "Redis", "BullMQ"],
+    "data": ["MongoDB", "Mongoose", "MySQL"],
+    "infra": ["Docker", "GitHub Actions", "AWS", "Render", "Vercel", "Cloudinary"]
+  },
+  "devDependencies": {
+    "testing": ["Jest", "Supertest"],
+    "tooling": ["Git", "GitHub", "VS Code", "Postman", "ESLint", "Prettier", "npm"]
+  },
+  "scripts": {
+    "learn:infra": "terraform plan && kubectl apply -f manifests/",
+    "review-pr": "check-failure-path && explain-why",
+    "contact": "see Install section below"
+  }
+}
+```
 
 <sub>Self-assessed, updated as I go — not a certification tracker.</sub>
 
@@ -343,9 +193,35 @@ Running a project rather than just contributing to one changes what you're respo
 
 <br/>
 
-## GitHub Metrics
+## Maintainers
+
+| Project | Role | Responsibilities |
+|---|---|---|
+| **ECSoC 2026** | Project Admin | scope, roadmap, final review on every PR before it merges |
+| **SSOC 2026** | Mentor | get first-time contributors to a merged PR |
+| **GSSoC 2026** | Contributor | active across issues and PRs on other maintainers' projects |
+
+Running a project rather than just contributing to one changes what you're responsible for. Reviewing a PR isn't just "does this work" — it's judging whether a contributor's approach fits the project's direction, clearly enough that a first-time contributor learns something instead of just getting a rejection.
+
+**Review checklist**
+- [ ] Handles the failure case, not just the happy path
+- [ ] The next contributor would understand *why*, not just *what*
+- [ ] Fits the project's direction — not just "it works"
+
+<br/>
+
+---
+
+<br/>
+
+## Metrics
 
 <div align="center">
+
+![Silent failures reaching prod](https://img.shields.io/badge/silent_failures_reaching_prod-0-brightgreen?style=flat-square)
+![Dead letter queues](https://img.shields.io/badge/dead--letter_queues-configured-2563EB?style=flat-square)
+
+<br/><br/>
 
 <img src="https://github-profile-trophy.vercel.app/?username=krishnx21&theme=tokyonight&no-frame=true&row=1&column=6&margin-w=8" />
 
@@ -370,60 +246,16 @@ Running a project rather than just contributing to one changes what you're respo
 
 <br/>
 
-<details>
-<summary>📖 <code>man krishna</code> — for anyone who reads man pages before docs</summary>
+## Install
 
-```
-KRISHNA(1)                   User Commands                  KRISHNA(1)
-
-NAME
-       krishna - backend engineer, infrastructure-curious
-
-SYNOPSIS
-       krishna [--internship] [--backend] [--infra]
-
-DESCRIPTION
-       Third-year CS student who treats the failure path as the
-       interesting part of a system, not the annoying part. Spends
-       most cycles in the backend: queues, auth, caching, and the
-       parts of a system nobody notices until they break.
-
-OPTIONS
-       --internship   currently open to backend / platform /
-                      infrastructure roles
-
-       --backend      default and preferred mode of operation
-
-       --infra        Kubernetes, Terraform, distributed systems
-                      (in progress, not yet GA)
-
-SEE ALSO
-       CertiVault(1), SecretSentinel(1), engineering-philosophy(7)
-
-BUGS
-       None known. Optimistic about that staying true.
-
-AUTHOR
-       Written and maintained by Krishna Kumar.
-
-KRISHNA(1)                    2026-08-01                    KRISHNA(1)
+```bash
+$ npm install krishna-kumar
+npm error 404 Not Found — not published, only available via direct offer
 ```
 
-</details>
-
-<br/>
-
----
-
-<br/>
-
-## Contact
+Reach out directly instead:
 
 <div align="center">
-
-Open to backend and infrastructure internships.
-
-<br/>
 
 <a href="mailto:krishnakumarsharma8077@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
 <a href="https://www.linkedin.com/in/krishna-kumar-89544b295"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
