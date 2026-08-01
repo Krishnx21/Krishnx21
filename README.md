@@ -56,7 +56,7 @@ Status used below: 🟢 shipped · 🟡 in progress · ⚪ planned
 
 ## [Unreleased]
 
-### CertiVault — smart document verification platform 🟡
+### CertiVault — smart document verification platform 
 
 *In plain terms: people can upload and share documents with confidence — every file is verified, every share link expires on its own, and nothing fails without someone finding out.*
 
