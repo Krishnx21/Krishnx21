@@ -1,4 +1,4 @@
-
+<div align="center">
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,100:1E293B&height=220&section=header&text=Krishna%20Kumar&fontSize=44&fontColor=E2E8F0&fontAlignY=35&desc=Backend%20Engineer%20%C2%B7%20Infrastructure%20%C2%B7%20Open%20Source&descAlignY=52&descSize=16&descColor=94A3B8" width="100%"/>
 
@@ -11,20 +11,20 @@
 <a href="https://github.com/krishnx21"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
 
 <br/><br/>
-<br>
+
 <img src="https://komarev.com/ghpvc/?username=krishnx21&label=Profile%20Views&color=1E293B&style=flat-square" alt="profile views" />
 
 </div>
 
 <br/>
 
-
-krishnaSHARMA@backend:~
+```bash
+krishna@backend:~$ whoami
 ```
 
 ```text
 > Third-year CS student. Backend-leaning, infra-curious, AI-assisted where it counts.
-> Currently building : CertiVault — document  platform
+> Currently building : CertiVault — document verification platform
 > Currently learning  : Kubernetes, Terraform, distributed systems
 > Looking for         : Backend / Platform / Infrastructure internship
 > Long-term target    : Software Engineer
@@ -38,7 +38,7 @@ krishnaSHARMA@backend:~
 
 ## About Me
 
-I'm a third-year Computer Science student who spends more time in the backend than the frontend — the auth layer, the queue, the cache, the part of a system that either holds up under load or quietly.
+I'm a third-year Computer Science student who spends more time in the backend than the frontend — the auth layer, the queue, the cache, the part of a system that either holds up under load or quietly doesn't.
 
 Frontend bugs are visible immediately: something looks wrong, someone notices. Backend bugs are patient. A race condition, a queue that silently drops a job, a token that never expires — these can sit for weeks before they cost someone data or trust. That asymmetry is what pulled me toward backend and infrastructure work in the first place, and it's the lens I build every project through: **what happens when this fails, and does the system know it failed?**
 
@@ -47,6 +47,7 @@ I care about systems that are:
 | | |
 |---|---|
 | 🛡️ **Reliable** | keep working when a dependency doesn't |
+| 🔐 **Secure** | access is scoped, not just authenticated |
 | 👁️ **Observable** | failure is visible before a user reports it |
 | 🧩 **Maintainable** | the next person (often me, in six months) can reason about it |
 | 📈 **Scalable** | the design doesn't assume load stays where it is today |
@@ -80,6 +81,31 @@ I care about systems that are:
 
 <br/>
 
+## 📡 Status Board
+
+<div align="center">
+
+| Project | Status | Core Challenge |
+|---|:---:|---|
+| **CertiVault** | 🟡 `in progress` | queues, integrity checks, expiring access |
+| **SecretSentinel** | ⚪ `planned` | entropy-based secret detection |
+| **Cloud File Sharing** | 🟢 `built` | scoped, self-expiring JWTs |
+| **AI Resume Analyzer** | 🟢 `built` | reliable structured LLM output |
+| **Weather Dashboard** | 🟢 `built` | interface polish |
+
+![Silent failures reaching prod](https://img.shields.io/badge/silent_failures_reaching_prod-0-brightgreen?style=flat-square)
+![Dead letter queues](https://img.shields.io/badge/dead--letter_queues-configured-2563EB?style=flat-square)
+
+</div>
+
+<sub>📟 If this were a real status page: no open incidents, one active deployment in progress, one on the roadmap.</sub>
+
+<br/>
+
+---
+
+<br/>
+
 ## 🚀 Flagship Project — CertiVault
 
 **Smart document management and verification platform** — authentication, role-based access, hash-based integrity checks on every uploaded file, expiring share links, and background processing for anything that doesn't need to block the request.
@@ -87,6 +113,39 @@ I care about systems that are:
 **Problem.** Document-sharing tools tend to get one of two things wrong: they either trust the client too much (anyone with a link has permanent access) or they do too much synchronous work on upload (hashing, notification, thumbnailing), so the API becomes only as fast as its slowest side-effect.
 
 **Solution.** Separate the request path from the work path. The API's job is to accept the upload, persist it, and enqueue everything else. A pool of background workers does the actual verification and notification work, so a slow hash computation or a flaky email provider never makes a user wait on their upload request.
+
+<table>
+<tr>
+<th width="50%">🗣️ In plain terms</th>
+<th width="50%">🛠️ Under the hood</th>
+</tr>
+<tr>
+<td valign="top">
+
+People can upload and share documents with confidence — every file is verified, every share link expires on its own, and nothing about the system fails silently without someone finding out.
+
+</td>
+<td valign="top">
+
+Upload requests return immediately; a Redis-backed BullMQ queue handles SHA-256 verification and email notification asynchronously. Failed jobs land in a dead-letter queue instead of vanishing, and share-link checks are cached in Redis to avoid a Mongo round-trip on every access.
+
+</td>
+</tr>
+</table>
+
+```mermaid
+flowchart LR
+    A([Client Upload]) --> B{API}
+    B -->|persist file| D[(MongoDB)]
+    B -->|enqueue job| C[(Redis + BullMQ)]
+    B -. 202 Accepted, no wait .-> A
+    C --> W[Worker Pool]
+    W -->|hash + verify| D
+    W -->|send| N([Email Notification])
+    W -->|on failure| X[[Dead-Letter Queue]]
+```
+
+<sub>The upload request returns immediately — verification and notification happen entirely off the request path.</sub>
 
 **Engineering decisions:**
 
@@ -112,13 +171,13 @@ I care about systems that are:
 <tr>
 <td width="50%" valign="top">
 
-### 📤 Cloud File Sharing URL
+### 📤 Cloud File Sharing
 
 **Problem.** Sharing a file via a link is easy; sharing it *safely* is the hard part — a link that works for anyone forever isn't sharing, it's a leak with a delay.
 
 **Solution.** JWT-scoped share links with defined access windows, backed by Cloudinary for storage so the app isn't managing raw file I/O itself.
 
-**Challenge.** Getting the scope right: A token needs to prove *what* it grants access to and *until when*, without requiring a database round-trip on every access check..
+**Challenge.** Getting the scope right: a token needs to prove *what* it grants access to and *until when*, without requiring a database round-trip on every access check.
 
 **Lesson.** Authorization is much easier to get wrong quietly than authentication is — a missing expiry check doesn't throw an error, it just works forever.
 
@@ -157,11 +216,37 @@ I care about systems that are:
 </td>
 <td width="50%" valign="top">
 
-### 🔭 Coming Next
+### 🔭 Coming Next — SecretSentinel
 
-Next up in the roadmap after CertiVault ships: a self-hosted **secret scanning and rotation intelligence** platform — deliberately built on a different stack, with the scan engine (regex + entropy detection) as the core engineering problem.
+A self-hosted **secret scanning and rotation intelligence** platform — deliberately built on a different stack from CertiVault, with the scan engine (regex + Shannon entropy detection) as the core engineering problem.
 
-<br>
+More on this once CertiVault ships.
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+---
+
+<br/>
+
+## 🔍 Postmortem: The Expiry Check That Wasn't There
+
+<table>
+<tr>
+<td>
+
+**System:** Cloud File Sharing · **Severity:** Medium — no error thrown, no alert fired · **Status:** Resolved ✅
+
+**Impact.** A share link's access window was meant to be enforced by a downstream check. In one code path, that check wasn't wired up — so the link simply never expired. Nothing crashed. Nothing logged. It just worked, for anyone who had the link, forever.
+
+**Root cause.** Authorization gaps don't announce themselves the way authentication gaps do. A missing `401` shows up in five seconds of testing. A missing expiry check only shows up if someone thinks to test the *invalid* case, not just the valid one.
+
+**Fix.** Expiry moved into the token's own claims, checked at verification time — not left to a separate, easy-to-forget cleanup step.
+
+**Takeaway.** I now test "does this correctly reject" with the same care as "does this correctly accept." The second one is what demos well. The first one is what matters at 2 AM.
 
 </td>
 </tr>
@@ -181,7 +266,12 @@ Next up in the roadmap after CertiVault ships: a self-hosted **secret scanning a
 | **SSOC 2026** | Mentor | Get first-time contributors to a merged PR — mostly explaining *why* a change should look a certain way, not just approving or rejecting it |
 | **GSSoC 2026** | Contributor | Active across issues and PRs on other maintainers' projects |
 
-Running a project rather than just contributing to one changes what you're responsible for. Reviewing a PR isn't just "does this work" — it's judging whether a contributor's approach fits the project's direction, and being able to explain that clearly enough that a first-time contributor learns something instead of just getting a rejection. 
+Running a project rather than just contributing to one changes what you're responsible for. Reviewing a PR isn't just "does this work" — it's judging whether a contributor's approach fits the project's direction, and being able to explain that clearly enough that a first-time contributor learns something instead of just getting a rejection.
+
+> **What I'm actually checking in a review:**
+> - Does this handle the failure case, or just the happy path?
+> - Will the next contributor understand *why*, not just *what*?
+> - Does this fit the project's direction — or does it just "work"?
 
 <br/>
 
@@ -257,6 +347,10 @@ Running a project rather than just contributing to one changes what you're respo
 
 <div align="center">
 
+<img src="https://github-profile-trophy.vercel.app/?username=krishnx21&theme=tokyonight&no-frame=true&row=1&column=6&margin-w=8" />
+
+<br/>
+
 <img height="165" src="https://github-readme-stats.vercel.app/api?username=krishnx21&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
 <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=krishnx21&layout=compact&theme=tokyonight&hide_border=true" />
 
@@ -264,7 +358,58 @@ Running a project rather than just contributing to one changes what you're respo
 
 <img height="180" src="https://github-readme-streak-stats-eight.vercel.app/?user=krishnx21&theme=tokyonight&hide_border=true" />
 
+<br/>
+
+<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=krishnx21&theme=tokyo-night&hide_border=true&area=true" />
+
 </div>
+
+<br/>
+
+---
+
+<br/>
+
+<details>
+<summary>📖 <code>man krishna</code> — for anyone who reads man pages before docs</summary>
+
+```
+KRISHNA(1)                   User Commands                  KRISHNA(1)
+
+NAME
+       krishna - backend engineer, infrastructure-curious
+
+SYNOPSIS
+       krishna [--internship] [--backend] [--infra]
+
+DESCRIPTION
+       Third-year CS student who treats the failure path as the
+       interesting part of a system, not the annoying part. Spends
+       most cycles in the backend: queues, auth, caching, and the
+       parts of a system nobody notices until they break.
+
+OPTIONS
+       --internship   currently open to backend / platform /
+                      infrastructure roles
+
+       --backend      default and preferred mode of operation
+
+       --infra        Kubernetes, Terraform, distributed systems
+                      (in progress, not yet GA)
+
+SEE ALSO
+       CertiVault(1), SecretSentinel(1), engineering-philosophy(7)
+
+BUGS
+       None known. Optimistic about that staying true.
+
+AUTHOR
+       Written and maintained by Krishna Kumar.
+
+KRISHNA(1)                    2026-08-01                    KRISHNA(1)
+```
+
+</details>
 
 <br/>
 
@@ -276,7 +421,7 @@ Running a project rather than just contributing to one changes what you're respo
 
 <div align="center">
 
-Open to backend and infrastructure internships. 
+Open to backend and infrastructure internships.
 
 <br/>
 
