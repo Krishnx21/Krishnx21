@@ -1,242 +1,247 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,100:1E293B&height=220&section=header&text=Krishna%20Kumar&fontSize=44&fontColor=E2E8F0&fontAlignY=35&desc=Backend%20Engineer%20%C2%B7%20Infrastructure%20%C2%B7%20Open%20Source&descAlignY=52&descSize=16&descColor=94A3B8" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,25:302b63,50:24243e,75:0891B2,100:7C3AED&height=220&section=header&text=Krishna%20Kumar&fontSize=72&fontColor=ffffff&animation=twinkling&fontAlignY=38&desc=Backend%20Engineer%20%E2%80%A2%20OSS%20Contributor%20%E2%80%A2%20DSA%20Grinder&descAlignY=58&descSize=18&descColor=a5b4fc" width="100%"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=16&pause=1400&color=94A3B8&center=true&vCenter=true&width=600&lines=systems+that+fail+gracefully%2C+not+silently.;queues+over+blocking+calls.;reads+the+stack+trace+before+the+docs." alt="typing" />
+</div>
 
-<br/>
+---
 
-<a href="https://www.linkedin.com/in/krishna-kumar-89544b295"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-<a href="mailto:krishnakumarsharma8077@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-<a href="https://github.com/krishnx21"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
+<div align="center">
 
-<br/><br/>
-
-<img src="https://komarev.com/ghpvc/?username=krishnx21&label=Profile%20Views&color=1E293B&style=flat-square" alt="profile views" />
+<!-- Typing animation -->
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=7C3AED&center=true&vCenter=true&random=false&width=600&lines=Hey+there+%F0%9F%91%8B+I'm+Krishna+Kumar;Backend+Engineer+%7C+Problem+Solver;400%2B+DSA+Problems+%26+Still+Counting+%F0%9F%94%A5;Building+Things+That+Scale+%F0%9F%9A%80;Open+Source+%E2%9D%A4%EF%B8%8F+%7C+Clean+Code+Evangelist" alt="Typing SVG"/>
 
 </div>
 
 <br/>
 
-# Changelog
-
-All notable changes to **krishna-kumar** are documented in this file — a system doesn't get to skip its own logging practices just because the system is a person.
-
-The format loosely follows [Keep a Changelog](https://keepachangelog.com/).
-Status used below: 🟢 shipped · 🟡 in progress · ⚪ planned
-
-<br/>
-
----
-
-<br/>
-
-## Design Principles
-
-> **Reliability is a design decision, not a bugfix.**
-> A system that works in the demo and falls over under concurrent writes isn't reliable, it's untested. I design for the failure case first — what happens if the worker dies mid-job, what happens if the same request arrives twice — and treat the happy path as the easy part.
-
-> **Queues over blocking calls, whenever the work can wait.**
-> If a request doesn't need to be answered synchronously, making the caller wait for it is a cost with no benefit. Offloading it to a queue keeps the API responsive under load, so a slow downstream dependency doesn't become the whole system's problem.
-
-> **Caching is a trade-off, not a default.**
-> Every cache is a promise to keep two copies of the truth in sync. I reach for it when the read cost is real and the staleness window is acceptable — not as a reflex for "making things faster."
-
-> **Software should fail loud, not silent.**
-> A try/catch that swallows an error is a bug wearing a disguise. If something fails, I want a log line, a retry policy, or a dead-letter queue — not a silent no-op that looks like success from the outside.
-
-> **Observability is what turns "it's slow" into an actionable ticket.**
-> Without logs, metrics, or traces, debugging production is guesswork with extra steps. I'd rather spend time instrumenting a system than debugging it blind.
-
-<br/>
-
----
-
-<br/>
-
-## [Unreleased]
-
-### CertiVault — smart document verification platform 
-
-*In plain terms: people can upload and share documents with confidence — every file is verified, every share link expires on its own, and nothing fails without someone finding out.*
-
-**Added**
-- Document upload with SHA-256 integrity verification, computed and stored at upload time
-- Role-based access control
-- Expiring, JWT-scoped share links
-- Background job processing via BullMQ + Redis — hashing, notifications, and a dead-letter queue for failed jobs
-
-**Changed**
-- Verification and notification moved off the request path entirely. The API's job now is just: persist the file, enqueue the work, respond. A slow hash computation or a flaky email provider no longer makes anyone wait.
-
-**Architecture**
-
-```mermaid
-flowchart LR
-    A([Client Upload]) --> B{API}
-    B -->|persist file| D[(MongoDB)]
-    B -->|enqueue job| C[(Redis + BullMQ)]
-    B -. 202 Accepted, no wait .-> A
-    C --> W[Worker Pool]
-    W -->|hash + verify| D
-    W -->|send| N([Email Notification])
-    W -->|on failure| X[[Dead-Letter Queue]]
-```
-
-*The upload request returns immediately — verification and notification happen entirely off the request path.*
-
-**Notes**
-The hardest part wasn't any single feature — it was the coordination problems that only show up outside the happy path: two requests hitting the same document at once, a share link that outlives its intended use, a worker that dies mid-job and needs its work picked back up rather than lost.
-
-`Node.js` `Express` `MongoDB` `Redis` `BullMQ` `Docker` `JWT` `Google OAuth` `Cloudinary`
-
-<br/>
-
-### Planned
-
-- **SecretSentinel** — self-hosted secret scanning + rotation intelligence. Deliberately different stack from CertiVault (PostgreSQL, Kubernetes, Terraform) — the scan engine (regex + Shannon entropy detection) is the core problem. Starts once CertiVault ships.
-- Kubernetes, Terraform, distributed systems — in progress, not yet stable
-
-<br/>
-
----
-
-<br/>
-
-## [2.0.0] — Cloud File Sharing 🟢
-
-**Added**
-- JWT-scoped share links with defined access windows
-- Cloudinary-backed storage, so the app isn't managing raw file I/O itself
-
-**Security**
-- *Issue:* a share link's expiry was meant to be enforced by a downstream check that, in one code path, wasn't wired up — so the link never expired. Nothing crashed. Nothing logged. It just worked, for anyone who had the link, forever.
-- *Root cause:* authorization gaps don't announce themselves the way authentication gaps do. A missing `401` shows up in five seconds of testing. A missing expiry check only shows up if someone thinks to test the *invalid* case, not just the valid one.
-- *Fix:* expiry moved into the token's own claims, checked at verification time — not left to a separate, easy-to-forget cleanup step.
-
-**Notes**
-Authorization is much easier to get wrong quietly than authentication is. I now test "does this correctly reject" with the same care as "does this correctly accept."
-
-`Node.js` `Express` `JWT` `Cloudinary`
-
-<br/>
-
----
-
-<br/>
-
-## [1.1.0] — AI Resume Analyzer 🟢
-
-**Added**
-- Resume scoring against a specific job description via the Claude API
-- Structured, UI-renderable feedback instead of a wall of text
-
-**Fixed**
-- Inconsistent LLM output shape — enforced an explicit output schema so parsing succeeds on every call, not just most, even when the input resume is messy
-
-**Notes**
-Prompting an LLM for a UI-facing feature is an API contract problem as much as a prompting problem.
-
-`React` `Express` `MySQL` `Claude API`
-
-<br/>
-
----
-
-<br/>
-
-## [1.0.0] — Weather Dashboard 🟢
-
-**Added**
-- Live forecasts with location search — initial release
-
-**Notes**
-No hard backend problem here by design — this was the first project where interface quality mattered as much as function, and that was its own useful exercise. Not every project needs to be the hard one.
-
-`JavaScript` `CSS` `Weather API`
-
-<br/>
-
----
-
-<br/>
-
-## Dependencies
-
-```json
-{
-  "name": "krishna-kumar",
-  "status": "open-to-internship-offers",
-  "languages": ["JavaScript", "TypeScript", "Python", "Java", "C"],
-  "dependencies": {
-    "backend": ["Node.js", "Express", "REST APIs", "JWT", "OAuth 2.0", "Redis", "BullMQ"],
-    "data": ["MongoDB", "Mongoose", "MySQL"],
-    "infra": ["Docker", "GitHub Actions", "AWS", "Render", "Vercel", "Cloudinary"]
-  },
-  "devDependencies": {
-    "testing": ["Jest", "Supertest"],
-    "tooling": ["Git", "GitHub", "VS Code", "Postman", "ESLint", "Prettier", "npm"]
-  },
-  "scripts": {
-    "learn:infra": "terraform plan && kubectl apply -f manifests/",
-    "review-pr": "check-failure-path && explain-why",
-    "contact": "see Install section below"
-  }
-}
-```
-
-<sub>Self-assessed, updated as I go — not a certification tracker.</sub>
-
-<br/>
-
----
-
-<br/>
-
-## Maintainers
-
-| Project | Role | Responsibilities |
-|---|---|---|
-| **ECSoC 2026** | Project Admin | scope, roadmap, final review on every PR before it merges |
-| **SSOC 2026** | Mentor | get first-time contributors to a merged PR |
-| **GSSoC 2026** | Contributor | active across issues and PRs on other maintainers' projects |
-
-Running a project rather than just contributing to one changes what you're responsible for. Reviewing a PR isn't just "does this work" — it's judging whether a contributor's approach fits the project's direction, clearly enough that a first-time contributor learns something instead of just getting a rejection.
-
-**Review checklist**
-- [ ] Handles the failure case, not just the happy path
-- [ ] The next contributor would understand *why*, not just *what*
-- [ ] Fits the project's direction — not just "it works"
-
-<br/>
-
----
-
-<br/>
-
-## Metrics
-
 <div align="center">
 
-![Silent failures reaching prod](https://img.shields.io/badge/silent_failures_reaching_prod-0-brightgreen?style=flat-square)
-![Dead letter queues](https://img.shields.io/badge/dead--letter_queues-configured-2563EB?style=flat-square)
+```
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║    > krishna --mode=developer --trait=obsessive              ║
+║                                                              ║
+║    Loading personality...                                    ║
+║    ████████████████████████████████████ 100%                 ║
+║                                                              ║
+║    [✓] Passion for clean architecture... LOADED             ║
+║    [✓] Caffeine dependency module........ LOADED             ║
+║    [✓] Late-night debugging instinct..... LOADED             ║
+║    [✓] "One more commit" syndrome........ LOADED             ║
+║                                                              ║
+║    Status: READY TO BUILD SOMETHING INCREDIBLE 🚀           ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+```
+
+</div>
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12&height=3" width="100%"/>
+
+---
+
+## <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="40"> &nbsp;`$ whoami`
+
+<table width="100%">
+<tr>
+<td width="55%" valign="top">
+
+<br/>
+
+Hey, I'm **Krishna** — a B.Tech CSE student who got tired of boring CRUD apps and started building things that actually solve problems.
+
+I live at the intersection of **backend systems**, **open source**, and **relentless curiosity**. I don't just write code — I architect solutions, review with empathy, and ship with intention.
+
+<br/>
+
+```yaml
+name: Krishna Kumar
+role: Backend-Focused Full Stack Developer
+university: B.Tech CSE (in progress)
+philosophy: "Ship it, learn from it, improve it."
+superpower: Making complex systems feel simple
+currently_obsessed_with:
+  - Distributed systems
+  - System Design patterns
+  - LeetCode at 2AM
+  - Open Source contributions
+fun_fact: I debug faster with music on 🎵
+```
+
+</td>
+<td width="45%" align="center" valign="top">
 
 <br/><br/>
 
-<img src="https://github-profile-trophy.vercel.app/?username=krishnx21&theme=tokyonight&no-frame=true&row=1&column=6&margin-w=8" />
+<img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="300" alt="Coding gif" style="border-radius: 12px"/>
+
+<br/><br/>
+
+> *"With great code comes great responsibility."*
 
 <br/>
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=krishnx21&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=krishnx21&layout=compact&theme=tokyonight&hide_border=true" />
+<a href="https://github.com/krishnx21">
+  <img src="https://komarev.com/ghpvc/?username=krishnx21&color=7C3AED&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile Views"/>
+</a>
+
+</td>
+</tr>
+</table>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12&height=3" width="100%"/>
+
+---
+
+## 🗺️ &nbsp;`$ cat mission_log.txt`
+
+<div align="center">
 
 <br/>
 
-<img height="180" src="https://github-readme-streak-stats-eight.vercel.app/?user=krishnx21&theme=tokyonight&hide_border=true" />
+<table>
+<tr>
+  <td align="center">
+    <img src="https://img.shields.io/badge/🚀%20SHIPPING-Backend%20Systems%20That%20Scale-7C3AED?style=for-the-badge&logoColor=white"/>
+  </td>
+  <td align="center">
+    <img src="https://img.shields.io/badge/🧠%20LEARNING-System%20Design%20%26%20Architecture-2563EB?style=for-the-badge&logoColor=white"/>
+  </td>
+</tr>
+<tr>
+  <td align="center">
+    <img src="https://img.shields.io/badge/⚔️%20GRINDING-400%2B%20DSA%20Problems-0891B2?style=for-the-badge&logoColor=white"/>
+  </td>
+  <td align="center">
+    <img src="https://img.shields.io/badge/🌍%20CONTRIBUTING-OSS%20Maintainer%20%26%20Reviewer-059669?style=for-the-badge&logoColor=white"/>
+  </td>
+</tr>
+</table>
 
 <br/>
 
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=krishnx21&theme=tokyo-night&hide_border=true&area=true" />
+</div>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12&height=3" width="100%"/>
+
+---
+
+## ⚡ &nbsp;`$ ls ./tech-stack`
+
+<div align="center"><br/>
+
+**Languages**
+
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+
+<br/>
+
+**Frontend**
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+
+<br/>
+
+**Backend**
+
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+![REST API](https://img.shields.io/badge/REST%20API-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+
+<br/>
+
+**Databases**
+
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+
+<br/>
+
+**DevOps & Tools**
+
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+
+</div>
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12&height=3" width="100%"/>
+
+---
+
+## 🛸 &nbsp;`$ git log --oneline --projects`
+
+<div align="center"><br/>
+
+<table width="90%">
+<tr>
+<td width="50%" valign="top">
+
+### 🔍 Smart Document Management
+> *Because file chaos is a crime.*
+
+Secure, scalable document workspace with upload pipelines, intelligent search, encrypted sharing, and document verification.
+
+**Stack:** `Docker` `Kubernetes` `Redis` `MongoDB`
+
+[![Repo](https://img.shields.io/badge/View%20Repo-7C3AED?style=flat-square&logo=github&logoColor=white)](https://github.com/krishnx21)
+
+</td>
+<td width="50%" valign="top">
+
+### 🚗 Cloud File Sharing
+> *Share files, not headaches.*
+
+Backend-first file sharing platform with time-limited protected links, access control, and audit trails.
+
+**Stack:** `Node.js` `Express` `JWT` `Cloudinary`
+
+[![Repo](https://img.shields.io/badge/View%20Repo-2563EB?style=flat-square&logo=github&logoColor=white)](https://github.com/krishnx21)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🎋 AI Resume Analyzer
+> *Your resume, brutally optimized.*
+
+AI-powered resume vs. JD comparison engine with scoring, gap analysis, and actionable suggestions.
+
+**Stack:** `React` `Express` `MySQL` `Claude API`
+
+[![Repo](https://img.shields.io/badge/View%20Repo-0891B2?style=flat-square&logo=github&logoColor=white)](https://github.com/krishnx21)
+
+</td>
+<td width="50%" valign="top">
+
+### 🤖 AI Customer Service Bot
+> *Support that never sleeps.*
+
+NLP-powered customer service agent with real-time sentiment analysis and intelligent routing.
+
+**Stack:** `Node.js` `Express` `OpenAI`
+
+[![Repo](https://img.shields.io/badge/View%20Repo-059669?style=flat-square&logo=github&logoColor=white)](https://github.com/krishnx21)
+
+</td>
+</tr>
+</table>
 
 </div>
 
@@ -244,25 +249,107 @@ Running a project rather than just contributing to one changes what you're respo
 
 ---
 
-<br/>
+## 📊 &nbsp;`$ ./stats --show=all`
 
-## Install
+<div align="center"><br/>
 
-```bash
-$ npm install krishna-kumar
-npm error 404 Not Found — not published, only available via direct offer
-```
-
-Reach out directly instead:
-
-<div align="center">
-
-<a href="mailto:krishnakumarsharma8077@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-<a href="https://www.linkedin.com/in/krishna-kumar-89544b295"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-<a href="https://github.com/krishnx21"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
+<img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=krishnx21&theme=dracula" alt="Profile Details"/>
+<img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=krishnx21&theme=dracula" alt="Languages"/>
 
 <br/><br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,100:1E293B&height=100&section=footer" width="100%"/>
+<img src="https://streak-stats.demolab.com/?user=krishnx21&theme=dracula&hide_border=true" alt="Streak Stats" width="70%"/>
+
+<br/><br/>
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=krishnx21&theme=dracula&hide_border=true&area=true" width="95%" alt="Activity Graph"/>
+
+</div>
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12&height=3" width="100%"/>
+
+---
+
+## 🎯 &nbsp;`$ cat goals_2026.txt`
+
+<div align="center"><br/>
+
+- [ ] Ship 20+ production-ready repositories
+- [ ] Reach 1000+ GitHub contributions
+- [ ] Solve 400+ DSA problems
+- [ ] Maintain 3+ open source projects
+- [ ] Master system design principles
+- [ ] Build scalable backend architecture
+
+</div>
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12&height=3" width="100%"/>
+
+---
+
+## 📚 &nbsp;`$ ./learning --status`
+
+<div align="center"><br/>
+
+### Currently Studying
+- System Design Fundamentals
+- Scalable Backend Architecture
+- Database Optimization
+- Distributed Systems Patterns
+
+### DSA Progress
+- Arrays, Trees, Graphs
+- Dynamic Programming
+- Greedy Algorithms
+- Backtracking
+
+</div>
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12&height=3" width="100%"/>
+
+---
+
+## 📡 &nbsp;`$ ./connect --channel=all`
+
+<div align="center"><br/>
+
+Let's build something incredible together. I'm always open to collaborations, internships, and meaningful conversations about code.
+
+<br/><br/>
+
+<a href="mailto:krishnakumarsharma8077@gmail.com">
+  <img src="https://img.shields.io/badge/Email-Me-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+</a>
+<a href="https://www.linkedin.com/in/krishna-kumar-89544b295">
+  <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+</a>
+<a href="https://github.com/krishnx21">
+  <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+</a>
+<a href="https://leetcode.com/u/krishnx_21/">
+  <img src="https://img.shields.io/badge/LeetCode-Challenge-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode"/>
+</a>
+
+<br/><br/>
+
+<img src="https://komarev.com/ghpvc/?username=krishnx21&style=for-the-badge&color=7C3AED&label=PROFILE+VIEWS" alt="Profile Views"/>
+
+<br/><br/>
+
+> *"Building the future, one commit at a time. Always learning. Always growing."*
+
+</div>
+
+<br/>
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,25:302b63,50:24243e,75:0891B2,100:7C3AED&height=100&section=footer" width="100%"/>
 
 </div>
