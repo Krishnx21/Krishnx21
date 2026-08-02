@@ -25,7 +25,7 @@
 ║    Loading personality...                                    ║
 ║    ████████████████████████████████████ 100%                 ║
 ║                                                              ║
-║    [✓] Passion for clean architecture... LOADED             ║
+║    [✓] Passion for clean architecture... LOADED              ║
 ║    [✓] Caffeine dependency module........ LOADED             ║
 ║    [✓] Late-night debugging instinct..... LOADED             ║
 ║    [✓] "One more commit" syndrome........ LOADED             ║
@@ -53,7 +53,7 @@
 
 Hey, I'm **Krishna** — a B.Tech CSE student who got tired of boring CRUD apps and started building things that actually solve problems.
 
-I live at the intersection of **backend systems**, **open source**, and **relentless curiosity**. I don't just write code — I architect solutions, review with empathy, and ship with intention.
+I live at the intersection of **backend systems**, **open source**, and **relentless curiosity**. I don't just write code — I architect solutions, review with empathy, and ship with intention...
 
 <br/>
 
