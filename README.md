@@ -8,7 +8,7 @@
 
 <div align="center">
 
-<!-- Typing animation -->
+
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=7C3AED&center=true&vCenter=true&random=false&width=600&lines=Hey+there+%F0%9F%91%8B+I'm+Krishna+Kumar;Backend+Engineer+%7C+Problem+Solver;400%2B+DSA+Problems+%26+Still+Counting+%F0%9F%94%A5;Building+Things+That+Scale+%F0%9F%9A%80;Open+Source+%E2%9D%A4%EF%B8%8F+%7C+Clean+Code+Evangelist" alt="Typing SVG"/>
 
 </div>
