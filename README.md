@@ -20,7 +20,7 @@
 ```
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
-║    > krishna --mode=developer --trait=obsessive              ║
+║    > krishna --mode=developer --trait=ob                     ║
 ║                                                              ║
 ║    Loading personality...                                    ║
 ║    ████████████████████████████████████ 100%                 ║
