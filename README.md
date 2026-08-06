@@ -25,7 +25,7 @@
 ║    Loading personality...                                    ║
 ║    ████████████████████████████████████ 100%                 ║
 ║                                                              ║
-║    [✓] Passion for clean architecture... LOADED               ║
+║    [✓] Passion for clean architecture...               ║
 ║    [✓] Caffeine dependency module........ LOADEd             ║
 ║    [✓] Late-night debugging instinct..... LOADED             ║
 ║    [✓] "One more commit" syndrome........ LOADED             ║
