@@ -96,7 +96,7 @@ fun_fact: I debug faster with music on 🎵
 
 ---
 
-## 🗺️ &nbsp;`$ cat mission_log.txt`
+## 🗺️ &nbsp;`$ cat mission_
 
 <div align="center">
 
