@@ -1,105 +1,114 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250" width="800" height="250">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="800" height="280">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&amp;family=Inter:wght@400;600;700&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&amp;display=swap');
       .mono { font-family: 'JetBrains Mono', monospace; }
-      .sans { font-family: 'Inter', sans-serif; }
       
-      @keyframes icon-bounce {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-5px); }
+      @keyframes signal-wave {
+        0% { r: 4; opacity: 1; }
+        100% { r: 20; opacity: 0; }
       }
       
-      @keyframes glow-pulse {
-        0%, 100% { filter: drop-shadow(0 0 5px rgba(0, 212, 255, 0.3)); }
-        50% { filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.6)); }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
       }
       
-      @keyframes slide-in {
-        from { transform: translateX(-20px); opacity: 0; }
-        to { transform: translateX(0); opacity: 1; }
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.3; }
       }
       
-      .icon-bounce { animation: icon-bounce 2s ease-in-out infinite; }
-      .glow-pulse { animation: glow-pulse 2s ease-in-out infinite; }
-      .slide-in { animation: slide-in 0.5s ease-out forwards; }
+      .signal-wave { animation: signal-wave 2s ease-out infinite; }
+      .pulse { animation: pulse 2s ease-in-out infinite; }
+      .blink { animation: blink 1.5s ease-in-out infinite; }
     </style>
     
     <linearGradient id="contactGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0a0e17"/>
-      <stop offset="100%" style="stop-color:#0d1117"/>
+      <stop offset="0%" style="stop-color:#05060B"/>
+      <stop offset="100%" style="stop-color:#0B0F17"/>
     </linearGradient>
     
-    <linearGradient id="contactAccent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#00d4ff"/>
-      <stop offset="100%" style="stop-color:#7c3aed"/>
-    </linearGradient>
-    
-    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#161b22"/>
-      <stop offset="100%" style="stop-color:#0d1117"/>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D4FF"/>
+      <stop offset="100%" style="stop-color:#7C3AED"/>
     </linearGradient>
   </defs>
 
   <!-- Background -->
-  <rect width="800" height="250" fill="url(#contactGradient)" rx="12"/>
+  <rect width="800" height="280" fill="url(#contactGradient)"/>
   
   <!-- Grid Pattern -->
-  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a2332" stroke-width="0.5"/>
+  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1E293B" stroke-width="0.5"/>
   </pattern>
-  <rect width="800" height="250" fill="url(#grid)" opacity="0.3"/>
+  <rect width="800" height="280" fill="url(#grid)" opacity="0.3"/>
 
   <!-- Header -->
-  <rect x="0" y="0" width="800" height="60" fill="#161b22" rx="12"/>
-  <rect y="52" width="800" height="8" fill="#161b22"/>
-  
-  <text x="25" y="38" class="mono" font-size="16" font-weight="800" fill="#00d4ff">// SIGNAL</text>
-  <text x="750" y="38" text-anchor="end" class="mono" font-size="12" fill="#8b949e">CONTACT</text>
-  
-  <line x1="0" y1="60" x2="800" y2="60" stroke="#1a2332" stroke-width="1"/>
+  <rect x="0" y="0" width="800" height="45" fill="#0B0F17" stroke="#1E293B" stroke-width="1"/>
+  <text x="25" y="28" class="mono" font-size="14" font-weight="700" fill="#00D4FF">SIGNAL // CONTACT</text>
+  <text x="750" y="28" text-anchor="end" class="mono" font-size="11" fill="#64748B">COMMUNICATION</text>
 
-  <!-- Social Links -->
+  <!-- Signal Status -->
+  <g transform="translate(700, 30)">
+    <circle cx="0" cy="0" r="4" fill="#22C55E" class="pulse"/>
+    <text x="15" y="4" class="mono" font-size="10" fill="#22C55E">AVAILABLE</text>
+  </g>
+
+  <!-- Contact Nodes -->
   <g transform="translate(100, 100)">
     <!-- GitHub -->
-    <g transform="translate(0, 0)" class="icon-bounce slide-in" style="animation-delay: 0.1s;">
-      <rect width="120" height="50" fill="url(#cardGradient)" stroke="#1a2332" stroke-width="1" rx="8" class="glow-pulse"/>
-      <text x="60" y="30" text-anchor="middle" class="mono" font-size="12" font-weight="700" fill="#ffffff">GITHUB</text>
-      <circle cx="105" cy="25" r="4" fill="#ffffff"/>
+    <g transform="translate(0, 0)">
+      <circle cx="0" cy="0" r="30" fill="#0B0F17" stroke="#1E293B" stroke-width="1"/>
+      <text x="0" y="5" text-anchor="middle" class="mono" font-size="10" fill="#E6EDF3">GITHUB</text>
+      <circle cx="0" cy="0" r="4" fill="#22C55E" class="signal-wave"/>
     </g>
 
     <!-- LinkedIn -->
-    <g transform="translate(140, 0)" class="icon-bounce slide-in" style="animation-delay: 0.2s;">
-      <rect width="120" height="50" fill="url(#cardGradient)" stroke="#1a2332" stroke-width="1" rx="8" class="glow-pulse"/>
-      <text x="60" y="30" text-anchor="middle" class="mono" font-size="12" font-weight="700" fill="#ffffff">LINKEDIN</text>
-      <circle cx="105" cy="25" r="4" fill="#0077b5"/>
+    <g transform="translate(120, 0)">
+      <circle cx="0" cy="0" r="30" fill="#0B0F17" stroke="#1E293B" stroke-width="1"/>
+      <text x="0" y="5" text-anchor="middle" class="mono" font-size="10" fill="#E6EDF3">LINKEDIN</text>
+      <circle cx="0" cy="0" r="4" fill="#00D4FF" class="signal-wave" style="animation-delay: 0.5s;"/>
     </g>
 
     <!-- LeetCode -->
-    <g transform="translate(280, 0)" class="icon-bounce slide-in" style="animation-delay: 0.3s;">
-      <rect width="120" height="50" fill="url(#cardGradient)" stroke="#1a2332" stroke-width="1" rx="8" class="glow-pulse"/>
-      <text x="60" y="30" text-anchor="middle" class="mono" font-size="12" font-weight="700" fill="#ffffff">LEETCODE</text>
-      <circle cx="105" cy="25" r="4" fill="#ffa116"/>
+    <g transform="translate(240, 0)">
+      <circle cx="0" cy="0" r="30" fill="#0B0F17" stroke="#1E293B" stroke-width="1"/>
+      <text x="0" y="5" text-anchor="middle" class="mono" font-size="10" fill="#E6EDF3">LEETCODE</text>
+      <circle cx="0" cy="0" r="4" fill="#F59E0B" class="signal-wave" style="animation-delay: 1s;"/>
     </g>
 
     <!-- Email -->
-    <g transform="translate(420, 0)" class="icon-bounce slide-in" style="animation-delay: 0.4s;">
-      <rect width="120" height="50" fill="url(#cardGradient)" stroke="#1a2332" stroke-width="1" rx="8" class="glow-pulse"/>
-      <text x="60" y="30" text-anchor="middle" class="mono" font-size="12" font-weight="700" fill="#ffffff">EMAIL</text>
-      <circle cx="105" cy="25" r="4" fill="#ea4335"/>
+    <g transform="translate(360, 0)">
+      <circle cx="0" cy="0" r="30" fill="#0B0F17" stroke="#1E293B" stroke-width="1"/>
+      <text x="0" y="5" text-anchor="middle" class="mono" font-size="10" fill="#E6EDF3">EMAIL</text>
+      <circle cx="0" cy="0" r="4" fill="#7C3AED" class="signal-wave" style="animation-delay: 1.5s;"/>
     </g>
   </g>
 
-  <!-- Status Message -->
+  <!-- Connection Lines -->
+  <g transform="translate(100, 100)">
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#00D4FF" stroke-width="1" opacity="0.3"/>
+    <line x1="30" y1="0" x2="60" y2="0" stroke="#7C3AED" stroke-width="1" opacity="0.3"/>
+    <line x1="60" y1="0" x2="90" y2="0" stroke="#F59E0B" stroke-width="1" opacity="0.3"/>
+    <line x1="90" y1="0" x2="120" y2="0" stroke="#22C55E" stroke-width="1" opacity="0.3"/>
+  </g>
+
+  <!-- Terminal Command -->
   <g transform="translate(25, 180)">
-    <rect width="730" height="40" fill="url(#cardGradient)" stroke="#1a2332" stroke-width="1" rx="8"/>
-    <text x="20" y="25" class="mono" font-size="11" fill="#8b949e">Open to collaborations and interesting projects. Let's build something amazing together.</text>
+    <rect width="750" height="60" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="4"/>
+    <text x="15" y="25" class="mono" font-size="11" fill="#64748B">&gt; signal --contact</text>
+    <text x="15" y="45" class="mono" font-size="10" fill="#E6EDF3">Establishing secure communication channel...</text>
     
-    <circle cx="700" cy="20" r="5" fill="#27ca40">
-      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
-    </circle>
+    <circle cx="700" cy="35" r="4" fill="#22C55E" class="blink"/>
+  </g>
+
+  <!-- Status -->
+  <g transform="translate(700, 260)">
+    <circle cx="0" cy="0" r="4" fill="#22C55E" class="pulse"/>
+    <text x="15" y="4" class="mono" font-size="10" fill="#22C55E">SIGNAL_ACTIVE</text>
   </g>
 
   <!-- Bottom Border -->
-  <rect x="0" y="248" width="800" height="2" fill="url(#contactAccent)"/>
+  <rect x="0" y="270" width="800" height="10" fill="url(#accentGradient)"/>
 </svg>

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&amp;display=swap');
+      .mono { font-family: 'JetBrains Mono', monospace; }
+      
+      @keyframes pulse {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
+      }
+      
+      @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.3; }
+      }
+      
+      .pulse { animation: pulse 2s ease-in-out infinite; }
+      .rotate { animation: rotate 10s linear infinite; }
+      .blink { animation: blink 1.5s ease-in-out infinite; }
+    </style>
+    
+    <linearGradient id="ossGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#05060B"/>
+      <stop offset="100%" style="stop-color:#0B0F17"/>
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D4FF"/>
+      <stop offset="100%" style="stop-color:#7C3AED"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="300" fill="url(#ossGradient)"/>
+  
+  <!-- Grid Pattern -->
+  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1E293B" stroke-width="0.5"/>
+  </pattern>
+  <rect width="800" height="300" fill="url(#grid)" opacity="0.3"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="45" fill="#0B0F17" stroke="#1E293B" stroke-width="1"/>
+  <text x="25" y="28" class="mono" font-size="14" font-weight="700" fill="#00D4FF">OPEN_SOURCE // CONTRIBUTION_NETWORK</text>
+  <text x="750" y="28" text-anchor="end" class="mono" font-size="11" fill="#64748B">COMMUNITY</text>
+
+  <!-- Network Visualization -->
+  <g transform="translate(400, 150)">
+    <!-- Center Node -->
+    <circle cx="0" cy="0" r="30" fill="#0B0F17" stroke="#00D4FF" stroke-width="2"/>
+    <text x="0" y="5" text-anchor="middle" class="mono" font-size="10" fill="#E6EDF3">YOU</text>
+    
+    <!-- Surrounding Nodes -->
+    <circle cx="-100" cy="-50" r="20" fill="#0B0F17" stroke="#22C55E" stroke-width="1"/>
+    <text x="-100" y="-45" text-anchor="middle" class="mono" font-size="8" fill="#22C55E">CONTRIB</text>
+    
+    <circle cx="100" cy="-50" r="20" fill="#0B0F17" stroke="#7C3AED" stroke-width="1"/>
+    <text x="100" y="-45" text-anchor="middle" class="mono" font-size="8" fill="#7C3AED">PRS</text>
+    
+    <circle cx="-100" cy="50" r="20" fill="#0B0F17" stroke="#F59E0B" stroke-width="1"/>
+    <text x="-100" y="55" text-anchor="middle" class="mono" font-size="8" fill="#F59E0B">ISSUES</text>
+    
+    <circle cx="100" cy="50" r="20" fill="#0B0F17" stroke="#00D4FF" stroke-width="1"/>
+    <text x="100" y="55" text-anchor="middle" class="mono" font-size="8" fill="#00D4FF">REVIEWS</text>
+    
+    <!-- Connections -->
+    <line x1="-80" y1="-50" x2="-30" y2="-30" stroke="#22C55E" stroke-width="1" class="pulse"/>
+    <line x1="80" y1="-50" x2="30" y2="-30" stroke="#7C3AED" stroke-width="1" class="pulse" style="animation-delay: 0.5s;"/>
+    <line x1="-80" y1="50" x2="-30" y2="30" stroke="#F59E0B" stroke-width="1" class="pulse" style="animation-delay: 1s;"/>
+    <line x1="80" y1="50" x2="30" y2="30" stroke="#00D4FF" stroke-width="1" class="pulse" style="animation-delay: 1.5s;"/>
+    
+    <!-- Outer ring -->
+    <circle cx="0" cy="0" r="80" fill="none" stroke="#00D4FF" stroke-width="1" opacity="0.2" class="rotate"/>
+  </g>
+
+  <!-- Stats -->
+  <g transform="translate(25, 230)">
+    <rect width="750" height="40" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="4"/>
+    <text x="15" y="25" class="mono" font-size="11" fill="#64748B">CONTRIBUTIONS</text>
+    <text x="150" y="25" class="mono" font-size="11" fill="#E6EDF3">PULL_REQUESTS</text>
+    <text x="300" y="25" class="mono" font-size="11" fill="#E6EDF3">CODE_REVIEWS</text>
+    <text x="450" y="25" class="mono" font-size="11" fill="#E6EDF3">ISSUES</text>
+    <text x="600" y="25" class="mono" font-size="11" fill="#E6EDF3">PROJECTS</text>
+    
+    <circle cx="120" cy="20" r="4" fill="#22C55E" class="blink"/>
+    <circle cx="270" cy="20" r="4" fill="#7C3AED" class="blink" style="animation-delay: 0.3s;"/>
+    <circle cx="420" cy="20" r="4" fill="#00D4FF" class="blink" style="animation-delay: 0.6s;"/>
+    <circle cx="570" cy="20" r="4" fill="#F59E0B" class="blink" style="animation-delay: 0.9s;"/>
+    <circle cx="720" cy="20" r="4" fill="#22C55E" class="blink" style="animation-delay: 1.2s;"/>
+  </g>
+
+  <!-- Status -->
+  <g transform="translate(700, 285)">
+    <circle cx="0" cy="0" r="4" fill="#22C55E" class="pulse"/>
+    <text x="15" y="4" class="mono" font-size="10" fill="#22C55E">NETWORK_ACTIVE</text>
+  </g>
+
+  <!-- Bottom Border -->
+  <rect x="0" y="290" width="800" height="10" fill="url(#accentGradient)"/>
+</svg>

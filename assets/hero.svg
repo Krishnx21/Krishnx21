@@ -1,34 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&amp;family=Inter:wght@400;600;700;800&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&amp;display=swap');
       .mono { font-family: 'JetBrains Mono', monospace; }
-      .sans { font-family: 'Inter', sans-serif; }
-      
-      @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-10px); }
-      }
-      
-      @keyframes pulse-glow {
-        0%, 100% { filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.6)); }
-        50% { filter: drop-shadow(0 0 40px rgba(0, 212, 255, 0.9)); }
-      }
-      
-      @keyframes scan {
-        0% { transform: translateY(-100%); opacity: 0; }
-        50% { opacity: 1; }
-        100% { transform: translateY(100%); opacity: 0; }
-      }
       
       @keyframes rotate {
         from { transform: rotate(0deg); }
         to { transform: rotate(360deg); }
       }
       
-      @keyframes typewriter {
-        from { width: 0; }
-        to { width: 100%; }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.6; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.05); }
       }
       
       @keyframes blink {
@@ -36,164 +19,112 @@
         50% { opacity: 0; }
       }
       
-      @keyframes particle {
-        0% { transform: translate(0, 0) scale(1); opacity: 1; }
-        100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; }
+      @keyframes radar-sweep {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
       }
       
-      .float { animation: float 6s ease-in-out infinite; }
-      .pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
-      .scan-line { animation: scan 3s linear infinite; }
+      @keyframes signal {
+        0%, 100% { r: 3; opacity: 1; }
+        50% { r: 5; opacity: 0.5; }
+      }
+      
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+      }
+      
       .rotate { animation: rotate 20s linear infinite; }
+      .pulse { animation: pulse 2s ease-in-out infinite; }
       .cursor { animation: blink 1s step-end infinite; }
-      
-      .particle {
-        animation: particle 4s ease-out infinite;
-      }
+      .radar-sweep { animation: radar-sweep 4s linear infinite; transform-origin: 450px 250px; }
+      .signal { animation: signal 2s ease-in-out infinite; }
+      .float { animation: float 3s ease-in-out infinite; }
     </style>
     
-    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0a0e17"/>
-      <stop offset="50%" style="stop-color:#0d1117"/>
-      <stop offset="100%" style="stop-color:#161b22"/>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#05060B"/>
+      <stop offset="100%" style="stop-color:#0B0F17"/>
     </linearGradient>
     
     <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#00d4ff"/>
-      <stop offset="50%" style="stop-color:#7c3aed"/>
-      <stop offset="100%" style="stop-color:#ec4899"/>
-    </linearGradient>
-    
-    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#00d4ff"/>
-      <stop offset="100%" style="stop-color:#a855f7"/>
+      <stop offset="0%" style="stop-color:#00D4FF"/>
+      <stop offset="100%" style="stop-color:#7C3AED"/>
     </linearGradient>
     
     <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    
-    <filter id="blur">
-      <feGaussianBlur stdDeviation="2"/>
-    </filter>
   </defs>
 
   <!-- Background -->
-  <rect width="900" height="500" fill="url(#mainGradient)"/>
+  <rect width="900" height="500" fill="url(#heroGradient)"/>
   
-  <!-- Animated Grid Background -->
-  <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
-    <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#1a2332" stroke-width="0.5"/>
+  <!-- Subtle grid -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="0.5"/>
   </pattern>
-  <rect width="900" height="500" fill="url(#grid)" opacity="0.4"/>
-  
-  <!-- Gradient Overlay -->
-  <rect width="900" height="500" fill="url(#mainGradient)" opacity="0.7"/>
+  <rect width="900" height="500" fill="url(#grid)" opacity="0.3"/>
 
-  <!-- Animated Circles Background -->
-  <circle cx="100" cy="100" r="150" fill="#00d4ff" opacity="0.05" class="rotate" style="transform-origin: 100px 100px;"/>
-  <circle cx="800" cy="400" r="200" fill="#7c3aed" opacity="0.05" class="rotate" style="transform-origin: 800px 400px; animation-direction: reverse;"/>
-  <circle cx="450" cy="250" r="300" fill="#ec4899" opacity="0.03" class="rotate" style="transform-origin: 450px 250px;"/>
+  <!-- Radar Circles -->
+  <circle cx="450" cy="250" r="200" fill="none" stroke="#00D4FF" stroke-width="1" opacity="0.1" class="rotate"/>
+  <circle cx="450" cy="250" r="150" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1" class="rotate" style="animation-direction: reverse;"/>
+  <circle cx="450" cy="250" r="100" fill="none" stroke="#00D4FF" stroke-width="1" opacity="0.2"/>
 
-  <!-- Main Content Container -->
-  <g class="float">
-    <!-- Logo/Brand -->
-    <text x="450" y="80" text-anchor="middle" class="mono" font-size="14" font-weight="700" fill="#00d4ff" letter-spacing="4" filter="url(#glow)">KSH // ENGINEERING OS</text>
+  <!-- Radar Sweep -->
+  <line x1="450" y1="250" x2="450" y2="50" stroke="url(#accentGradient)" stroke-width="2" class="radar-sweep" opacity="0.3"/>
+
+  <!-- Network Nodes -->
+  <circle cx="200" cy="150" r="4" fill="#00D4FF" class="signal"/>
+  <circle cx="700" cy="150" r="4" fill="#7C3AED" class="signal" style="animation-delay: 0.5s;"/>
+  <circle cx="200" cy="350" r="4" fill="#22C55E" class="signal" style="animation-delay: 1s;"/>
+  <circle cx="700" cy="350" r="4" fill="#F59E0B" class="signal" style="animation-delay: 1.5s;"/>
+
+  <!-- Connection Lines -->
+  <line x1="200" y1="150" x2="450" y2="250" stroke="#00D4FF" stroke-width="1" opacity="0.3"/>
+  <line x1="700" y1="150" x2="450" y2="250" stroke="#7C3AED" stroke-width="1" opacity="0.3"/>
+  <line x1="200" y1="350" x2="450" y2="250" stroke="#22C55E" stroke-width="1" opacity="0.3"/>
+  <line x1="700" y1="350" x2="450" y2="250" stroke="#F59E0B" stroke-width="1" opacity="0.3"/>
+
+  <!-- Main Identity -->
+  <g transform="translate(450, 250)" class="float">
+    <text x="0" y="-20" text-anchor="middle" class="mono" font-size="36" font-weight="800" fill="#E6EDF3" filter="url(#glow)">KRISHNA KUMAR SHARMA</text>
     
-    <!-- Main Title -->
-    <text x="450" y="150" text-anchor="middle" class="sans" font-size="52" font-weight="800" fill="#ffffff" filter="url(#glow)">KRISHNA KUMAR SHARMA</text>
-    
-    <!-- Subtitle with Gradient -->
-    <text x="450" y="200" text-anchor="middle" class="sans" font-size="18" font-weight="600" fill="url(#textGradient)">Backend Engineer • Cloud Architect • Open Source Contributor</text>
-    
-    <!-- Status Badge -->
-    <g transform="translate(450, 240)">
-      <rect x="-80" y="-15" width="160" height="30" fill="#0d1117" stroke="#00d4ff" stroke-width="2" rx="15" class="pulse-glow"/>
-      <circle cx="-60" cy="0" r="5" fill="#27ca40">
-        <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
-      </circle>
-      <text x="-45" y="5" class="mono" font-size="12" font-weight="700" fill="#ffffff">SYSTEM ONLINE</text>
-    </g>
+    <!-- Focus Areas -->
+    <text x="0" y="20" text-anchor="middle" class="mono" font-size="14" fill="#00D4FF">BACKEND</text>
+    <text x="0" y="40" text-anchor="middle" class="mono" font-size="14" fill="#7C3AED">CLOUD</text>
+    <text x="0" y="60" text-anchor="middle" class="mono" font-size="14" fill="#22C55E">DEVOPS</text>
+    <text x="0" y="80" text-anchor="middle" class="mono" font-size="14" fill="#F59E0B">OPEN SOURCE</text>
+    <text x="0" y="100" text-anchor="middle" class="mono" font-size="14" fill="#E6EDF3">DSA</text>
   </g>
 
-  <!-- Code/Terminal Block -->
-  <g transform="translate(150, 290)">
-    <rect width="600" height="140" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="8" filter="url(#blur)"/>
+  <!-- Terminal Block -->
+  <g transform="translate(150, 380)">
+    <rect width="600" height="80" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="4"/>
+    <text x="20" y="25" class="mono" font-size="11" fill="#00D4FF">KSH // ENGINEERING TERMINAL</text>
+    <text x="20" y="45" class="mono" font-size="10" fill="#64748B">STATUS: <tspan fill="#22C55E">BUILDING</tspan></text>
+    <text x="20" y="65" class="mono" font-size="10" fill="#64748B">MODE: <tspan fill="#00D4FF">LEARN → BUILD → SHIP</tspan></text>
     
-    <!-- Terminal Header -->
-    <rect width="600" height="35" fill="#161b22" rx="8"/>
-    <rect y="27" width="600" height="8" fill="#161b22"/>
-    
-    <!-- Terminal Dots -->
-    <circle cx="25" cy="17" r="5" fill="#ff5f56"/>
-    <circle cx="45" cy="17" r="5" fill="#ffbd2e"/>
-    <circle cx="65" cy="17" r="5" fill="#27ca40"/>
-    
-    <text x="85" y="22" class="mono" font-size="11" fill="#8b949e">ksh-terminal — zsh — 80x24</text>
-    
-    <!-- Terminal Content -->
-    <g transform="translate(25, 60)">
-      <text x="0" y="0" class="mono" font-size="11" fill="#00d4ff">$</text>
-      <text x="15" y="0" class="mono" font-size="11" fill="#ffffff">whoami</text>
-      <text x="75" y="0" class="mono" font-size="11" fill="#8b949e"># Krishna Kumar Sharma</text>
-      
-      <text x="0" y="20" class="mono" font-size="11" fill="#00d4ff">$</text>
-      <text x="15" y="20" class="mono" font-size="11" fill="#ffffff">focus --backend --cloud --opensource</text>
-      
-      <text x="0" y="40" class="mono" font-size="11" fill="#00d4ff">$</text>
-      <text x="15" y="40" class="mono" font-size="11" fill="#ffffff">build --project CertiVault</text>
-      <text x="200" y="40" class="mono" font-size="11" fill="#e3b341">[BUILDING]</text>
-      
-      <text x="0" y="60" class="mono" font-size="11" fill="#00d4ff">$</text>
-      <text x="15" y="60" class="mono" font-size="11" fill="#ffffff">learn --dsa --system-design</text>
-      
-      <text x="0" y="80" class="mono" font-size="11" fill="#00d4ff">$ <tspan class="cursor">_</tspan></text>
-    </g>
-    
-    <!-- Scan Line Effect -->
-    <rect x="0" y="35" width="600" height="2" fill="url(#accentGradient)" opacity="0.3" class="scan-line"/>
+    <circle cx="560" cy="40" r="5" fill="#22C55E" class="pulse"/>
+    <text x="520" y="44" class="mono" font-size="10" fill="#22C55E">ONLINE</text>
   </g>
 
-  <!-- Stats Row -->
-  <g transform="translate(150, 450)">
-    <g transform="translate(0, 0)">
-      <rect width="120" height="40" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="6"/>
-      <text x="60" y="18" text-anchor="middle" class="mono" font-size="10" fill="#8b949e">PROJECTS</text>
-      <text x="60" y="32" text-anchor="middle" class="mono" font-size="14" font-weight="700" fill="#00d4ff">5+</text>
-    </g>
-    
-    <g transform="translate(140, 0)">
-      <rect width="120" height="40" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="6"/>
-      <text x="60" y="18" text-anchor="middle" class="mono" font-size="10" fill="#8b949e">CONTRIBUTIONS</text>
-      <text x="60" y="32" text-anchor="middle" class="mono" font-size="14" font-weight="700" fill="#7c3aed">ACTIVE</text>
-    </g>
-    
-    <g transform="translate(280, 0)">
-      <rect width="120" height="40" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="6"/>
-      <text x="60" y="18" text-anchor="middle" class="mono" font-size="10" fill="#8b949e">EXPERIENCE</text>
-      <text x="60" y="32" text-anchor="middle" class="mono" font-size="14" font-weight="700" fill="#ec4899">LEARNING</text>
-    </g>
-    
-    <g transform="translate(420, 0)">
-      <rect width="120" height="40" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="6"/>
-      <text x="60" y="18" text-anchor="middle" class="mono" font-size="10" fill="#8b949e">STATUS</text>
-      <text x="60" y="32" text-anchor="middle" class="mono" font-size="14" font-weight="700" fill="#27ca40">ONLINE</text>
-    </g>
+  <!-- HUD Elements -->
+  <g transform="translate(50, 50)">
+    <rect width="120" height="30" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="2"/>
+    <text x="10" y="20" class="mono" font-size="10" fill="#64748B">SYS: KSH-OS v1.0</text>
   </g>
 
-  <!-- Decorative Elements -->
-  <circle cx="50" cy="50" r="3" fill="#00d4ff" opacity="0.5">
-    <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="850" cy="450" r="3" fill="#7c3aed" opacity="0.5">
-    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  
+  <g transform="translate(730, 50)">
+    <rect width="120" height="30" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="2"/>
+    <text x="10" y="20" class="mono" font-size="10" fill="#00D4FF">TIME: <tspan fill="#E6EDF3">LIVE</tspan></text>
+  </g>
+
   <!-- Corner Accents -->
-  <path d="M 0 0 L 100 0 L 0 100 Z" fill="url(#accentGradient)" opacity="0.1"/>
-  <path d="M 900 500 L 800 500 L 900 400 Z" fill="url(#accentGradient)" opacity="0.1"/>
+  <path d="M 0 0 L 50 0 L 0 50 Z" fill="url(#accentGradient)" opacity="0.1"/>
+  <path d="M 900 500 L 850 500 L 900 450 Z" fill="url(#accentGradient)" opacity="0.1"/>
 </svg>

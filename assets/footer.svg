@@ -1,68 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 180" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 120" width="800" height="120">
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080c14" />
-      <stop offset="100%" stop-color="#0e1726" />
-    </linearGradient>
-
-    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="50%" stop-color="#3b82f6" />
-      <stop offset="100%" stop-color="#8b5cf6" />
-    </linearGradient>
-
-    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.7" stroke-opacity="0.4" />
-    </pattern>
-
     <style>
-      .mono { font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'JetBrains Mono', monospace; }
-      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&amp;display=swap');
+      .mono { font-family: 'JetBrains Mono', monospace; }
+      
+      @keyframes signal {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 1; }
+      }
+      
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+      }
+      
+      @keyframes data-bit {
+        0% { transform: translateX(0); opacity: 1; }
+        100% { transform: translateX(10px); opacity: 0; }
+      }
+      
+      .signal { animation: signal 2s ease-in-out infinite; }
+      .pulse { animation: pulse 2s ease-in-out infinite; }
+      .data-bit { animation: data-bit 1s linear infinite; }
     </style>
+    
+    <linearGradient id="footerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#05060B"/>
+      <stop offset="100%" style="stop-color:#0B0F17"/>
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D4FF"/>
+      <stop offset="100%" style="stop-color:#7C3AED"/>
+    </linearGradient>
   </defs>
 
-  <!-- Container Box -->
-  <rect width="900" height="180" rx="12" fill="url(#bgGrad)" stroke="#1e2d4a" stroke-width="1.5" />
-  <rect width="900" height="180" rx="12" fill="url(#grid)" />
+  <!-- Background -->
+  <rect width="800" height="120" fill="url(#footerGradient)"/>
+  
+  <!-- Grid Pattern -->
+  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1E293B" stroke-width="0.5"/>
+  </pattern>
+  <rect width="800" height="120" fill="url(#grid)" opacity="0.3"/>
 
-  <path d="M 25 20 L 875 20" stroke="url(#accentGrad)" stroke-width="1.5" opacity="0.8"/>
-
-  <!-- Signature -->
-  <g transform="translate(0, 55)">
-    <text x="450" y="0" text-anchor="middle" fill="#f8fafc" class="mono" font-size="16" font-weight="800" letter-spacing="2">KSH // BUILD • DEBUG • LEARN • SHIP</text>
-    <text x="450" y="24" text-anchor="middle" fill="#64748b" class="mono" font-size="11">ENGINEERING OPERATING SYSTEM • SYSTEM_ID: KRISHNX21</text>
+  <!-- Main Signature -->
+  <text x="400" y="40" text-anchor="middle" class="mono" font-size="16" font-weight="800" fill="#00D4FF">KSH // ENGINEERING TERMINAL</text>
+  
+  <!-- Philosophy -->
+  <text x="400" y="65" text-anchor="middle" class="mono" font-size="14" fill="#7C3AED">BUILD • DEBUG • LEARN • SHIP</text>
+  
+  <!-- Digital Signal -->
+  <g transform="translate(400, 90)">
+    <line x1="-100" y1="0" x2="100" y2="0" stroke="#00D4FF" stroke-width="1" opacity="0.5"/>
+    <circle cx="0" cy="0" r="3" fill="#22C55E" class="pulse"/>
+    <circle cx="-50" cy="0" r="2" fill="#00D4FF" class="signal"/>
+    <circle cx="50" cy="0" r="2" fill="#7C3AED" class="signal" style="animation-delay: 0.5s;"/>
+    
+    <!-- Data bits -->
+    <circle cx="-80" cy="0" r="1" fill="#22C55E" class="data-bit"/>
+    <circle cx="-70" cy="0" r="1" fill="#00D4FF" class="data-bit" style="animation-delay: 0.2s;"/>
+    <circle cx="70" cy="0" r="1" fill="#7C3AED" class="data-bit" style="animation-delay: 0.3s;"/>
+    <circle cx="80" cy="0" r="1" fill="#F59E0B" class="data-bit" style="animation-delay: 0.4s;"/>
   </g>
 
-  <!-- Connect Buttons Row -->
-  <g transform="translate(180, 110)">
-    <!-- LinkedIn -->
-    <a href="https://www.linkedin.com/in/krishna-kumar-89544b295" target="_blank">
-      <rect x="0" y="0" width="120" height="32" rx="6" fill="#0A66C2" fill-opacity="0.2" stroke="#0A66C2" stroke-width="1"/>
-      <text x="60" y="20" text-anchor="middle" fill="#60a5fa" class="mono" font-size="11" font-weight="700">LINKEDIN</text>
-    </a>
-
-    <!-- Email -->
-    <a href="mailto:krishnakumarsharma8077@gmail.com" target="_blank">
-      <g transform="translate(140, 0)">
-        <rect x="0" y="0" width="115" height="32" rx="6" fill="#EA4335" fill-opacity="0.2" stroke="#EA4335" stroke-width="1"/>
-        <text x="57" y="20" text-anchor="middle" fill="#f87171" class="mono" font-size="11" font-weight="700">EMAIL</text>
-      </g>
-    </a>
-
-    <!-- LeetCode -->
-    <a href="https://leetcode.com/u/krishnx_21/" target="_blank">
-      <g transform="translate(275, 0)">
-        <rect x="0" y="0" width="125" height="32" rx="6" fill="#FFA116" fill-opacity="0.2" stroke="#FFA116" stroke-width="1"/>
-        <text x="62" y="20" text-anchor="middle" fill="#fbbf24" class="mono" font-size="11" font-weight="700">LEETCODE</text>
-      </g>
-    </a>
-
-    <!-- GitHub Profile -->
-    <a href="https://github.com/krishnx21" target="_blank">
-      <g transform="translate(420, 0)">
-        <rect x="0" y="0" width="120" height="32" rx="6" fill="#38bdf8" fill-opacity="0.2" stroke="#38bdf8" stroke-width="1"/>
-        <text x="60" y="20" text-anchor="middle" fill="#38bdf8" class="mono" font-size="11" font-weight="700">GITHUB</text>
-      </g>
-    </a>
+  <!-- Status -->
+  <g transform="translate(700, 105)">
+    <circle cx="0" cy="0" r="4" fill="#22C55E" class="pulse"/>
+    <text x="15" y="4" class="mono" font-size="10" fill="#22C55E">always building.</text>
   </g>
+
+  <!-- Top Border -->
+  <rect x="0" y="0" width="800" height="2" fill="url(#accentGradient)"/>
+  
+  <!-- Bottom Border -->
+  <rect x="0" y="118" width="800" height="2" fill="url(#accentGradient)"/>
 </svg>

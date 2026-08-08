@@ -1,97 +1,103 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="800" height="350">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="800" height="320">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&amp;family=Inter:wght@400;600;700&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&amp;display=swap');
       .mono { font-family: 'JetBrains Mono', monospace; }
-      .sans { font-family: 'Inter', sans-serif; }
       
-      @keyframes fade-in {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
+      @keyframes scan {
+        0% { transform: translateX(-100%); opacity: 0; }
+        50% { opacity: 0.5; }
+        100% { transform: translateX(100%); opacity: 0; }
       }
       
-      @keyframes pulse-glow {
-        0%, 100% { filter: drop-shadow(0 0 5px rgba(0, 212, 255, 0.3)); }
-        50% { filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.6)); }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
       }
       
-      .fade-in { animation: fade-in 0.5s ease-out forwards; }
-      .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+      @keyframes cursor {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      
+      .scan { animation: scan 3s linear infinite; }
+      .pulse { animation: pulse 2s ease-in-out infinite; }
+      .cursor { animation: cursor 1s step-end infinite; }
     </style>
     
     <linearGradient id="aboutGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0a0e17"/>
-      <stop offset="100%" style="stop-color:#0d1117"/>
+      <stop offset="0%" style="stop-color:#05060B"/>
+      <stop offset="100%" style="stop-color:#0B0F17"/>
     </linearGradient>
     
-    <linearGradient id="aboutAccent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#00d4ff"/>
-      <stop offset="100%" style="stop-color:#7c3aed"/>
-    </linearGradient>
-    
-    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#161b22"/>
-      <stop offset="100%" style="stop-color:#0d1117"/>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D4FF"/>
+      <stop offset="100%" style="stop-color:#7C3AED"/>
     </linearGradient>
   </defs>
 
   <!-- Background -->
-  <rect width="800" height="350" fill="url(#aboutGradient)" rx="12"/>
+  <rect width="800" height="320" fill="url(#aboutGradient)"/>
   
   <!-- Grid Pattern -->
-  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a2332" stroke-width="0.5"/>
+  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1E293B" stroke-width="0.5"/>
   </pattern>
-  <rect width="800" height="350" fill="url(#grid)" opacity="0.3"/>
+  <rect width="800" height="320" fill="url(#grid)" opacity="0.3"/>
 
   <!-- Header -->
-  <rect x="0" y="0" width="800" height="60" fill="#161b22" rx="12"/>
-  <rect y="52" width="800" height="8" fill="#161b22"/>
-  
-  <text x="25" y="38" class="mono" font-size="16" font-weight="800" fill="#00d4ff">// IDENTITY_DUMP</text>
-  <text x="750" y="38" text-anchor="end" class="mono" font-size="12" fill="#8b949e">WHO_AM_I</text>
-  
-  <line x1="0" y1="60" x2="800" y2="60" stroke="#1a2332" stroke-width="1"/>
+  <rect x="0" y="0" width="800" height="45" fill="#0B0F17" stroke="#1E293B" stroke-width="1"/>
+  <text x="25" y="28" class="mono" font-size="14" font-weight="700" fill="#00D4FF">WHOAMI</text>
+  <text x="750" y="28" text-anchor="end" class="mono" font-size="11" fill="#64748B">IDENTITY_SCAN</text>
 
-  <!-- Content -->
-  <g transform="translate(25, 80)">
-    <!-- Name & Role -->
-    <g transform="translate(0, 0)" class="fade-in" style="animation-delay: 0.1s;">
-      <rect width="730" height="60" fill="url(#cardGradient)" stroke="#1a2332" stroke-width="1" rx="8"/>
-      <text x="20" y="25" class="sans" font-size="18" font-weight="700" fill="#ffffff">Krishna Kumar Sharma</text>
-      <text x="20" y="48" class="mono" font-size="12" fill="#00d4ff">Backend &amp; Cloud Developer</text>
-      
-      <circle cx="700" cy="30" r="6" fill="#27ca40" class="pulse-glow"/>
-    </g>
-
-    <!-- Focus Areas -->
-    <g transform="translate(0, 75)" class="fade-in" style="animation-delay: 0.2s;">
-      <rect width="730" height="50" fill="url(#cardGradient)" stroke="#1a2332" stroke-width="1" rx="8"/>
-      <text x="20" y="20" class="mono" font-size="11" font-weight="700" fill="#8b949e">FOCUS</text>
-      <text x="20" y="38" class="sans" font-size="12" fill="#ffffff">Backend Engineering • Cloud • DevOps • Open Source • DSA • System Design</text>
-    </g>
-
-    <!-- Philosophy -->
-    <g transform="translate(0, 140)" class="fade-in" style="animation-delay: 0.3s;">
-      <rect width="730" height="50" fill="url(#cardGradient)" stroke="#1a2332" stroke-width="1" rx="8"/>
-      <text x="20" y="20" class="mono" font-size="11" font-weight="700" fill="#8b949e">PHILOSOPHY</text>
-      <text x="20" y="38" class="mono" font-size="12" fill="#00d4ff">BUILD → BREAK → DEBUG → LEARN → SHIP</text>
-    </g>
-
-    <!-- Current Status -->
-    <g transform="translate(0, 205)" class="fade-in" style="animation-delay: 0.4s;">
-      <rect width="730" height="50" fill="url(#cardGradient)" stroke="#1a2332" stroke-width="1" rx="8"/>
-      <text x="20" y="20" class="mono" font-size="11" font-weight="700" fill="#8b949e">CURRENT_STATUS</text>
-      <text x="20" y="38" class="sans" font-size="12" fill="#27ca40">Building scalable backend systems and learning cloud architecture</text>
-    </g>
+  <!-- Identity Panel -->
+  <g transform="translate(25, 65)">
+    <rect width="370" height="180" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="4"/>
+    <text x="15" y="25" class="mono" font-size="11" font-weight="700" fill="#7C3AED">NAME</text>
+    <text x="15" y="45" class="mono" font-size="12" fill="#E6EDF3">Krishna Kumar Sharma</text>
+    
+    <text x="15" y="70" class="mono" font-size="11" font-weight="700" fill="#7C3AED">DOMAIN</text>
+    <text x="15" y="90" class="mono" font-size="12" fill="#E6EDF3">Backend Engineering</text>
+    
+    <text x="15" y="115" class="mono" font-size="11" font-weight="700" fill="#7C3AED">FOCUS</text>
+    <text x="15" y="135" class="mono" font-size="12" fill="#E6EDF3">Cloud / DevOps / DSA</text>
+    
+    <circle cx="340" cy="90" r="4" fill="#22C55E" class="pulse"/>
   </g>
 
-  <!-- Status Badge -->
-  <g transform="translate(680, 320)">
-    <rect width="80" height="20" fill="#0d1117" stroke="#27ca40" stroke-width="1" rx="4"/>
-    <text x="40" y="14" text-anchor="middle" class="mono" font-size="10" fill="#27ca40">ONLINE</text>
+  <g transform="translate(405, 65)">
+    <rect width="370" height="180" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="4"/>
+    <text x="15" y="25" class="mono" font-size="11" font-weight="700" fill="#00D4FF">CURRENT_SYSTEM</text>
+    <text x="15" y="45" class="mono" font-size="12" fill="#F59E0B">CertiVault</text>
+    
+    <text x="15" y="70" class="mono" font-size="11" font-weight="700" fill="#00D4FF">CURRENT_OBJECTIVE</text>
+    <text x="15" y="90" class="mono" font-size="12" fill="#E6EDF3">Build stronger engineering</text>
+    <text x="15" y="110" class="mono" font-size="12" fill="#E6EDF3">fundamentals</text>
+    
+    <text x="15" y="135" class="mono" font-size="11" font-weight="700" fill="#00D4FF">PHILOSOPHY</text>
+    <text x="15" y="155" class="mono" font-size="12" fill="#7C3AED">LEARN → BUILD → SHIP</text>
+    
+    <circle cx="340" cy="90" r="4" fill="#F59E0B" class="pulse"/>
+  </g>
+
+  <!-- Terminal Scan -->
+  <g transform="translate(25, 260)">
+    <rect width="750" height="40" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="4"/>
+    <text x="15" y="25" class="mono" font-size="11" fill="#64748B">&gt; scan --identity --deep</text>
+    <text x="250" y="25" class="mono" font-size="10" fill="#22C55E">SCANNING...</text>
+    
+    <circle cx="700" cy="20" r="4" fill="#22C55E" class="pulse"/>
+  </g>
+
+  <!-- Scan line -->
+  <rect x="0" y="65" width="800" height="2" fill="url(#accentGradient)" class="scan" opacity="0.3"/>
+
+  <!-- Status -->
+  <g transform="translate(700, 310)">
+    <circle cx="0" cy="0" r="4" fill="#22C55E" class="pulse"/>
+    <text x="15" y="4" class="mono" font-size="10" fill="#22C55E">IDENTITY_VERIFIED</text>
   </g>
 
   <!-- Bottom Border -->
-  <rect x="0" y="348" width="800" height="2" fill="url(#aboutAccent)"/>
+  <rect x="0" y="315" width="800" height="5" fill="url(#accentGradient)"/>
 </svg>

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="800" height="320">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&amp;display=swap');
+      .mono { font-family: 'JetBrains Mono', monospace; }
+      
+      @keyframes progress {
+        from { width: 0; }
+        to { width: var(--width); }
+      }
+      
+      @keyframes pulse {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
+      }
+      
+      .progress { animation: progress 2s ease-out forwards; }
+      .pulse { animation: pulse 2s ease-in-out infinite; }
+    </style>
+    
+    <linearGradient id="telemetryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#05060B"/>
+      <stop offset="100%" style="stop-color:#0B0F17"/>
+    </linearGradient>
+    
+    <linearGradient id="barGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D4FF"/>
+      <stop offset="100%" style="stop-color:#7C3AED"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="320" fill="url(#telemetryGradient)"/>
+  
+  <!-- Grid Pattern -->
+  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1E293B" stroke-width="0.5"/>
+  </pattern>
+  <rect width="800" height="320" fill="url(#grid)" opacity="0.3"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="45" fill="#0B0F17" stroke="#1E293B" stroke-width="1"/>
+  <text x="25" y="28" class="mono" font-size="14" font-weight="700" fill="#00D4FF">ENGINEERING TELEMETRY</text>
+  <text x="750" y="28" text-anchor="end" class="mono" font-size="11" fill="#64748B">CURRENT FOCUS</text>
+
+  <!-- Focus Bars -->
+  <g transform="translate(25, 70)">
+    <!-- Backend -->
+    <g transform="translate(0, 0)">
+      <text x="0" y="15" class="mono" font-size="12" fill="#E6EDF3">BACKEND</text>
+      <rect x="80" y="5" width="650" height="15" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="2"/>
+      <rect x="80" y="5" width="520" height="15" fill="url(#barGradient)" rx="2" class="progress" style="--width: 520px;"/>
+      <text x="710" y="16" class="mono" font-size="10" fill="#22C55E">ACTIVE</text>
+    </g>
+
+    <!-- DSA -->
+    <g transform="translate(0, 45)">
+      <text x="0" y="15" class="mono" font-size="12" fill="#E6EDF3">DSA</text>
+      <rect x="80" y="5" width="650" height="15" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="2"/>
+      <rect x="80" y="5" width="455" height="15" fill="url(#barGradient)" rx="2" class="progress" style="--width: 455px; animation-delay: 0.3s;"/>
+      <text x="710" y="16" class="mono" font-size="10" fill="#7C3AED">TRAINING</text>
+    </g>
+
+    <!-- Cloud -->
+    <g transform="translate(0, 90)">
+      <text x="0" y="15" class="mono" font-size="12" fill="#E6EDF3">CLOUD</text>
+      <rect x="80" y="5" width="650" height="15" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="2"/>
+      <rect x="80" y="5" width="325" height="15" fill="url(#barGradient)" rx="2" class="progress" style="--width: 325px; animation-delay: 0.6s;"/>
+      <text x="710" y="16" class="mono" font-size="10" fill="#00D4FF">LEARNING</text>
+    </g>
+
+    <!-- DevOps -->
+    <g transform="translate(0, 135)">
+      <text x="0" y="15" class="mono" font-size="12" fill="#E6EDF3">DEVOPS</text>
+      <rect x="80" y="5" width="650" height="15" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="2"/>
+      <rect x="80" y="5" width="260" height="15" fill="url(#barGradient)" rx="2" class="progress" style="--width: 260px; animation-delay: 0.9s;"/>
+      <text x="710" y="16" class="mono" font-size="10" fill="#64748B">EXPLORING</text>
+    </g>
+
+    <!-- System Design -->
+    <g transform="translate(0, 180)">
+      <text x="0" y="15" class="mono" font-size="12" fill="#E6EDF3">SYSTEM DESIGN</text>
+      <rect x="80" y="5" width="650" height="15" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="2"/>
+      <rect x="80" y="5" width="195" height="15" fill="url(#barGradient)" rx="2" class="progress" style="--width: 195px; animation-delay: 1.2s;"/>
+      <text x="710" y="16" class="mono" font-size="10" fill="#64748B">LEARNING</text>
+    </g>
+
+    <!-- CertiVault -->
+    <g transform="translate(0, 225)">
+      <text x="0" y="15" class="mono" font-size="12" fill="#E6EDF3">CERTIVAULT</text>
+      <rect x="80" y="5" width="650" height="15" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="2"/>
+      <rect x="80" y="5" width="585" height="15" fill="url(#barGradient)" rx="2" class="progress" style="--width: 585px; animation-delay: 1.5s;"/>
+      <text x="710" y="16" class="mono" font-size="10" fill="#F59E0B">BUILDING</text>
+    </g>
+  </g>
+
+  <!-- Status Indicator -->
+  <g transform="translate(700, 290)">
+    <circle cx="0" cy="0" r="6" fill="#22C55E" class="pulse"/>
+    <text x="15" y="4" class="mono" font-size="10" fill="#22C55E">TELEMETRY ACTIVE</text>
+  </g>
+
+  <!-- Bottom Border -->
+  <rect x="0" y="310" width="800" height="10" fill="url(#barGradient)"/>
+</svg>

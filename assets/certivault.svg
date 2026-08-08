@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&amp;display=swap');
+      .mono { font-family: 'JetBrains Mono', monospace; }
+      
+      @keyframes data-flow {
+        0% { transform: translateX(0); opacity: 1; }
+        100% { transform: translateX(20px); opacity: 0; }
+      }
+      
+      @keyframes pulse {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
+      }
+      
+      @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      
+      @keyframes scan {
+        0% { transform: translateY(-100%); opacity: 0; }
+        50% { opacity: 0.3; }
+        100% { transform: translateY(100%); opacity: 0; }
+      }
+      
+      .data-flow { animation: data-flow 2s linear infinite; }
+      .pulse { animation: pulse 2s ease-in-out infinite; }
+      .rotate { animation: rotate 10s linear infinite; }
+      .scan { animation: scan 3s linear infinite; }
+    </style>
+    
+    <linearGradient id="certivaultGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#05060B"/>
+      <stop offset="100%" style="stop-color:#0B0F17"/>
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D4FF"/>
+      <stop offset="100%" style="stop-color:#7C3AED"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#certivaultGradient)"/>
+  
+  <!-- Grid Pattern -->
+  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1E293B" stroke-width="0.5"/>
+  </pattern>
+  <rect width="800" height="450" fill="url(#grid)" opacity="0.3"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="50" fill="#0B0F17" stroke="#00D4FF" stroke-width="1"/>
+  <text x="25" y="32" class="mono" font-size="16" font-weight="800" fill="#00D4FF">CERTIVAULT</text>
+  <text x="750" y="32" text-anchor="end" class="mono" font-size="11" fill="#64748B">SECURE_DOCUMENT_PLATFORM</text>
+
+  <!-- Status -->
+  <g transform="translate(700, 30)">
+    <circle cx="0" cy="0" r="5" fill="#F59E0B" class="pulse"/>
+    <text x="15" y="4" class="mono" font-size="10" fill="#F59E0B">BUILDING</text>
+  </g>
+
+  <!-- Architecture Diagram -->
+  <g transform="translate(25, 70)">
+    <!-- Client -->
+    <g transform="translate(325, 0)">
+      <rect width="150" height="40" fill="#0B0F17" stroke="#00D4FF" stroke-width="1" rx="4"/>
+      <text x="75" y="25" text-anchor="middle" class="mono" font-size="11" fill="#E6EDF3">CLIENT</text>
+    </g>
+
+    <!-- Connection -->
+    <line x1="400" y1="40" x2="400" y2="60" stroke="#00D4FF" stroke-width="2"/>
+    <circle cx="400" cy="50" r="3" fill="#00D4FF" class="pulse"/>
+
+    <!-- API -->
+    <g transform="translate(325, 60)">
+      <rect width="150" height="40" fill="#0B0F17" stroke="#7C3AED" stroke-width="1" rx="4"/>
+      <text x="75" y="25" text-anchor="middle" class="mono" font-size="11" fill="#E6EDF3">API_GATEWAY</text>
+    </g>
+
+    <!-- Connection -->
+    <line x1="400" y1="100" x2="400" y2="120" stroke="#7C3AED" stroke-width="2"/>
+    <circle cx="400" cy="110" r="3" fill="#7C3AED" class="pulse"/>
+
+    <!-- Auth -->
+    <g transform="translate(325, 120)">
+      <rect width="150" height="40" fill="#0B0F17" stroke="#22C55E" stroke-width="1" rx="4"/>
+      <text x="75" y="25" text-anchor="middle" class="mono" font-size="11" fill="#E6EDF3">AUTH_SERVICE</text>
+    </g>
+
+    <!-- Connection -->
+    <line x1="400" y1="160" x2="400" y2="180" stroke="#22C55E" stroke-width="2"/>
+    <circle cx="400" cy="170" r="3" fill="#22C55E" class="pulse"/>
+
+    <!-- Document Service -->
+    <g transform="translate(200, 180)">
+      <rect width="400" height="50" fill="#0B0F17" stroke="#F59E0B" stroke-width="1" rx="4"/>
+      <text x="200" y="30" text-anchor="middle" class="mono" font-size="12" font-weight="700" fill="#E6EDF3">DOCUMENT_SERVICE</text>
+    </g>
+
+    <!-- Database Group -->
+    <g transform="translate(25, 250)">
+      <rect width="170" height="45" fill="#0B0F17" stroke="#00D4FF" stroke-width="1" rx="4"/>
+      <text x="85" y="28" text-anchor="middle" class="mono" font-size="11" fill="#E6EDF3">DATABASE</text>
+      <circle cx="150" cy="22" r="3" fill="#00D4FF" class="pulse"/>
+    </g>
+
+    <g transform="translate(205, 250)">
+      <rect width="170" height="45" fill="#0B0F17" stroke="#7C3AED" stroke-width="1" rx="4"/>
+      <text x="85" y="28" text-anchor="middle" class="mono" font-size="11" fill="#E6EDF3">REDIS_CACHE</text>
+      <circle cx="150" cy="22" r="3" fill="#7C3AED" class="pulse" style="animation-delay: 0.3s;"/>
+    </g>
+
+    <g transform="translate(385, 250)">
+      <rect width="170" height="45" fill="#0B0F17" stroke="#22C55E" stroke-width="1" rx="4"/>
+      <text x="85" y="28" text-anchor="middle" class="mono" font-size="11" fill="#E6EDF3">AWS_S3</text>
+      <circle cx="150" cy="22" r="3" fill="#22C55E" class="pulse" style="animation-delay: 0.6s;"/>
+    </g>
+
+    <g transform="translate(565, 250)">
+      <rect width="170" height="45" fill="#0B0F17" stroke="#F59E0B" stroke-width="1" rx="4"/>
+      <text x="85" y="28" text-anchor="middle" class="mono" font-size="11" fill="#E6EDF3">AUDIT_LOG</text>
+      <circle cx="150" cy="22" r="3" fill="#F59E0B" class="pulse" style="animation-delay: 0.9s;"/>
+    </g>
+
+    <!-- Connections from Document Service -->
+    <line x1="225" y1="230" x2="112" y2="250" stroke="#00D4FF" stroke-width="1" opacity="0.5"/>
+    <line x1="290" y1="230" x2="290" y2="250" stroke="#7C3AED" stroke-width="1" opacity="0.5"/>
+    <line x1="400" y1="230" x2="457" y2="250" stroke="#22C55E" stroke-width="1" opacity="0.5"/>
+    <line x1="510" y1="230" x2="650" y2="250" stroke="#F59E0B" stroke-width="1" opacity="0.5"/>
+
+    <!-- CI/CD -->
+    <g transform="translate(325, 310)">
+      <rect width="150" height="40" fill="#0B0F17" stroke="#22C55E" stroke-width="1" rx="4"/>
+      <text x="75" y="25" text-anchor="middle" class="mono" font-size="11" fill="#E6EDF3">CI/CD</text>
+    </g>
+
+    <!-- Monitoring -->
+    <g transform="translate(325, 370)">
+      <rect width="150" height="40" fill="#0B0F17" stroke="#7C3AED" stroke-width="1" rx="4"/>
+      <text x="75" y="25" text-anchor="middle" class="mono" font-size="11" fill="#E6EDF3">MONITORING</text>
+    </g>
+
+    <!-- Vertical connections -->
+    <line x1="400" y1="295" x2="400" y2="310" stroke="#22C55E" stroke-width="1" opacity="0.5"/>
+    <line x1="400" y1="350" x2="400" y2="370" stroke="#7C3AED" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- Features Panel -->
+  <g transform="translate(25, 420)">
+    <rect width="750" height="25" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="4"/>
+    <text x="15" y="17" class="mono" font-size="10" fill="#64748B">FEATURES: <tspan fill="#00D4FF">VERIFICATION</tspan> <tspan fill="#7C3AED">DOCUMENT_MANAGEMENT</tspan> <tspan fill="#22C55E">AUDIT_LOGS</tspan> <tspan fill="#F59E0B">CLOUD_STORAGE</tspan> <tspan fill="#E6EDF3">SECURITY</tspan></text>
+  </g>
+
+  <!-- Animated ring -->
+  <circle cx="400" cy="250" r="200" fill="none" stroke="#00D4FF" stroke-width="1" opacity="0.1" class="rotate"/>
+
+  <!-- Scan line -->
+  <rect x="0" y="60" width="800" height="2" fill="url(#accentGradient)" class="scan" opacity="0.3"/>
+
+  <!-- Bottom Border -->
+  <rect x="0" y="445" width="800" height="5" fill="url(#accentGradient)"/>
+</svg>
