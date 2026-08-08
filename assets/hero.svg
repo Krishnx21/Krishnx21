@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap');
+      .mono { font-family: 'JetBrains Mono', 'Courier New', monospace; }
+      .glow { filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.3)); }
+      .pulse { animation: pulse 2s ease-in-out infinite; }
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.6; }
+      }
+      .cursor { animation: blink 1s step-end infinite; }
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+    </style>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e17"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="100%" style="stop-color:#0099ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#bgGradient)" rx="8"/>
+  
+  <!-- Subtle grid pattern -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a2332" stroke-width="0.5"/>
+  </pattern>
+  <rect width="800" height="400" fill="url(#grid)" opacity="0.3"/>
+
+  <!-- Top border accent -->
+  <rect x="0" y="0" width="800" height="2" fill="url(#accentGradient)"/>
+
+  <!-- Main Title -->
+  <text x="400" y="80" text-anchor="middle" class="mono" font-size="24" font-weight="700" fill="#00d4ff" glow>KSH // ENGINEERING OS</text>
+  
+  <!-- Name -->
+  <text x="400" y="130" text-anchor="middle" class="mono" font-size="32" font-weight="700" fill="#ffffff">KRISHNA KUMAR SHARMA</text>
+  
+  <!-- Role -->
+  <text x="400" y="170" text-anchor="middle" class="mono" font-size="16" fill="#8b949e">Backend • Cloud • Open Source</text>
+
+  <!-- Terminal Block -->
+  <rect x="100" y="200" width="600" height="150" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="4"/>
+  <rect x="100" y="200" width="600" height="30" fill="#161b22" stroke="#1a2332" stroke-width="1" rx="4"/>
+  <rect x="100" y="200" width="600" height="15" fill="#161b22" rx="4"/>
+  
+  <!-- Terminal dots -->
+  <circle cx="120" cy="215" r="4" fill="#ff5f56"/>
+  <circle cx="140" cy="215" r="4" fill="#ffbd2e"/>
+  <circle cx="160" cy="215" r="4" fill="#27ca40"/>
+
+  <!-- Terminal content -->
+  <text x="120" y="250" class="mono" font-size="12" fill="#8b949e">&gt; booting engineering profile...</text>
+  <text x="120" y="270" class="mono" font-size="12" fill="#8b949e">&gt; loading systems...</text>
+  <text x="120" y="290" class="mono" font-size="12" fill="#8b949e">&gt; loading projects...</text>
+  <text x="120" y="310" class="mono" font-size="12" fill="#8b949e">&gt; loading contribution stream...</text>
+  <text x="120" y="335" class="mono" font-size="12" fill="#00d4ff" font-weight="700">&gt; status: <tspan class="pulse">ONLINE</tspan><tspan class="cursor">_</tspan></text>
+
+  <!-- Status indicator -->
+  <circle cx="680" cy="335" r="6" fill="#27ca40" class="pulse"/>
+  <text x="695" y="340" class="mono" font-size="10" fill="#27ca40">ACTIVE</text>
+
+  <!-- Bottom accent line -->
+  <rect x="0" y="398" width="800" height="2" fill="url(#accentGradient)"/>
+</svg>

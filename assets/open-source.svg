@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 736 260" width="736" height="260">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap');
+      .mono { font-family: 'JetBrains Mono', 'Courier New', monospace; }
+    </style>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e17"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="736" height="260" fill="url(#bgGradient)" rx="8"/>
+  
+  <!-- Subtle grid -->
+  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1a2332" stroke-width="0.5"/>
+  </pattern>
+  <rect width="736" height="260" fill="url(#grid)" opacity="0.3"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="736" height="40" fill="#161b22" rx="8"/>
+  <rect x="0" y="32" width="736" height="8" fill="#161b22"/>
+  <text x="20" y="26" class="mono" font-size="14" font-weight="700" fill="#00d4ff">// OPEN_SOURCE_ACTIVITY</text>
+  <line x1="0" y1="40" x2="736" y2="40" stroke="#1a2332" stroke-width="1"/>
+
+  <!-- Activity Metrics -->
+  <g transform="translate(20, 60)">
+    <!-- Contributions -->
+    <rect width="160" height="80" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="4"/>
+    <text x="15" y="25" class="mono" font-size="10" fill="#8b949e">CONTRIBUTIONS</text>
+    <text x="15" y="50" class="mono" font-size="20" font-weight="700" fill="#27ca40">ACTIVE</text>
+    <text x="15" y="68" class="mono" font-size="10" fill="#8b949e">Community focused</text>
+
+    <!-- Pull Requests -->
+    <rect x="175" y="0" width="160" height="80" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="4"/>
+    <text x="190" y="25" class="mono" font-size="10" fill="#8b949e">PULL REQUESTS</text>
+    <text x="190" y="50" class="mono" font-size="20" font-weight="700" fill="#a371f7">OPEN</text>
+    <text x="190" y="68" class="mono" font-size="10" fill="#8b949e">Code review active</text>
+
+    <!-- Issues -->
+    <rect x="350" y="0" width="160" height="80" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="4"/>
+    <text x="365" y="25" class="mono" font-size="10" fill="#8b949e">ISSUES</text>
+    <text x="365" y="50" class="mono" font-size="20" font-weight="700" fill="#00d4ff">TRACKING</text>
+    <text x="365" y="68" class="mono" font-size="10" fill="#8b949e">Bug triage</text>
+
+    <!-- Code Reviews -->
+    <rect x="525" y="0" width="160" height="80" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="4"/>
+    <text x="540" y="25" class="mono" font-size="10" fill="#8b949e">CODE REVIEWS</text>
+    <text x="540" y="50" class="mono" font-size="20" font-weight="700" fill="#e3b341">LEARNING</text>
+    <text x="540" y="68" class="mono" font-size="10" fill="#8b949e">Quality focused</text>
+  </g>
+
+  <!-- Focus Areas -->
+  <g transform="translate(20, 155)">
+    <rect width="680" height="60" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="4"/>
+    <text x="15" y="25" class="mono" font-size="11" font-weight="700" fill="#00d4ff">CONTRIBUTION FOCUS</text>
+    <line x1="15" y1="35" x2="665" y2="35" stroke="#1a2332" stroke-width="0.5"/>
+    
+    <text x="15" y="52" class="mono" font-size="11" fill="#ffffff">Backend Systems</text>
+    <text x="150" y="52" class="mono" font-size="11" fill="#ffffff">Cloud Infrastructure</text>
+    <text x="300" y="52" class="mono" font-size="11" fill="#ffffff">DevOps Tools</text>
+    <text x="440" y="52" class="mono" font-size="11" fill="#ffffff">Documentation</text>
+    <text x="570" y="52" class="mono" font-size="11" fill="#ffffff">Bug Fixes</text>
+  </g>
+
+  <!-- GitHub Stats Placeholder -->
+  <g transform="translate(20, 230)">
+    <text x="0" y="15" class="mono" font-size="10" fill="#8b949e">GITHUB STATS</text>
+    <text x="120" y="15" class="mono" font-size="10" fill="#00d4ff">[Dynamic contribution graph rendered by GitHub Actions]</text>
+  </g>
+
+  <!-- Bottom border -->
+  <rect x="0" y="258" width="736" height="2" fill="#00d4ff"/>
+</svg>

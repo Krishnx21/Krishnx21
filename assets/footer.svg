@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 180" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080c14" />
+      <stop offset="100%" stop-color="#0e1726" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.7" stroke-opacity="0.4" />
+    </pattern>
+
+    <style>
+      .mono { font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'JetBrains Mono', monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Container Box -->
+  <rect width="900" height="180" rx="12" fill="url(#bgGrad)" stroke="#1e2d4a" stroke-width="1.5" />
+  <rect width="900" height="180" rx="12" fill="url(#grid)" />
+
+  <path d="M 25 20 L 875 20" stroke="url(#accentGrad)" stroke-width="1.5" opacity="0.8"/>
+
+  <!-- Signature -->
+  <g transform="translate(0, 55)">
+    <text x="450" y="0" text-anchor="middle" fill="#f8fafc" class="mono" font-size="16" font-weight="800" letter-spacing="2">KSH // BUILD • DEBUG • LEARN • SHIP</text>
+    <text x="450" y="24" text-anchor="middle" fill="#64748b" class="mono" font-size="11">ENGINEERING OPERATING SYSTEM • SYSTEM_ID: KRISHNX21</text>
+  </g>
+
+  <!-- Connect Buttons Row -->
+  <g transform="translate(180, 110)">
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/krishna-kumar-89544b295" target="_blank">
+      <rect x="0" y="0" width="120" height="32" rx="6" fill="#0A66C2" fill-opacity="0.2" stroke="#0A66C2" stroke-width="1"/>
+      <text x="60" y="20" text-anchor="middle" fill="#60a5fa" class="mono" font-size="11" font-weight="700">LINKEDIN</text>
+    </a>
+
+    <!-- Email -->
+    <a href="mailto:krishnakumarsharma8077@gmail.com" target="_blank">
+      <g transform="translate(140, 0)">
+        <rect x="0" y="0" width="115" height="32" rx="6" fill="#EA4335" fill-opacity="0.2" stroke="#EA4335" stroke-width="1"/>
+        <text x="57" y="20" text-anchor="middle" fill="#f87171" class="mono" font-size="11" font-weight="700">EMAIL</text>
+      </g>
+    </a>
+
+    <!-- LeetCode -->
+    <a href="https://leetcode.com/u/krishnx_21/" target="_blank">
+      <g transform="translate(275, 0)">
+        <rect x="0" y="0" width="125" height="32" rx="6" fill="#FFA116" fill-opacity="0.2" stroke="#FFA116" stroke-width="1"/>
+        <text x="62" y="20" text-anchor="middle" fill="#fbbf24" class="mono" font-size="11" font-weight="700">LEETCODE</text>
+      </g>
+    </a>
+
+    <!-- GitHub Profile -->
+    <a href="https://github.com/krishnx21" target="_blank">
+      <g transform="translate(420, 0)">
+        <rect x="0" y="0" width="120" height="32" rx="6" fill="#38bdf8" fill-opacity="0.2" stroke="#38bdf8" stroke-width="1"/>
+        <text x="60" y="20" text-anchor="middle" fill="#38bdf8" class="mono" font-size="11" font-weight="700">GITHUB</text>
+      </g>
+    </a>
+  </g>
+</svg>

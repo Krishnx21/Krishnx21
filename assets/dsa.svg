@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 736 360" width="736" height="360">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap');
+      .mono { font-family: 'JetBrains Mono', 'Courier New', monospace; }
+    </style>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e17"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="736" height="360" fill="url(#bgGradient)" rx="8"/>
+  
+  <!-- Subtle grid -->
+  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1a2332" stroke-width="0.5"/>
+  </pattern>
+  <rect width="736" height="360" fill="url(#grid)" opacity="0.3"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="736" height="40" fill="#161b22" rx="8"/>
+  <rect x="0" y="32" width="736" height="8" fill="#161b22"/>
+  <text x="20" y="26" class="mono" font-size="14" font-weight="700" fill="#00d4ff">// DSA_TRAINING</text>
+  <line x1="0" y1="40" x2="736" y2="40" stroke="#1a2332" stroke-width="1"/>
+
+  <!-- Topics Grid -->
+  <g transform="translate(20, 60)">
+    <!-- Arrays -->
+    <rect width="140" height="40" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="4"/>
+    <text x="70" y="25" text-anchor="middle" class="mono" font-size="11" fill="#ffffff">Arrays</text>
+    <circle cx="125" cy="25" r="4" fill="#27ca40"/>
+
+    <!-- Strings -->
+    <rect x="155" y="0" width="140" height="40" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="4"/>
+    <text x="225" y="25" text-anchor="middle" class="mono" font-size="11" fill="#ffffff">Strings</text>
+    <circle cx="280" cy="25" r="4" fill="#27ca40"/>
+
+    <!-- Hashing -->
+    <rect x="310" y="0" width="140" height="40" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="4"/>
+    <text x="380" y="25" text-anchor="middle" class="mono" font-size="11" fill="#ffffff">Hashing</text>
+    <circle cx="435" cy="25" r="4" fill="#e3b341"/>
+
+    <!-- Sorting -->
+    <rect x="465" y="0" width="140" height="40" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="4"/>
+    <text x="535" y="25" text-anchor="middle" class="mono" font-size="11" fill="#ffffff">Sorting</text>
+    <circle cx="590" cy="25" r="4" fill="#27ca40"/>
+
+    <!-- Recursion -->
+    <rect x="0" y="55" width="140" height="40" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="4"/>
+    <text x="70" y="80" text-anchor="middle" class="mono" font-size="11" fill="#ffffff">Recursion</text>
+    <circle cx="125" cy="80" r="4" fill="#e3b341"/>
+
+    <!-- Linked Lists -->
+    <rect x="155" y="55" width="140" height="40" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="4"/>
+    <text x="225" y="80" text-anchor="middle" class="mono" font-size="11" fill="#ffffff">Linked Lists</text>
+    <circle cx="280" cy="80" r="4" fill="#27ca40"/>
+
+    <!-- Stacks -->
+    <rect x="310" y="55" width="140" height="40" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="4"/>
+    <text x="380" y="80" text-anchor="middle" class="mono" font-size="11" fill="#ffffff">Stacks</text>
+    <circle cx="435" cy="80" r="4" fill="#27ca40"/>
+
+    <!-- Queues -->
+    <rect x="465" y="55" width="140" height="40" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="4"/>
+    <text x="535" y="80" text-anchor="middle" class="mono" font-size="11" fill="#ffffff">Queues</text>
+    <circle cx="590" cy="80" r="4" fill="#27ca40"/>
+
+    <!-- Trees -->
+    <rect x="0" y="110" width="140" height="40" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="4"/>
+    <text x="70" y="135" text-anchor="middle" class="mono" font-size="11" fill="#ffffff">Trees</text>
+    <circle cx="125" cy="135" r="4" fill="#e3b341"/>
+
+    <!-- Graphs -->
+    <rect x="155" y="110" width="140" height="40" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="4"/>
+    <text x="225" y="135" text-anchor="middle" class="mono" font-size="11" fill="#ffffff">Graphs</text>
+    <circle cx="280" cy="135" r="4" fill="#a371f7"/>
+
+    <!-- Dynamic Programming -->
+    <rect x="310" y="110" width="140" height="40" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="4"/>
+    <text x="380" y="135" text-anchor="middle" class="mono" font-size="11" fill="#ffffff">Dynamic Programming</text>
+    <circle cx="435" cy="135" r="4" fill="#a371f7"/>
+  </g>
+
+  <!-- Philosophy Section -->
+  <g transform="translate(20, 230)">
+    <rect width="680" height="80" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="4"/>
+    <text x="15" y="25" class="mono" font-size="11" font-weight="700" fill="#00d4ff">APPROACH PHILOSOPHY</text>
+    <line x1="15" y1="35" x2="665" y2="35" stroke="#1a2332" stroke-width="0.5"/>
+    
+    <text x="15" y="55" class="mono" font-size="10" fill="#8b949e">CONCEPT → PATTERN → APPROACH → OBSERVATION → TIME → SPACE</text>
+    <text x="15" y="70" class="mono" font-size="10" fill="#ffffff">Understand fundamentals. Recognize patterns. Optimize complexity.</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(20, 320)">
+    <circle cx="0" cy="0" r="4" fill="#27ca40"/>
+    <text x="15" y="4" class="mono" font-size="10" fill="#27ca40">MASTERED</text>
+    
+    <circle cx="100" cy="0" r="4" fill="#e3b341"/>
+    <text x="115" y="4" class="mono" font-size="10" fill="#e3b341">PRACTICING</text>
+    
+    <circle cx="200" cy="0" r="4" fill="#a371f7"/>
+    <text x="215" y="4" class="mono" font-size="10" fill="#a371f7">LEARNING</text>
+  </g>
+
+  <!-- Bottom border -->
+  <rect x="0" y="358" width="736" height="2" fill="#00d4ff"/>
+</svg>
