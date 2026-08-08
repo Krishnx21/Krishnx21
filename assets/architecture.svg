@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&amp;display=swap');
+      .mono { font-family: 'JetBrains Mono', monospace; }
+      
+      @keyframes data-packet {
+        0% { offset-distance: 0%; opacity: 1; }
+        90% { opacity: 1; }
+        100% { offset-distance: 100%; opacity: 0; }
+      }
+      
+      @keyframes pulse {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
+      }
+      
+      .data-packet { animation: data-packet 3s linear infinite; }
+      .pulse { animation: pulse 2s ease-in-out infinite; }
+    </style>
+    
+    <linearGradient id="archGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#05060B"/>
+      <stop offset="100%" style="stop-color:#0B0F17"/>
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D4FF"/>
+      <stop offset="100%" style="stop-color:#7C3AED"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Main Container -->
+  <rect width="800" height="420" fill="url(#archGradient)"/>
+  
+  <!-- Grid Pattern -->
+  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1E293B" stroke-width="0.5"/>
+  </pattern>
+  <rect width="800" height="420" fill="url(#grid)" opacity="0.3"/>
+
+  <!-- Header Zone -->
+  <rect x="0" y="0" width="800" height="50" fill="#0B0F17" stroke="#1E293B" stroke-width="1"/>
+  <text x="25" y="32" class="mono" font-size="14" font-weight="700" fill="#00D4FF">ENGINEERING ARCHITECTURE</text>
+  <text x="750" y="32" text-anchor="end" class="mono" font-size="11" fill="#64748B">INFRASTRUCTURE</text>
+
+  <!-- Architecture Flow Zone -->
+  <g transform="translate(50, 70)">
+    <!-- Developer -->
+    <rect x="300" y="0" width="150" height="40" fill="#0B0F17" stroke="#00D4FF" stroke-width="1" rx="4"/>
+    <text x="375" y="25" text-anchor="middle" class="mono" font-size="12" fill="#E6EDF3">DEVELOPER</text>
+    
+    <!-- Connection -->
+    <line x1="375" y1="40" x2="375" y2="60" stroke="#00D4FF" stroke-width="2"/>
+    <circle cx="375" cy="50" r="3" fill="#00D4FF" class="pulse"/>
+    
+    <!-- GitHub -->
+    <rect x="300" y="60" width="150" height="40" fill="#0B0F17" stroke="#22C55E" stroke-width="1" rx="4"/>
+    <text x="375" y="85" text-anchor="middle" class="mono" font-size="12" fill="#E6EDF3">GITHUB</text>
+    
+    <!-- Connection -->
+    <line x1="375" y1="100" x2="375" y2="120" stroke="#22C55E" stroke-width="2"/>
+    <circle cx="375" cy="110" r="3" fill="#22C55E" class="pulse"/>
+    
+    <!-- Code -->
+    <rect x="300" y="120" width="150" height="40" fill="#0B0F17" stroke="#7C3AED" stroke-width="1" rx="4"/>
+    <text x="375" y="145" text-anchor="middle" class="mono" font-size="12" fill="#E6EDF3">CODE</text>
+    
+    <!-- Connection -->
+    <line x1="375" y1="160" x2="375" y2="180" stroke="#7C3AED" stroke-width="2"/>
+    <circle cx="375" cy="170" r="3" fill="#7C3AED" class="pulse"/>
+    
+    <!-- Frontend -->
+    <rect x="300" y="180" width="150" height="40" fill="#0B0F17" stroke="#F59E0B" stroke-width="1" rx="4"/>
+    <text x="375" y="205" text-anchor="middle" class="mono" font-size="12" fill="#E6EDF3">FRONTEND</text>
+    
+    <!-- Connection -->
+    <line x1="375" y1="220" x2="375" y2="240" stroke="#F59E0B" stroke-width="2"/>
+    <circle cx="375" cy="230" r="3" fill="#F59E0B" class="pulse"/>
+    
+    <!-- API -->
+    <rect x="300" y="240" width="150" height="40" fill="#0B0F17" stroke="#00D4FF" stroke-width="1" rx="4"/>
+    <text x="375" y="265" text-anchor="middle" class="mono" font-size="12" fill="#E6EDF3">API</text>
+    
+    <!-- Connection -->
+    <line x1="375" y1="280" x2="375" y2="300" stroke="#00D4FF" stroke-width="2"/>
+    <circle cx="375" cy="290" r="3" fill="#00D4FF" class="pulse"/>
+    
+    <!-- Backend -->
+    <rect x="300" y="300" width="150" height="40" fill="#0B0F17" stroke="#00D4FF" stroke-width="1" rx="4"/>
+    <text x="375" y="325" text-anchor="middle" class="mono" font-size="12" fill="#E6EDF3">BACKEND</text>
+    
+    <!-- Split -->
+    <line x1="375" y1="340" x2="250" y2="360" stroke="#22C55E" stroke-width="2"/>
+    <line x1="375" y1="340" x2="500" y2="360" stroke="#7C3AED" stroke-width="2"/>
+    
+    <!-- Database -->
+    <rect x="100" y="360" width="150" height="40" fill="#0B0F17" stroke="#22C55E" stroke-width="1" rx="4"/>
+    <text x="175" y="385" text-anchor="middle" class="mono" font-size="12" fill="#E6EDF3">DATABASE</text>
+    
+    <!-- Cache -->
+    <rect x="550" y="360" width="150" height="40" fill="#0B0F17" stroke="#7C3AED" stroke-width="1" rx="4"/>
+    <text x="625" y="385" text-anchor="middle" class="mono" font-size="12" fill="#E6EDF3">CACHE</text>
+    
+    <!-- Side Connections -->
+    <line x1="450" y1="320" x2="580" y2="320" stroke="#00D4FF" stroke-width="1" opacity="0.5"/>
+    <line x1="580" y1="320" x2="580" y2="360" stroke="#00D4FF" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Cloud -->
+    <rect x="550" y="280" width="150" height="40" fill="#0B0F17" stroke="#00D4FF" stroke-width="1" rx="4"/>
+    <text x="625" y="305" text-anchor="middle" class="mono" font-size="12" fill="#E6EDF3">CLOUD</text>
+    
+    <!-- CI/CD -->
+    <rect x="550" y="240" width="150" height="40" fill="#0B0F17" stroke="#22C55E" stroke-width="1" rx="4"/>
+    <text x="625" y="265" text-anchor="middle" class="mono" font-size="12" fill="#E6EDF3">CI/CD</text>
+    
+    <!-- Monitoring -->
+    <rect x="550" y="200" width="150" height="40" fill="#0B0F17" stroke="#F59E0B" stroke-width="1" rx="4"/>
+    <text x="625" y="225" text-anchor="middle" class="mono" font-size="12" fill="#E6EDF3">MONITORING</text>
+  </g>
+
+  <!-- Data Packets -->
+  <circle cx="425" cy="145" r="3" fill="#00D4FF" class="data-packet"/>
+  <circle cx="425" cy="225" r="3" fill="#7C3AED" class="data-packet" style="animation-delay: 1s;"/>
+  <circle cx="425" cy="305" r="3" fill="#22C55E" class="data-packet" style="animation-delay: 2s;"/>
+
+  <!-- Status Zone -->
+  <rect x="0" y="380" width="800" height="40" fill="#0B0F17" stroke="#1E293B" stroke-width="1"/>
+  <text x="25" y="405" class="mono" font-size="11" fill="#64748B">ARCHITECTURE STATUS: <tspan fill="#22C55E">ACTIVE</tspan></text>
+  <text x="750" y="405" text-anchor="end" class="mono" font-size="11" fill="#64748B">DATA_FLOW</text>
+
+  <!-- Bottom Border -->
+  <rect x="0" y="415" width="800" height="5" fill="url(#accentGradient)"/>
+</svg>

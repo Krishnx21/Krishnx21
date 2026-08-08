@@ -10,16 +10,11 @@
       }
       
       @keyframes pulse {
-        0%, 100% { opacity: 0.6; transform: scale(1); }
-        50% { opacity: 1; transform: scale(1.05); }
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
       }
       
-      @keyframes blink {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
-      }
-      
-      @keyframes radar-sweep {
+      @keyframes radar {
         from { transform: rotate(0deg); }
         to { transform: rotate(360deg); }
       }
@@ -29,17 +24,10 @@
         50% { r: 5; opacity: 0.5; }
       }
       
-      @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-5px); }
-      }
-      
       .rotate { animation: rotate 20s linear infinite; }
       .pulse { animation: pulse 2s ease-in-out infinite; }
-      .cursor { animation: blink 1s step-end infinite; }
-      .radar-sweep { animation: radar-sweep 4s linear infinite; transform-origin: 450px 250px; }
+      .radar { animation: radar 4s linear infinite; transform-origin: 450px 200px; }
       .signal { animation: signal 2s ease-in-out infinite; }
-      .float { animation: float 3s ease-in-out infinite; }
     </style>
     
     <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -51,77 +39,73 @@
       <stop offset="0%" style="stop-color:#00D4FF"/>
       <stop offset="100%" style="stop-color:#7C3AED"/>
     </linearGradient>
-    
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
   </defs>
 
-  <!-- Background -->
+  <!-- Main Container -->
   <rect width="900" height="500" fill="url(#heroGradient)"/>
   
-  <!-- Subtle grid -->
+  <!-- Grid Pattern -->
   <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
     <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="0.5"/>
   </pattern>
   <rect width="900" height="500" fill="url(#grid)" opacity="0.3"/>
 
-  <!-- Radar Circles -->
-  <circle cx="450" cy="250" r="200" fill="none" stroke="#00D4FF" stroke-width="1" opacity="0.1" class="rotate"/>
-  <circle cx="450" cy="250" r="150" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1" class="rotate" style="animation-direction: reverse;"/>
-  <circle cx="450" cy="250" r="100" fill="none" stroke="#00D4FF" stroke-width="1" opacity="0.2"/>
-
-  <!-- Radar Sweep -->
-  <line x1="450" y1="250" x2="450" y2="50" stroke="url(#accentGradient)" stroke-width="2" class="radar-sweep" opacity="0.3"/>
-
-  <!-- Network Nodes -->
-  <circle cx="200" cy="150" r="4" fill="#00D4FF" class="signal"/>
-  <circle cx="700" cy="150" r="4" fill="#7C3AED" class="signal" style="animation-delay: 0.5s;"/>
-  <circle cx="200" cy="350" r="4" fill="#22C55E" class="signal" style="animation-delay: 1s;"/>
-  <circle cx="700" cy="350" r="4" fill="#F59E0B" class="signal" style="animation-delay: 1.5s;"/>
-
-  <!-- Connection Lines -->
-  <line x1="200" y1="150" x2="450" y2="250" stroke="#00D4FF" stroke-width="1" opacity="0.3"/>
-  <line x1="700" y1="150" x2="450" y2="250" stroke="#7C3AED" stroke-width="1" opacity="0.3"/>
-  <line x1="200" y1="350" x2="450" y2="250" stroke="#22C55E" stroke-width="1" opacity="0.3"/>
-  <line x1="700" y1="350" x2="450" y2="250" stroke="#F59E0B" stroke-width="1" opacity="0.3"/>
-
-  <!-- Main Identity -->
-  <g transform="translate(450, 250)" class="float">
-    <text x="0" y="-20" text-anchor="middle" class="mono" font-size="36" font-weight="800" fill="#E6EDF3" filter="url(#glow)">KRISHNA KUMAR SHARMA</text>
-    
-    <!-- Focus Areas -->
-    <text x="0" y="20" text-anchor="middle" class="mono" font-size="14" fill="#00D4FF">BACKEND</text>
-    <text x="0" y="40" text-anchor="middle" class="mono" font-size="14" fill="#7C3AED">CLOUD</text>
-    <text x="0" y="60" text-anchor="middle" class="mono" font-size="14" fill="#22C55E">DEVOPS</text>
-    <text x="0" y="80" text-anchor="middle" class="mono" font-size="14" fill="#F59E0B">OPEN SOURCE</text>
-    <text x="0" y="100" text-anchor="middle" class="mono" font-size="14" fill="#E6EDF3">DSA</text>
+  <!-- Name Zone -->
+  <g transform="translate(450, 160)">
+    <text x="0" y="0" text-anchor="middle" class="mono" font-size="48" font-weight="800" fill="#E6EDF3">KRISHNA</text>
+    <text x="0" y="50" text-anchor="middle" class="mono" font-size="48" font-weight="800" fill="#E6EDF3">KUMAR</text>
+    <text x="0" y="100" text-anchor="middle" class="mono" font-size="48" font-weight="800" fill="#E6EDF3">SHARMA</text>
   </g>
 
-  <!-- Terminal Block -->
-  <g transform="translate(150, 380)">
-    <rect width="600" height="80" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="4"/>
-    <text x="20" y="25" class="mono" font-size="11" fill="#00D4FF">KSH // ENGINEERING TERMINAL</text>
-    <text x="20" y="45" class="mono" font-size="10" fill="#64748B">STATUS: <tspan fill="#22C55E">BUILDING</tspan></text>
-    <text x="20" y="65" class="mono" font-size="10" fill="#64748B">MODE: <tspan fill="#00D4FF">LEARN → BUILD → SHIP</tspan></text>
-    
-    <circle cx="560" cy="40" r="5" fill="#22C55E" class="pulse"/>
-    <text x="520" y="44" class="mono" font-size="10" fill="#22C55E">ONLINE</text>
+  <!-- Subtitle Zone -->
+  <g transform="translate(450, 290)">
+    <text x="0" y="0" text-anchor="middle" class="mono" font-size="14" fill="#00D4FF">BACKEND • CLOUD • DEVOPS • OPEN SOURCE</text>
+  </g>
+
+  <!-- Role Zone -->
+  <g transform="translate(450, 320)">
+    <text x="0" y="0" text-anchor="middle" class="mono" font-size="12" fill="#8B949E">COMPUTER SCIENCE ENGINEER</text>
   </g>
 
   <!-- HUD Elements -->
-  <g transform="translate(50, 50)">
-    <rect width="120" height="30" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="2"/>
-    <text x="10" y="20" class="mono" font-size="10" fill="#64748B">SYS: KSH-OS v1.0</text>
+  <g transform="translate(450, 200)">
+    <!-- Radar Circles -->
+    <circle cx="0" cy="0" r="150" fill="none" stroke="#00D4FF" stroke-width="1" opacity="0.1" class="rotate"/>
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.1" class="rotate" style="animation-direction: reverse;"/>
+    <circle cx="0" cy="0" r="50" fill="none" stroke="#00D4FF" stroke-width="1" opacity="0.2"/>
+    
+    <!-- Radar Sweep -->
+    <line x1="0" y1="0" x2="0" y2="-150" stroke="url(#accentGradient)" stroke-width="2" class="radar" opacity="0.3"/>
+    
+    <!-- Network Nodes -->
+    <circle cx="-120" cy="-80" r="4" fill="#00D4FF" class="signal"/>
+    <circle cx="120" cy="-80" r="4" fill="#7C3AED" class="signal" style="animation-delay: 0.5s;"/>
+    <circle cx="-120" cy="80" r="4" fill="#22C55E" class="signal" style="animation-delay: 1s;"/>
+    <circle cx="120" cy="80" r="4" fill="#F59E0B" class="signal" style="animation-delay: 1.5s;"/>
+    
+    <!-- Connection Lines -->
+    <line x1="-120" y1="-80" x2="0" y2="0" stroke="#00D4FF" stroke-width="1" opacity="0.3"/>
+    <line x1="120" y1="-80" x2="0" y2="0" stroke="#7C3AED" stroke-width="1" opacity="0.3"/>
+    <line x1="-120" y1="80" x2="0" y2="0" stroke="#22C55E" stroke-width="1" opacity="0.3"/>
+    <line x1="120" y1="80" x2="0" y2="0" stroke="#F59E0B" stroke-width="1" opacity="0.3"/>
   </g>
 
-  <g transform="translate(730, 50)">
-    <rect width="120" height="30" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="2"/>
-    <text x="10" y="20" class="mono" font-size="10" fill="#00D4FF">TIME: <tspan fill="#E6EDF3">LIVE</tspan></text>
+  <!-- Status Panel Zone -->
+  <g transform="translate(50, 380)">
+    <rect width="800" height="80" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="4"/>
+    
+    <text x="20" y="25" class="mono" font-size="11" fill="#64748B">SYSTEM STATUS</text>
+    <circle cx="140" cy="20" r="5" fill="#22C55E" class="pulse"/>
+    <text x="155" y="24" class="mono" font-size="11" fill="#22C55E">ONLINE</text>
+    
+    <text x="20" y="50" class="mono" font-size="11" fill="#64748B">CURRENT MODE</text>
+    <text x="140" y="50" class="mono" font-size="11" fill="#00D4FF">BUILD / LEARN / SHIP</text>
+    
+    <text x="400" y="25" class="mono" font-size="11" fill="#64748B">SIGNAL</text>
+    <text x="460" y="25" class="mono" font-size="11" fill="#22C55E">CONNECTED</text>
+    
+    <text x="400" y="50" class="mono" font-size="11" fill="#64748B">KSH-OS</text>
+    <text x="460" y="50" class="mono" font-size="11" fill="#7C3AED">v2.0</text>
   </g>
 
   <!-- Corner Accents -->

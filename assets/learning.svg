@@ -6,7 +6,7 @@
       
       @keyframes data-flow {
         0% { transform: translateX(0); opacity: 1; }
-        100% { transform: translateX(100px); opacity: 0; }
+        100% { transform: translateX(15px); opacity: 0; }
       }
       
       @keyframes pulse {
@@ -29,7 +29,7 @@
     </linearGradient>
   </defs>
 
-  <!-- Background -->
+  <!-- Main Container -->
   <rect width="800" height="320" fill="url(#learningGradient)"/>
   
   <!-- Grid Pattern -->
@@ -38,84 +38,68 @@
   </pattern>
   <rect width="800" height="320" fill="url(#grid)" opacity="0.3"/>
 
-  <!-- Header -->
-  <rect x="0" y="0" width="800" height="45" fill="#0B0F17" stroke="#1E293B" stroke-width="1"/>
-  <text x="25" y="28" class="mono" font-size="14" font-weight="700" fill="#00D4FF">LEARNING_ENGINE</text>
-  <text x="750" y="28" text-anchor="end" class="mono" font-size="11" fill="#64748B">KNOWLEDGE_PIPELINE</text>
+  <!-- Header Zone -->
+  <rect x="0" y="0" width="800" height="50" fill="#0B0F17" stroke="#1E293B" stroke-width="1"/>
+  <text x="25" y="32" class="mono" font-size="14" font-weight="700" fill="#00D4FF">LEARNING ENGINE</text>
+  <text x="750" y="32" text-anchor="end" class="mono" font-size="11" fill="#64748B">KNOWLEDGE_PIPELINE</text>
 
-  <!-- Learning Pipeline -->
+  <!-- Current Learning Zone -->
   <g transform="translate(25, 70)">
-    <!-- Nodes -->
-    <g transform="translate(0, 0)">
-      <rect width="140" height="35" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="4"/>
-      <text x="70" y="22" text-anchor="middle" class="mono" font-size="11" fill="#E6EDF3">INPUT</text>
-    </g>
-
-    <g transform="translate(160, 0)">
-      <rect width="140" height="35" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="4"/>
-      <text x="70" y="22" text-anchor="middle" class="mono" font-size="11" fill="#E6EDF3">CONCEPT</text>
-    </g>
-
-    <g transform="translate(320, 0)">
-      <rect width="140" height="35" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="4"/>
-      <text x="70" y="22" text-anchor="middle" class="mono" font-size="11" fill="#E6EDF3">PRACTICE</text>
-    </g>
-
-    <g transform="translate(480, 0)">
-      <rect width="140" height="35" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="4"/>
-      <text x="70" y="22" text-anchor="middle" class="mono" font-size="11" fill="#E6EDF3">PROJECT</text>
-    </g>
-
-    <g transform="translate(640, 0)">
-      <rect width="140" height="35" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="4"/>
-      <text x="70" y="22" text-anchor="middle" class="mono" font-size="11" fill="#E6EDF3">FEEDBACK</text>
-    </g>
-
-    <!-- Arrows -->
-    <line x1="140" y1="17" x2="160" y2="17" stroke="#00D4FF" stroke-width="2"/>
-    <line x1="300" y1="17" x2="320" y2="17" stroke="#00D4FF" stroke-width="2"/>
-    <line x1="460" y1="17" x2="480" y2="17" stroke="#00D4FF" stroke-width="2"/>
-    <line x1="620" y1="17" x2="640" y2="17" stroke="#00D4FF" stroke-width="2"/>
-
-    <!-- Data packets -->
-    <circle cx="150" cy="17" r="3" fill="#00D4FF" class="data-flow"/>
-    <circle cx="310" cy="17" r="3" fill="#7C3AED" class="data-flow" style="animation-delay: 0.5s;"/>
-    <circle cx="470" cy="17" r="3" fill="#22C55E" class="data-flow" style="animation-delay: 1s;"/>
-    <circle cx="630" cy="17" r="3" fill="#F59E0B" class="data-flow" style="animation-delay: 1.5s;"/>
-  </g>
-
-  <!-- Current Learning -->
-  <g transform="translate(25, 130)">
-    <rect width="750" height="120" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="4"/>
-    <text x="15" y="25" class="mono" font-size="11" font-weight="700" fill="#00D4FF">CURRENTLY_LEARNING</text>
-    <line x1="15" y1="35" x2="735" y2="35" stroke="#1E293B" stroke-width="0.5"/>
+    <rect width="750" height="70" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="4"/>
+    <text x="15" y="25" class="mono" font-size="11" font-weight="700" fill="#00D4FF">CURRENT_LEARNING</text>
     
-    <text x="15" y="55" class="mono" font-size="10" fill="#E6EDF3">DSA</text>
-    <text x="15" y="75" class="mono" font-size="10" fill="#E6EDF3">Backend Architecture</text>
-    <text x="15" y="95" class="mono" font-size="10" fill="#E6EDF3">System Design</text>
-    <text x="200" y="55" class="mono" font-size="10" fill="#E6EDF3">Cloud</text>
-    <text x="200" y="75" class="mono" font-size="10" fill="#E6EDF3">DevOps</text>
-    <text x="200" y="95" class="mono" font-size="10" fill="#E6EDF3">AI / ML</text>
+    <text x="15" y="45" class="mono" font-size="10" fill="#E6EDF3">DSA</text>
+    <text x="60" y="45" class="mono" font-size="10" fill="#E6EDF3">Backend_Engineering</text>
+    <text x="220" y="45" class="mono" font-size="10" fill="#E6EDF3">System_Design</text>
+    <text x="350" y="45" class="mono" font-size="10" fill="#E6EDF3">Cloud</text>
+    <text x="420" y="45" class="mono" font-size="10" fill="#E6EDF3">DevOps</text>
+    <text x="490" y="45" class="mono" font-size="10" fill="#E6EDF3">AI/ML</text>
     
-    <circle cx="700" cy="55" r="3" fill="#7C3AED" class="pulse"/>
-    <circle cx="700" cy="75" r="3" fill="#00D4FF" class="pulse" style="animation-delay: 0.3s;"/>
-    <circle cx="700" cy="95" r="3" fill="#F59E0B" class="pulse" style="animation-delay: 0.6s;"/>
+    <circle cx="700" cy="42" r="3" fill="#7C3AED" class="pulse"/>
   </g>
 
-  <!-- Output -->
-  <g transform="translate(25, 270)">
-    <rect width="750" height="35" fill="#0B0F17" stroke="#22C55E" stroke-width="1" rx="4"/>
-    <text x="15" y="22" class="mono" font-size="11" fill="#22C55E">OUTPUT: KNOWLEDGE</text>
+  <!-- Pipeline Zone -->
+  <g transform="translate(25, 155)">
+    <rect width="750" height="50" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="4"/>
+    <text x="15" y="20" class="mono" font-size="11" font-weight="700" fill="#7C3AED">LEARNING_PIPELINE</text>
     
-    <circle cx="700" cy="17" r="4" fill="#22C55E" class="pulse"/>
+    <text x="15" y="38" class="mono" font-size="10" fill="#E6EDF3">LEARN</text>
+    <text x="60" y="38" class="mono" font-size="10" fill="#64748B">→</text>
+    <text x="75" y="38" class="mono" font-size="10" fill="#E6EDF3">PRACTICE</text>
+    <text x="140" y="38" class="mono" font-size="10" fill="#64748B">→</text>
+    <text x="155" y="38" class="mono" font-size="10" fill="#E6EDF3">BUILD</text>
+    <text x="200" y="38" class="mono" font-size="10" fill="#64748B">→</text>
+    <text x="215" y="38" class="mono" font-size="10" fill="#E6EDF3">FAIL</text>
+    <text x="250" y="38" class="mono" font-size="10" fill="#64748B">→</text>
+    <text x="265" y="38" class="mono" font-size="10" fill="#E6EDF3">DEBUG</text>
+    <text x="310" y="38" class="mono" font-size="10" fill="#64748B">→</text>
+    <text x="325" y="38" class="mono" font-size="10" fill="#E6EDF3">UNDERSTAND</text>
+    <text x="400" y="38" class="mono" font-size="10" fill="#64748B">→</text>
+    <text x="415" y="38" class="mono" font-size="10" fill="#E6EDF3">REVISE</text>
+    <text x="460" y="38" class="mono" font-size="10" fill="#64748B">→</text>
+    <text x="475" y="38" class="mono" font-size="10" fill="#E6EDF3">SHIP</text>
+    
+    <circle cx="730" cy="35" r="4" fill="#22C55E" class="pulse"/>
   </g>
 
-  <!-- Status -->
-  <g transform="translate(700, 315)">
-    <circle cx="0" cy="0" r="4" fill="#22C55E" class="pulse"/>
-    <text x="15" y="4" class="mono" font-size="10" fill="#22C55E">ENGINE_ACTIVE</text>
+  <!-- Data Flow Visualization -->
+  <g transform="translate(25, 220)">
+    <rect width="750" height="50" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="4"/>
+    <text x="15" y="20" class="mono" font-size="11" fill="#64748B">PROCESS_STATUS</text>
+    <text x="15" y="38" class="mono" font-size="10" fill="#22C55E">ACTIVE_PIPELINE</text>
+    
+    <circle cx="200" cy="35" r="3" fill="#00D4FF" class="data-flow"/>
+    <circle cx="250" cy="35" r="3" fill="#7C3AED" class="data-flow" style="animation-delay: 0.3s;"/>
+    <circle cx="300" cy="35" r="3" fill="#22C55E" class="data-flow" style="animation-delay: 0.6s;"/>
+    <circle cx="350" cy="35" r="3" fill="#F59E0B" class="data-flow" style="animation-delay: 0.9s;"/>
+    <circle cx="400" cy="35" r="3" fill="#00D4FF" class="data-flow" style="animation-delay: 1.2s;"/>
   </g>
+
+  <!-- Status Zone -->
+  <rect x="0" y="280" width="800" height="40" fill="#0B0F17" stroke="#1E293B" stroke-width="1"/>
+  <text x="25" y="305" class="mono" font-size="11" fill="#64748B">ENGINE_STATUS: <tspan fill="#22C55E">OPERATIONAL</tspan></text>
+  <text x="750" y="305" text-anchor="end" class="mono" font-size="11" fill="#64748B">PROCESSING</text>
 
   <!-- Bottom Border -->
-  <rect x="0" y="310" width="800" height="10" fill="url(#accentGradient)"/>
+  <rect x="0" y="315" width="800" height="5" fill="url(#accentGradient)"/>
 </svg>

@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: '0 18 * * *'
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 permissions:
   contents: write
@@ -23,6 +26,6 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add -A .
-          if git commit -m "generated"; then
+          if git commit -m "generated 3d contribution graph"; then
             git push
           fi

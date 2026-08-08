@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="800" height="320">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&amp;display=swap');
       .mono { font-family: 'JetBrains Mono', monospace; }
       
-      @keyframes scan {
-        0% { transform: translateX(-100%); opacity: 0; }
-        50% { opacity: 0.5; }
-        100% { transform: translateX(100%); opacity: 0; }
+      @keyframes flow {
+        0% { opacity: 0.3; }
+        50% { opacity: 1; }
+        100% { opacity: 0.3; }
       }
       
       @keyframes pulse {
@@ -15,14 +15,8 @@
         50% { opacity: 1; }
       }
       
-      @keyframes cursor {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
-      }
-      
-      .scan { animation: scan 3s linear infinite; }
+      .flow { animation: flow 2s ease-in-out infinite; }
       .pulse { animation: pulse 2s ease-in-out infinite; }
-      .cursor { animation: cursor 1s step-end infinite; }
     </style>
     
     <linearGradient id="aboutGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -36,68 +30,81 @@
     </linearGradient>
   </defs>
 
-  <!-- Background -->
-  <rect width="800" height="320" fill="url(#aboutGradient)"/>
+  <!-- Main Container -->
+  <rect width="800" height="400" fill="url(#aboutGradient)"/>
   
   <!-- Grid Pattern -->
   <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
     <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1E293B" stroke-width="0.5"/>
   </pattern>
-  <rect width="800" height="320" fill="url(#grid)" opacity="0.3"/>
+  <rect width="800" height="400" fill="url(#grid)" opacity="0.3"/>
 
-  <!-- Header -->
-  <rect x="0" y="0" width="800" height="45" fill="#0B0F17" stroke="#1E293B" stroke-width="1"/>
-  <text x="25" y="28" class="mono" font-size="14" font-weight="700" fill="#00D4FF">WHOAMI</text>
-  <text x="750" y="28" text-anchor="end" class="mono" font-size="11" fill="#64748B">IDENTITY_SCAN</text>
+  <!-- Header Zone -->
+  <rect x="0" y="0" width="800" height="50" fill="#0B0F17" stroke="#1E293B" stroke-width="1"/>
+  <text x="25" y="32" class="mono" font-size="14" font-weight="700" fill="#00D4FF">// IDENTITY</text>
+  <text x="750" y="32" text-anchor="end" class="mono" font-size="11" fill="#64748B">WHOAMI</text>
 
-  <!-- Identity Panel -->
-  <g transform="translate(25, 65)">
-    <rect width="370" height="180" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="4"/>
-    <text x="15" y="25" class="mono" font-size="11" font-weight="700" fill="#7C3AED">NAME</text>
-    <text x="15" y="45" class="mono" font-size="12" fill="#E6EDF3">Krishna Kumar Sharma</text>
+  <!-- Content Zone -->
+  <g transform="translate(25, 75)">
+    <!-- Left Panel -->
+    <rect width="370" height="260" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="4"/>
     
-    <text x="15" y="70" class="mono" font-size="11" font-weight="700" fill="#7C3AED">DOMAIN</text>
-    <text x="15" y="90" class="mono" font-size="12" fill="#E6EDF3">Backend Engineering</text>
+    <text x="20" y="30" class="mono" font-size="12" font-weight="700" fill="#7C3AED">WHOAMI</text>
+    <line x1="20" y1="40" x2="350" y2="40" stroke="#1E293B" stroke-width="0.5"/>
     
-    <text x="15" y="115" class="mono" font-size="11" font-weight="700" fill="#7C3AED">FOCUS</text>
-    <text x="15" y="135" class="mono" font-size="12" fill="#E6EDF3">Cloud / DevOps / DSA</text>
+    <text x="20" y="65" class="mono" font-size="11" fill="#64748B">NAME</text>
+    <text x="20" y="85" class="mono" font-size="13" fill="#E6EDF3">Krishna Kumar Sharma</text>
     
-    <circle cx="340" cy="90" r="4" fill="#22C55E" class="pulse"/>
+    <text x="20" y="115" class="mono" font-size="11" fill="#64748B">DOMAIN</text>
+    <text x="20" y="135" class="mono" font-size="13" fill="#E6EDF3">Backend Engineering</text>
+    
+    <text x="20" y="165" class="mono" font-size="11" fill="#64748B">FOCUS</text>
+    <text x="20" y="185" class="mono" font-size="13" fill="#E6EDF3">Cloud / DevOps / Open Source / DSA</text>
+    
+    <circle cx="340" cy="110" r="4" fill="#22C55E" class="pulse"/>
   </g>
 
-  <g transform="translate(405, 65)">
-    <rect width="370" height="180" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="4"/>
-    <text x="15" y="25" class="mono" font-size="11" font-weight="700" fill="#00D4FF">CURRENT_SYSTEM</text>
-    <text x="15" y="45" class="mono" font-size="12" fill="#F59E0B">CertiVault</text>
+  <!-- Right Panel -->
+  <g transform="translate(405, 75)">
+    <rect width="370" height="310" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="4"/>
     
-    <text x="15" y="70" class="mono" font-size="11" font-weight="700" fill="#00D4FF">CURRENT_OBJECTIVE</text>
-    <text x="15" y="90" class="mono" font-size="12" fill="#E6EDF3">Build stronger engineering</text>
-    <text x="15" y="110" class="mono" font-size="12" fill="#E6EDF3">fundamentals</text>
+    <text x="20" y="30" class="mono" font-size="12" font-weight="700" fill="#00D4FF">CURRENT SYSTEMS</text>
+    <line x1="20" y1="40" x2="350" y2="40" stroke="#1E293B" stroke-width="0.5"/>
     
-    <text x="15" y="135" class="mono" font-size="11" font-weight="700" fill="#00D4FF">PHILOSOPHY</text>
-    <text x="15" y="155" class="mono" font-size="12" fill="#7C3AED">LEARN → BUILD → SHIP</text>
+    <text x="20" y="65" class="mono" font-size="11" fill="#64748B">CURRENT BUILD</text>
+    <text x="20" y="85" class="mono" font-size="13" fill="#F59E0B">OpsPilot</text>
     
-    <circle cx="340" cy="90" r="4" fill="#F59E0B" class="pulse"/>
+    <text x="20" y="115" class="mono" font-size="11" fill="#64748B">COMPLETED SYSTEM</text>
+    <text x="20" y="135" class="mono" font-size="13" fill="#22C55E">CertiVault</text>
+    
+    <text x="20" y="165" class="mono" font-size="11" fill="#64748B">PHILOSOPHY</text>
+    <text x="20" y="185" class="mono" font-size="13" fill="#7C3AED">BUILD → DEBUG → LEARN → SHIP</text>
+    
+    <text x="20" y="215" class="mono" font-size="11" fill="#64748B">CONTRIBUTIONS</text>
+    <text x="20" y="235" class="mono" font-size="13" fill="#22C55E">GSSOC • ECSOC ADMIN</text>
+    
+    <circle cx="340" cy="110" r="4" fill="#F59E0B" class="pulse"/>
   </g>
 
-  <!-- Terminal Scan -->
-  <g transform="translate(25, 260)">
-    <rect width="750" height="40" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="4"/>
-    <text x="15" y="25" class="mono" font-size="11" fill="#64748B">&gt; scan --identity --deep</text>
-    <text x="250" y="25" class="mono" font-size="10" fill="#22C55E">SCANNING...</text>
+  <!-- Engineering Philosophy Zone -->
+  <g transform="translate(25, 350)">
+    <rect width="750" height="35" fill="#0B0F17" stroke="#1E293B" stroke-width="1" rx="4"/>
+    <text x="20" y="22" class="mono" font-size="11" fill="#64748B">ENGINEERING PHILOSOPHY</text>
+    <text x="200" y="22" class="mono" font-size="11" fill="#E6EDF3">UNDERSTAND</text>
+    <text x="280" y="22" class="mono" font-size="11" fill="#64748B">→</text>
+    <text x="300" y="22" class="mono" font-size="11" fill="#E6EDF3">DESIGN</text>
+    <text x="360" y="22" class="mono" font-size="11" fill="#64748B">→</text>
+    <text x="380" y="22" class="mono" font-size="11" fill="#E6EDF3">BUILD</text>
+    <text x="430" y="22" class="mono" font-size="11" fill="#64748B">→</text>
+    <text x="450" y="22" class="mono" font-size="11" fill="#E6EDF3">DEBUG</text>
+    <text x="500" y="22" class="mono" font-size="11" fill="#64748B">→</text>
+    <text x="520" y="22" class="mono" font-size="11" fill="#E6EDF3">LEARN</text>
+    <text x="570" y="22" class="mono" font-size="11" fill="#64748B">→</text>
+    <text x="590" y="22" class="mono" font-size="11" fill="#E6EDF3">SHIP</text>
     
-    <circle cx="700" cy="20" r="4" fill="#22C55E" class="pulse"/>
-  </g>
-
-  <!-- Scan line -->
-  <rect x="0" y="65" width="800" height="2" fill="url(#accentGradient)" class="scan" opacity="0.3"/>
-
-  <!-- Status -->
-  <g transform="translate(700, 310)">
-    <circle cx="0" cy="0" r="4" fill="#22C55E" class="pulse"/>
-    <text x="15" y="4" class="mono" font-size="10" fill="#22C55E">IDENTITY_VERIFIED</text>
+    <circle cx="730" cy="17" r="4" fill="#22C55E" class="pulse"/>
   </g>
 
   <!-- Bottom Border -->
-  <rect x="0" y="315" width="800" height="5" fill="url(#accentGradient)"/>
+  <rect x="0" y="395" width="800" height="5" fill="url(#accentGradient)"/>
 </svg>
