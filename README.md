@@ -48,13 +48,13 @@
 
 <div align="center">
 
-<h3 style="color:#00d4ff;font-family:'JetBrains Mono',monospace;letter-spacing:6px">// GITHUB_ACTIVITY // CONTRIBUTION_STREAM</h3>
-<p style="color:#8B949E;font-family:'JetBrains Mono',monospace">> const uptime = "always building";</p>
+<h3 style="color:#00d4ff;font-family:'Cascadia Code',monospace;letter-spacing:6px">// GITHUB ACTIVITY // CONTRIBUTION_STREAM</h3>
+<p style="color:#8B949E;font-family:'Cascadia Code',monospace">> const uptime = "always building";</p>
 
 <br/>
 
-<img src="https://github-readme-stats.vercel.app/api?username=Krishnx21&show_icons=true&theme=dark&hide_border=true&bg_color=05060B&title_color=00d4ff&text_color=E6EDF3&icon_color=00d4ff&border_color=1a2332" alt="GitHub Stats" height="185"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Krishnx21&layout=compact&theme=dark&hide_border=true&bg_color=05060B&title_color=00d4ff&text_color=E6EDF3&border_color=1a2332" alt="Top Languages" height="185"/>
+<img src="./stats.svg" alt="GitHub Stats" height="185"/>
+<img src="./langs.svg" alt="Top Languages" height="185"/>
 
 <br/><br/>
 
@@ -66,8 +66,8 @@
 
 <br/><br/>
 
-<a href="https://github.com/Krishnx21/Krishnx21/blob/main/output/github-contribution-grid-snake-dark.svg">
-<img src="https://raw.githubusercontent.com/Krishnx21/Krishnx21/output/github-contribution-grid-snake-dark.svg" alt="Contribution Snake" width="62%"/>
+<a href="https://github.com/Krishnx21/Krishnx21/blob/main/output/github-contribution-grid-snake-violet.svg">
+<img src="https://raw.githubusercontent.com/Krishnx21/Krishnx21/output/github-contribution-grid-snake-violet.svg" alt="Contribution Snake" width="62%"/>
 </a>
 
 <br/><br/>
@@ -88,13 +88,13 @@
 
 <br/>
 
-<p style="color:#8B949E;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.9">
-[01] CertiVault <span style="color:#484f58">//</span> <a href="https://github.com/Krishnx21/CertiVault" style="color:#00d4ff;text-decoration:none;">github.com/Krishnx21/CertiVault</a><br/>
-[02] Smart File Sharing <span style="color:#484f58">//</span> <a href="#" style="color:#00d4ff;text-decoration:none;">coming soon</a><br/>
-[03] AI Resume Analyzer <span style="color:#484f58">//</span> <a href="#" style="color:#00d4ff;text-decoration:none;">in development</a><br/>
-[04] AI Customer Service <span style="color:#484f58">//</span> <a href="#" style="color:#00d4ff;text-decoration:none;">exploring</a><br/>
-[05] OpsPilot <span style="color:#484f58">//</span> <a href="#" style="color:#00d4ff;text-decoration:none;">planned</a><br/>
-[06] Open Source <span style="color:#484f58">//</span> <a href="https://github.com/Krishnx21" style="color:#00d4ff;text-decoration:none;">github.com/Krishnx21</a>
+<p style="color:#8B949E;font-family:'Cascadia Code',monospace;font-size:12px;line-height:1.9">
+[01] CertiVault <span style="color:#484f58">//</span> <a href="https://github.com/Krishnx21/CertiVault">github.com/Krishnx21/CertiVault</a><br/>
+[02] Smart File Sharing <span style="color:#484f58">//</span> <a href="#">coming soon</a><br/>
+[03] AI Resume Analyzer <span style="color:#484f58">//</span> <a href="#">in development</a><br/>
+[04] AI Customer Service <span style="color:#484f58">//</span> <a href="#">exploring</a><br/>
+[05] OpsPilot <span style="color:#484f58">//</span> <a href="#">planned</a><br/>
+[06] Open Source <span style="color:#484f58">//</span> <a href="https://github.com/Krishnx21">github.com/Krishnx21</a>
 </p>
 
 </div>
@@ -148,6 +148,6 @@
 
 <br/>
 
-<p align="center" style="color:#484f58;font-family:'JetBrains Mono',monospace;font-size:12px">
+<p align="center" style="color:#484f58;font-family:'Cascadia Code',monospace;font-size:12px">
 building systems since 2024 — always learning, always building. never giving up.
 </p>

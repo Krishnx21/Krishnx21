@@ -14,12 +14,12 @@
   <rect width="400" height="185" fill="url(#langsGradient)" rx="8"/>
   
   <!-- Header -->
-  <text x="20" y="30" class="mono" font-size="12" font-weight="700" fill="#E63946">TOP LANGUAGES</text>
+  <text x="20" y="30" class="mono" font-size="12" font-weight="700" fill="#00d4ff">TOP LANGUAGES</text>
   <line x1="20" y1="40" x2="380" y2="40" stroke="#1a2332" stroke-width="1"/>
 
-  <!-- Languages Placeholder - Will be replaced by actual GitHub languages image -->
+  <!-- Note about dynamic image -->
   <text x="200" y="100" text-anchor="middle" class="mono" font-size="10" fill="#8b949e">Dynamic Top Languages</text>
-  <text x="200" y="120" text-anchor="middle" class="mono" font-size="9" fill="#484f58">Replace with GitHub Top Languages</text>
+  <text x="200" y="120" text-anchor="middle" class="mono" font-size="9" fill="#484f58">Replace with GitHub Top Languages URL</text>
   
   <!-- Decorative elements -->
   <rect x="20" y="60" width="360" height="100" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="4" opacity="0.5"/>

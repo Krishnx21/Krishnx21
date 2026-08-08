@@ -1,34 +1,33 @@
-name: Generate Snake Contribution Graph
+name: Generate Snake
 
 on:
   schedule:
-    # Run every 6 hours
-    - cron: "0 */6 * * *"
-  workflow_dispatch:
+    - cron: "0 0 * * *"
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
 
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
-    
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Generate Snake
+      - name: Generate snake game SVG
         uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            output/github-contribution-grid-snake.svg
-            output/github-contribution-grid-snake-dark.svg?palette=github-dark
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            dist/github-contribution-grid-snake-violet.svg?palette=violet
+            dist/github-contribution-grid-snake-yellow.svg?palette=yellow
+            dist/github-contribution-snake.svg
 
-      - name: Commit and push
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add output/github-contribution-grid-snake.svg output/github-contribution-grid-snake-dark.svg
-          git commit -m "Update snake contribution graph" || echo "No changes to commit"
-          git push || echo "No changes to push"
+      - name: Push output to "output" branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
