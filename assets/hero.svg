@@ -1,72 +1,199 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap');
-      .mono { font-family: 'JetBrains Mono', 'Courier New', monospace; }
-      .glow { filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.3)); }
-      .pulse { animation: pulse 2s ease-in-out infinite; }
-      @keyframes pulse {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.6; }
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&amp;family=Inter:wght@400;600;700;800&amp;display=swap');
+      .mono { font-family: 'JetBrains Mono', monospace; }
+      .sans { font-family: 'Inter', sans-serif; }
+      
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
       }
-      .cursor { animation: blink 1s step-end infinite; }
+      
+      @keyframes pulse-glow {
+        0%, 100% { filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.6)); }
+        50% { filter: drop-shadow(0 0 40px rgba(0, 212, 255, 0.9)); }
+      }
+      
+      @keyframes scan {
+        0% { transform: translateY(-100%); opacity: 0; }
+        50% { opacity: 1; }
+        100% { transform: translateY(100%); opacity: 0; }
+      }
+      
+      @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      
+      @keyframes typewriter {
+        from { width: 0; }
+        to { width: 100%; }
+      }
+      
       @keyframes blink {
         0%, 100% { opacity: 1; }
         50% { opacity: 0; }
       }
+      
+      @keyframes particle {
+        0% { transform: translate(0, 0) scale(1); opacity: 1; }
+        100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; }
+      }
+      
+      .float { animation: float 6s ease-in-out infinite; }
+      .pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+      .scan-line { animation: scan 3s linear infinite; }
+      .rotate { animation: rotate 20s linear infinite; }
+      .cursor { animation: blink 1s step-end infinite; }
+      
+      .particle {
+        animation: particle 4s ease-out infinite;
+      }
     </style>
-    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#0a0e17"/>
-      <stop offset="100%" style="stop-color:#0d1117"/>
+      <stop offset="50%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
     </linearGradient>
+    
     <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#00d4ff"/>
-      <stop offset="100%" style="stop-color:#0099ff"/>
+      <stop offset="50%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#ec4899"/>
     </linearGradient>
+    
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
   </defs>
 
   <!-- Background -->
-  <rect width="800" height="400" fill="url(#bgGradient)" rx="8"/>
+  <rect width="900" height="500" fill="url(#mainGradient)"/>
   
-  <!-- Subtle grid pattern -->
-  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a2332" stroke-width="0.5"/>
+  <!-- Animated Grid Background -->
+  <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+    <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#1a2332" stroke-width="0.5"/>
   </pattern>
-  <rect width="800" height="400" fill="url(#grid)" opacity="0.3"/>
-
-  <!-- Top border accent -->
-  <rect x="0" y="0" width="800" height="2" fill="url(#accentGradient)"/>
-
-  <!-- Main Title -->
-  <text x="400" y="80" text-anchor="middle" class="mono" font-size="24" font-weight="700" fill="#00d4ff" glow>KSH // ENGINEERING OS</text>
+  <rect width="900" height="500" fill="url(#grid)" opacity="0.4"/>
   
-  <!-- Name -->
-  <text x="400" y="130" text-anchor="middle" class="mono" font-size="32" font-weight="700" fill="#ffffff">KRISHNA KUMAR SHARMA</text>
+  <!-- Gradient Overlay -->
+  <rect width="900" height="500" fill="url(#mainGradient)" opacity="0.7"/>
+
+  <!-- Animated Circles Background -->
+  <circle cx="100" cy="100" r="150" fill="#00d4ff" opacity="0.05" class="rotate" style="transform-origin: 100px 100px;"/>
+  <circle cx="800" cy="400" r="200" fill="#7c3aed" opacity="0.05" class="rotate" style="transform-origin: 800px 400px; animation-direction: reverse;"/>
+  <circle cx="450" cy="250" r="300" fill="#ec4899" opacity="0.03" class="rotate" style="transform-origin: 450px 250px;"/>
+
+  <!-- Main Content Container -->
+  <g class="float">
+    <!-- Logo/Brand -->
+    <text x="450" y="80" text-anchor="middle" class="mono" font-size="14" font-weight="700" fill="#00d4ff" letter-spacing="4" filter="url(#glow)">KSH // ENGINEERING OS</text>
+    
+    <!-- Main Title -->
+    <text x="450" y="150" text-anchor="middle" class="sans" font-size="52" font-weight="800" fill="#ffffff" filter="url(#glow)">KRISHNA KUMAR SHARMA</text>
+    
+    <!-- Subtitle with Gradient -->
+    <text x="450" y="200" text-anchor="middle" class="sans" font-size="18" font-weight="600" fill="url(#textGradient)">Backend Engineer • Cloud Architect • Open Source Contributor</text>
+    
+    <!-- Status Badge -->
+    <g transform="translate(450, 240)">
+      <rect x="-80" y="-15" width="160" height="30" fill="#0d1117" stroke="#00d4ff" stroke-width="2" rx="15" class="pulse-glow"/>
+      <circle cx="-60" cy="0" r="5" fill="#27ca40">
+        <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="-45" y="5" class="mono" font-size="12" font-weight="700" fill="#ffffff">SYSTEM ONLINE</text>
+    </g>
+  </g>
+
+  <!-- Code/Terminal Block -->
+  <g transform="translate(150, 290)">
+    <rect width="600" height="140" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="8" filter="url(#blur)"/>
+    
+    <!-- Terminal Header -->
+    <rect width="600" height="35" fill="#161b22" rx="8"/>
+    <rect y="27" width="600" height="8" fill="#161b22"/>
+    
+    <!-- Terminal Dots -->
+    <circle cx="25" cy="17" r="5" fill="#ff5f56"/>
+    <circle cx="45" cy="17" r="5" fill="#ffbd2e"/>
+    <circle cx="65" cy="17" r="5" fill="#27ca40"/>
+    
+    <text x="85" y="22" class="mono" font-size="11" fill="#8b949e">ksh-terminal — zsh — 80x24</text>
+    
+    <!-- Terminal Content -->
+    <g transform="translate(25, 60)">
+      <text x="0" y="0" class="mono" font-size="11" fill="#00d4ff">$</text>
+      <text x="15" y="0" class="mono" font-size="11" fill="#ffffff">whoami</text>
+      <text x="75" y="0" class="mono" font-size="11" fill="#8b949e"># Krishna Kumar Sharma</text>
+      
+      <text x="0" y="20" class="mono" font-size="11" fill="#00d4ff">$</text>
+      <text x="15" y="20" class="mono" font-size="11" fill="#ffffff">focus --backend --cloud --opensource</text>
+      
+      <text x="0" y="40" class="mono" font-size="11" fill="#00d4ff">$</text>
+      <text x="15" y="40" class="mono" font-size="11" fill="#ffffff">build --project CertiVault</text>
+      <text x="200" y="40" class="mono" font-size="11" fill="#e3b341">[BUILDING]</text>
+      
+      <text x="0" y="60" class="mono" font-size="11" fill="#00d4ff">$</text>
+      <text x="15" y="60" class="mono" font-size="11" fill="#ffffff">learn --dsa --system-design</text>
+      
+      <text x="0" y="80" class="mono" font-size="11" fill="#00d4ff">$ <tspan class="cursor">_</tspan></text>
+    </g>
+    
+    <!-- Scan Line Effect -->
+    <rect x="0" y="35" width="600" height="2" fill="url(#accentGradient)" opacity="0.3" class="scan-line"/>
+  </g>
+
+  <!-- Stats Row -->
+  <g transform="translate(150, 450)">
+    <g transform="translate(0, 0)">
+      <rect width="120" height="40" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="6"/>
+      <text x="60" y="18" text-anchor="middle" class="mono" font-size="10" fill="#8b949e">PROJECTS</text>
+      <text x="60" y="32" text-anchor="middle" class="mono" font-size="14" font-weight="700" fill="#00d4ff">5+</text>
+    </g>
+    
+    <g transform="translate(140, 0)">
+      <rect width="120" height="40" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="6"/>
+      <text x="60" y="18" text-anchor="middle" class="mono" font-size="10" fill="#8b949e">CONTRIBUTIONS</text>
+      <text x="60" y="32" text-anchor="middle" class="mono" font-size="14" font-weight="700" fill="#7c3aed">ACTIVE</text>
+    </g>
+    
+    <g transform="translate(280, 0)">
+      <rect width="120" height="40" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="6"/>
+      <text x="60" y="18" text-anchor="middle" class="mono" font-size="10" fill="#8b949e">EXPERIENCE</text>
+      <text x="60" y="32" text-anchor="middle" class="mono" font-size="14" font-weight="700" fill="#ec4899">LEARNING</text>
+    </g>
+    
+    <g transform="translate(420, 0)">
+      <rect width="120" height="40" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="6"/>
+      <text x="60" y="18" text-anchor="middle" class="mono" font-size="10" fill="#8b949e">STATUS</text>
+      <text x="60" y="32" text-anchor="middle" class="mono" font-size="14" font-weight="700" fill="#27ca40">ONLINE</text>
+    </g>
+  </g>
+
+  <!-- Decorative Elements -->
+  <circle cx="50" cy="50" r="3" fill="#00d4ff" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="850" cy="450" r="3" fill="#7c3aed" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+  </circle>
   
-  <!-- Role -->
-  <text x="400" y="170" text-anchor="middle" class="mono" font-size="16" fill="#8b949e">Backend • Cloud • Open Source</text>
-
-  <!-- Terminal Block -->
-  <rect x="100" y="200" width="600" height="150" fill="#0d1117" stroke="#1a2332" stroke-width="1" rx="4"/>
-  <rect x="100" y="200" width="600" height="30" fill="#161b22" stroke="#1a2332" stroke-width="1" rx="4"/>
-  <rect x="100" y="200" width="600" height="15" fill="#161b22" rx="4"/>
-  
-  <!-- Terminal dots -->
-  <circle cx="120" cy="215" r="4" fill="#ff5f56"/>
-  <circle cx="140" cy="215" r="4" fill="#ffbd2e"/>
-  <circle cx="160" cy="215" r="4" fill="#27ca40"/>
-
-  <!-- Terminal content -->
-  <text x="120" y="250" class="mono" font-size="12" fill="#8b949e">&gt; booting engineering profile...</text>
-  <text x="120" y="270" class="mono" font-size="12" fill="#8b949e">&gt; loading systems...</text>
-  <text x="120" y="290" class="mono" font-size="12" fill="#8b949e">&gt; loading projects...</text>
-  <text x="120" y="310" class="mono" font-size="12" fill="#8b949e">&gt; loading contribution stream...</text>
-  <text x="120" y="335" class="mono" font-size="12" fill="#00d4ff" font-weight="700">&gt; status: <tspan class="pulse">ONLINE</tspan><tspan class="cursor">_</tspan></text>
-
-  <!-- Status indicator -->
-  <circle cx="680" cy="335" r="6" fill="#27ca40" class="pulse"/>
-  <text x="695" y="340" class="mono" font-size="10" fill="#27ca40">ACTIVE</text>
-
-  <!-- Bottom accent line -->
-  <rect x="0" y="398" width="800" height="2" fill="url(#accentGradient)"/>
+  <!-- Corner Accents -->
+  <path d="M 0 0 L 100 0 L 0 100 Z" fill="url(#accentGradient)" opacity="0.1"/>
+  <path d="M 900 500 L 800 500 L 900 400 Z" fill="url(#accentGradient)" opacity="0.1"/>
 </svg>

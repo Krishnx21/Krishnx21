@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250" width="800" height="250">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&amp;family=Inter:wght@400;600;700&amp;display=swap');
+      .mono { font-family: 'JetBrains Mono', monospace; }
+      .sans { font-family: 'Inter', sans-serif; }
+      
+      @keyframes icon-bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+      }
+      
+      @keyframes glow-pulse {
+        0%, 100% { filter: drop-shadow(0 0 5px rgba(0, 212, 255, 0.3)); }
+        50% { filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.6)); }
+      }
+      
+      @keyframes slide-in {
+        from { transform: translateX(-20px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+      
+      .icon-bounce { animation: icon-bounce 2s ease-in-out infinite; }
+      .glow-pulse { animation: glow-pulse 2s ease-in-out infinite; }
+      .slide-in { animation: slide-in 0.5s ease-out forwards; }
+    </style>
+    
+    <linearGradient id="contactGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e17"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    
+    <linearGradient id="contactAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+    
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#161b22"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="250" fill="url(#contactGradient)" rx="12"/>
+  
+  <!-- Grid Pattern -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a2332" stroke-width="0.5"/>
+  </pattern>
+  <rect width="800" height="250" fill="url(#grid)" opacity="0.3"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="60" fill="#161b22" rx="12"/>
+  <rect y="52" width="800" height="8" fill="#161b22"/>
+  
+  <text x="25" y="38" class="mono" font-size="16" font-weight="800" fill="#00d4ff">// SIGNAL</text>
+  <text x="750" y="38" text-anchor="end" class="mono" font-size="12" fill="#8b949e">CONTACT</text>
+  
+  <line x1="0" y1="60" x2="800" y2="60" stroke="#1a2332" stroke-width="1"/>
+
+  <!-- Social Links -->
+  <g transform="translate(100, 100)">
+    <!-- GitHub -->
+    <g transform="translate(0, 0)" class="icon-bounce slide-in" style="animation-delay: 0.1s;">
+      <rect width="120" height="50" fill="url(#cardGradient)" stroke="#1a2332" stroke-width="1" rx="8" class="glow-pulse"/>
+      <text x="60" y="30" text-anchor="middle" class="mono" font-size="12" font-weight="700" fill="#ffffff">GITHUB</text>
+      <circle cx="105" cy="25" r="4" fill="#ffffff"/>
+    </g>
+
+    <!-- LinkedIn -->
+    <g transform="translate(140, 0)" class="icon-bounce slide-in" style="animation-delay: 0.2s;">
+      <rect width="120" height="50" fill="url(#cardGradient)" stroke="#1a2332" stroke-width="1" rx="8" class="glow-pulse"/>
+      <text x="60" y="30" text-anchor="middle" class="mono" font-size="12" font-weight="700" fill="#ffffff">LINKEDIN</text>
+      <circle cx="105" cy="25" r="4" fill="#0077b5"/>
+    </g>
+
+    <!-- LeetCode -->
+    <g transform="translate(280, 0)" class="icon-bounce slide-in" style="animation-delay: 0.3s;">
+      <rect width="120" height="50" fill="url(#cardGradient)" stroke="#1a2332" stroke-width="1" rx="8" class="glow-pulse"/>
+      <text x="60" y="30" text-anchor="middle" class="mono" font-size="12" font-weight="700" fill="#ffffff">LEETCODE</text>
+      <circle cx="105" cy="25" r="4" fill="#ffa116"/>
+    </g>
+
+    <!-- Email -->
+    <g transform="translate(420, 0)" class="icon-bounce slide-in" style="animation-delay: 0.4s;">
+      <rect width="120" height="50" fill="url(#cardGradient)" stroke="#1a2332" stroke-width="1" rx="8" class="glow-pulse"/>
+      <text x="60" y="30" text-anchor="middle" class="mono" font-size="12" font-weight="700" fill="#ffffff">EMAIL</text>
+      <circle cx="105" cy="25" r="4" fill="#ea4335"/>
+    </g>
+  </g>
+
+  <!-- Status Message -->
+  <g transform="translate(25, 180)">
+    <rect width="730" height="40" fill="url(#cardGradient)" stroke="#1a2332" stroke-width="1" rx="8"/>
+    <text x="20" y="25" class="mono" font-size="11" fill="#8b949e">Open to collaborations and interesting projects. Let's build something amazing together.</text>
+    
+    <circle cx="700" cy="20" r="5" fill="#27ca40">
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Bottom Border -->
+  <rect x="0" y="248" width="800" height="2" fill="url(#contactAccent)"/>
+</svg>
