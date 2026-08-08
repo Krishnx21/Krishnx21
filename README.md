@@ -53,8 +53,8 @@
 
 <br/>
 
-<img src="./stats.svg" alt="GitHub Stats" height="185"/>
-<img src="./langs.svg" alt="Top Languages" height="185"/>
+<img src="https://github-readme-stats.vercel.app/api?username=Krishnx21&show_icons=true&theme=dark&hide_border=true&bg_color=05060B&title_color=00d4ff&text_color=E6EDF3&icon_color=00d4ff&border_color=1a2332" alt="GitHub Stats" height="185"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Krishnx21&layout=compact&theme=dark&hide_border=true&bg_color=05060B&title_color=00d4ff&text_color=E6EDF3&border_color=1a2332" alt="Top Languages" height="185"/>
 
 <br/><br/>
 
