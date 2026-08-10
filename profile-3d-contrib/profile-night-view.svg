@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200" viewBox="0 0 800 200">
-  <rect width="800" height="200" fill="#05060B"/>
-  <text x="400" y="100" font-family="Cascadia Code, monospace" font-size="16" fill="#00D4FF" text-anchor="middle">
-    3D Contribution Graph - Workflow Pending
-  </text>
-  <text x="400" y="130" font-family="Cascadia Code, monospace" font-size="12" fill="#8B949E" text-anchor="middle">
-    Run the workflow manually or wait for scheduled execution
-  </text>
-</svg>
