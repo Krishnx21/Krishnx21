@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Terminal - Krishnx21</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #05060B;
+            font-family: 'Cascadia Code', monospace;
+            color: #E6EDF3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .terminal-container {
+            width: 100%;
+            max-width: 800px;
+            background: #0D1117;
+            border: 1px solid #1E293B;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+        }
+        .terminal-header {
+            background: #161B22;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #1E293B;
+        }
+        .terminal-buttons {
+            display: flex;
+            gap: 8px;
+        }
+        .terminal-button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        .terminal-button.red { background: #FF5F56; }
+        .terminal-button.yellow { background: #FFBD2E; }
+        .terminal-button.green { background: #27C93F; }
+        
+        .terminal-title {
+            flex: 1;
+            text-align: center;
+            color: #8B949E;
+            font-size: 12px;
+        }
+        
+        .terminal-body {
+            padding: 20px;
+            height: 300px;
+            overflow-y: auto;
+            font-size: 14px;
+        }
+        
+        .terminal-line {
+            margin: 5px 0;
+            display: flex;
+        }
+        
+        .prompt {
+            color: #00D4FF;
+            margin-right: 10px;
+        }
+        
+        .command {
+            color: #E6EDF3;
+        }
+        
+        .output {
+            color: #8B949E;
+            margin-left: 20px;
+        }
+        
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 16px;
+            background: #00D4FF;
+            animation: blink 1s infinite;
+            vertical-align: middle;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        .typing {
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 2s steps(40, end);
+        }
+        
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        .highlight {
+            color: #7C3AED;
+        }
+        
+        .success {
+            color: #27C93F;
+        }
+        
+        .warning {
+            color: #FFBD2E;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #0D1117;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #1E293B;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <div class="terminal-button red"></div>
+                <div class="terminal-button yellow"></div>
+                <div class="terminal-button green"></div>
+            </div>
+            <div class="terminal-title">krishnx21@dev-terminal ~ bash</div>
+        </div>
+        <div class="terminal-body" id="terminal">
+            <div class="terminal-line">
+                <span class="prompt">➜</span>
+                <span class="command">whoami</span>
+            </div>
+            <div class="terminal-line output">krishnx21</div>
+            
+            <div class="terminal-line">
+                <span class="prompt">➜</span>
+                <span class="command">cat profile.json</span>
+            </div>
+            <div class="terminal-line output">
+                <pre>{
+  "name": "Krishnx21",
+  "role": "Full-Stack Developer",
+  "passion": "Building solutions that matter",
+  "status": "Always learning, always building",
+  "location": "Digital Nomad",
+  "coffee_level": "Maximum ☕"
+}</pre>
+            </div>
+            
+            <div class="terminal-line">
+                <span class="prompt">➜</span>
+                <span class="command">npm run skills</span>
+            </div>
+            <div class="terminal-line output">
+                <span class="success">✓</span> JavaScript/TypeScript<br>
+                <span class="success">✓</span> React/Vue.js<br>
+                <span class="success">✓</span> Node.js/Python<br>
+                <span class="success">✓</span> AI/ML Development<br>
+                <span class="success">✓</span> Cloud Architecture
+            </div>
+            
+            <div class="terminal-line">
+                <span class="prompt">➜</span>
+                <span class="command">git commit -m "Ready to collaborate"</span>
+            </div>
+            <div class="terminal-line output">
+                <span class="success">[main 8a2b3c]</span> Ready to collaborate<br>
+                <span class="output">1 file changed, infinite possibilities added</span>
+            </div>
+            
+            <div class="terminal-line">
+                <span class="prompt">➜</span>
+                <span class="command" id="current-command"></span><span class="cursor"></span>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const commands = [
+            'ls -la projects/',
+            'cat contact.txt',
+            'npm start collaboration',
+            'echo "Let\'s build something amazing!"'
+        ];
+        
+        let currentCommandIndex = 0;
+        let currentCharIndex = 0;
+        const commandElement = document.getElementById('current-command');
+        
+        function typeCommand() {
+            if (currentCommandIndex < commands.length) {
+                const currentCommand = commands[currentCommandIndex];
+                
+                if (currentCharIndex < currentCommand.length) {
+                    commandElement.textContent += currentCommand[currentCharIndex];
+                    currentCharIndex++;
+                    setTimeout(typeCommand, 100);
+                } else {
+                    setTimeout(() => {
+                        executeCommand(currentCommand);
+                        currentCommandIndex++;
+                        currentCharIndex = 0;
+                        commandElement.textContent = '';
+                        setTimeout(typeCommand, 1000);
+                    }, 500);
+                }
+            } else {
+                commandElement.textContent = 'echo "Thanks for visiting!"';
+            }
+        }
+        
+        function executeCommand(command) {
+            const terminal = document.getElementById('terminal');
+            const newLine = document.createElement('div');
+            newLine.className = 'terminal-line output';
+            
+            if (command.includes('ls')) {
+                newLine.innerHTML = 'awesome-projects/  contributions/  skills/  contact-info/';
+            } else if (command.includes('cat contact')) {
+                newLine.innerHTML = 'GitHub: Krishnx21 | LinkedIn: krishna-kumar9870 | Email: krishnakumarsharma8077@gmail.com';
+            } else if (command.includes('npm start')) {
+                newLine.innerHTML = '<span class="success">Starting collaboration server...</span><br><span class="success">Ready to connect! 🚀</span>';
+            } else if (command.includes('echo')) {
+                newLine.innerHTML = '<span class="highlight">Let\'s build something amazing! 🎉</span>';
+            }
+            
+            // Insert before the current command line
+            const currentLine = terminal.lastElementChild;
+            terminal.insertBefore(newLine, currentLine);
+            
+            // Scroll to bottom
+            terminal.scrollTop = terminal.scrollHeight;
+        }
+        
+        // Start typing after a delay
+        setTimeout(typeCommand, 2000);
+    </script>
+</body>
+</html>

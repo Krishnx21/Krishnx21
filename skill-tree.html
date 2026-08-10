@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Tree - Krishnx21</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #05060B;
+            font-family: 'Cascadia Code', monospace;
+            color: #E6EDF3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .skill-tree-container {
+            width: 100%;
+            max-width: 900px;
+            background: #0D1117;
+            border: 1px solid #1E293B;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h2 {
+            color: #00D4FF;
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        .header p {
+            color: #8B949E;
+            margin: 5px 0 0 0;
+            font-size: 14px;
+        }
+        
+        .skill-tree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .skill-category {
+            background: #161B22;
+            border: 1px solid #30363D;
+            border-radius: 8px;
+            padding: 20px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-category:hover {
+            border-color: #00D4FF;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.2);
+        }
+        
+        .category-title {
+            color: #00D4FF;
+            font-size: 16px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .category-icon {
+            font-size: 20px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+        }
+        
+        .skill-item {
+            background: #0D1117;
+            border: 1px solid #21262D;
+            border-radius: 6px;
+            padding: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .skill-item:hover {
+            border-color: #00D4FF;
+            background: #1E293B;
+        }
+        
+        .skill-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .skill-item:hover::before {
+            left: 100%;
+        }
+        
+        .skill-name {
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .skill-level {
+            height: 4px;
+            background: #21262D;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        
+        .skill-level-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00D4FF, #7C3AED);
+            border-radius: 2px;
+            transition: width 1s ease;
+        }
+        
+        .skill-percentage {
+            font-size: 10px;
+            color: #8B949E;
+            margin-top: 3px;
+        }
+        
+        .mastery-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #00D4FF, #7C3AED);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 10px;
+            margin-left: 5px;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .skill-category {
+            animation: fadeInUp 0.5s ease forwards;
+            opacity: 0;
+        }
+        
+        .skill-category:nth-child(1) { animation-delay: 0.1s; }
+        .skill-category:nth-child(2) { animation-delay: 0.2s; }
+        .skill-category:nth-child(3) { animation-delay: 0.3s; }
+        .skill-category:nth-child(4) { animation-delay: 0.4s; }
+        .skill-category:nth-child(5) { animation-delay: 0.5s; }
+    </style>
+</head>
+<body>
+    <div class="skill-tree-container">
+        <div class="header">
+            <h2>// SKILL_TREE // EXPERTISE_MAP</h2>
+            <p>Interactive visualization of technical proficiencies</p>
+        </div>
+        
+        <div class="skill-tree">
+            <!-- Frontend Development -->
+            <div class="skill-category">
+                <div class="category-title">
+                    <span class="category-icon">🎨</span>
+                    Frontend Development
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-name">React</div>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="width: 90%;"></div>
+                        </div>
+                        <div class="skill-percentage">90% <span class="mastery-badge">Expert</span></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Vue.js</div>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="width: 75%;"></div>
+                        </div>
+                        <div class="skill-percentage">75%</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">TypeScript</div>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="width: 85%;"></div>
+                        </div>
+                        <div class="skill-percentage">85%</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">CSS/Sass</div>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="width: 80%;"></div>
+                        </div>
+                        <div class="skill-percentage">80%</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Backend Development -->
+            <div class="skill-category">
+                <div class="category-title">
+                    <span class="category-icon">⚙️</span>
+                    Backend Development
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-name">Node.js</div>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="width: 85%;"></div>
+                        </div>
+                        <div class="skill-percentage">85% <span class="mastery-badge">Expert</span></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Python</div>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="width: 80%;"></div>
+                        </div>
+                        <div class="skill-percentage">80%</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Java</div>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="width: 70%;"></div>
+                        </div>
+                        <div class="skill-percentage">70%</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Express.js</div>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="width: 82%;"></div>
+                        </div>
+                        <div class="skill-percentage">82%</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Database & Storage -->
+            <div class="skill-category">
+                <div class="category-title">
+                    <span class="category-icon">🗄️</span>
+                    Database & Storage
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-name">MongoDB</div>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="width: 85%;"></div>
+                        </div>
+                        <div class="skill-percentage">85% <span class="mastery-badge">Expert</span></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">PostgreSQL</div>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="width: 75%;"></div>
+                        </div>
+                        <div class="skill-percentage">75%</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Redis</div>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="width: 70%;"></div>
+                        </div>
+                        <div class="skill-percentage">70%</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">MySQL</div>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="width: 65%;"></div>
+                        </div>
+                        <div class="skill-percentage">65%</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cloud & DevOps -->
+            <div class="skill-category">
+                <div class="category-title">
+                    <span class="category-icon">☁️</span>
+                    Cloud & DevOps
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-name">AWS</div>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="width: 75%;"></div>
+                        </div>
+                        <div class="skill-percentage">75%</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Docker</div>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="width: 80%;"></div>
+                        </div>
+                        <div class="skill-percentage">80%</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Kubernetes</div>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="width: 65%;"></div>
+                        </div>
+                        <div class="skill-percentage">65%</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">CI/CD</div>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="width: 78%;"></div>
+                        </div>
+                        <div class="skill-percentage">78%</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- AI & Machine Learning -->
+            <div class="skill-category">
+                <div class="category-title">
+                    <span class="category-icon">🤖</span>
+                    AI & Machine Learning
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-name">TensorFlow</div>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="width: 70%;"></div>
+                        </div>
+                        <div class="skill-percentage">70%</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">PyTorch</div>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="width: 65%;"></div>
+                        </div>
+                        <div class="skill-percentage">65%</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">NLP</div>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="width: 60%;"></div>
+                        </div>
+                        <div class="skill-percentage">60%</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Computer Vision</div>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="width: 55%;"></div>
+                        </div>
+                        <div class="skill-percentage">55%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Animate skill bars on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillFills = document.querySelectorAll('.skill-level-fill');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const width = entry.target.style.width;
+                        entry.target.style.width = '0%';
+                        setTimeout(() => {
+                            entry.target.style.width = width;
+                        }, 100);
+                    }
+                });
+            });
+            
+            skillFills.forEach(fill => observer.observe(fill));
+        });
+    </script>
+</body>
+</html>

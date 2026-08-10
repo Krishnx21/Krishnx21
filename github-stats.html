@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Stats - Krishnx21</title>
+    <style>
+        body {
+            font-family: 'Cascadia Code', monospace;
+            background-color: #05060B;
+            color: #E6EDF3;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .stats-container {
+            background: #0D1117;
+            border: 1px solid #1E293B;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 800px;
+            width: 100%;
+        }
+        .stats-header {
+            color: #00D4FF;
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .stat-card {
+            background: #161B22;
+            border: 1px solid #30363D;
+            border-radius: 6px;
+            padding: 15px;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00D4FF;
+        }
+        .stat-label {
+            font-size: 12px;
+            color: #8B949E;
+            margin-top: 5px;
+        }
+        .languages-section {
+            margin-top: 20px;
+        }
+        .language-bar {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .language-name {
+            width: 100px;
+            font-size: 14px;
+        }
+        .language-progress {
+            flex: 1;
+            height: 8px;
+            background: #21262D;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 0 10px;
+        }
+        .language-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+        .language-percentage {
+            width: 50px;
+            text-align: right;
+            font-size: 12px;
+            color: #8B949E;
+        }
+        .loading {
+            text-align: center;
+            color: #8B949E;
+        }
+        .error {
+            color: #FF6B6B;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="stats-container">
+        <div class="stats-header">// GITHUB_STATS // KRISHNX21</div>
+        
+        <div id="loading" class="loading">Loading GitHub data...</div>
+        <div id="error" class="error" style="display: none;"></div>
+        
+        <div id="stats-content" style="display: none;">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="repos">0</div>
+                    <div class="stat-label">Repositories</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stars">0</div>
+                    <div class="stat-label">Stars</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="followers">0</div>
+                    <div class="stat-label">Followers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="following">0</div>
+                    <div class="stat-label">Following</div>
+                </div>
+            </div>
+            
+            <div class="languages-section">
+                <div class="stats-header" style="font-size: 16px;">// TOP_LANGUAGES</div>
+                <div id="languages-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const username = 'Krishnx21';
+        
+        async function fetchGitHubData() {
+            try {
+                // Fetch user profile
+                const userResponse = await fetch(`https://api.github.com/users/${username}`);
+                if (!userResponse.ok) throw new Error('User not found');
+                const userData = await userResponse.json();
+                
+                // Fetch repositories
+                const reposResponse = await fetch(`https://api.github.com/users/${username}/repos?per_page=100&sort=updated`);
+                if (!reposResponse.ok) throw new Error('Repositories not found');
+                const reposData = await reposResponse.json();
+                
+                // Calculate stats
+                const stats = {
+                    repos: userData.public_repos,
+                    stars: reposData.reduce((acc, repo) => acc + repo.stargazers_count, 0),
+                    followers: userData.followers,
+                    following: userData.following
+                };
+                
+                // Calculate languages
+                const languages = {};
+                reposData.forEach(repo => {
+                    if (repo.language) {
+                        languages[repo.language] = (languages[repo.language] || 0) + 1;
+                    }
+                });
+                
+                const total = Object.values(languages).reduce((a, b) => a + b, 0);
+                const languagePercentages = Object.entries(languages)
+                    .map(([lang, count]) => ({
+                        name: lang,
+                        percentage: ((count / total) * 100).toFixed(1),
+                        color: getLanguageColor(lang)
+                    }))
+                    .sort((a, b) => parseFloat(b.percentage) - parseFloat(a.percentage))
+                    .slice(0, 6);
+                
+                // Update UI
+                document.getElementById('repos').textContent = stats.repos;
+                document.getElementById('stars').textContent = stats.stars;
+                document.getElementById('followers').textContent = stats.followers;
+                document.getElementById('following').textContent = stats.following;
+                
+                const languagesContainer = document.getElementById('languages-container');
+                languagePercentages.forEach(lang => {
+                    const bar = document.createElement('div');
+                    bar.className = 'language-bar';
+                    bar.innerHTML = `
+                        <div class="language-name">${lang.name}</div>
+                        <div class="language-progress">
+                            <div class="language-fill" style="width: ${lang.percentage}%; background: ${lang.color};"></div>
+                        </div>
+                        <div class="language-percentage">${lang.percentage}%</div>
+                    `;
+                    languagesContainer.appendChild(bar);
+                });
+                
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('stats-content').style.display = 'block';
+                
+            } catch (error) {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('error').style.display = 'block';
+                document.getElementById('error').textContent = 'Error: ' + error.message;
+            }
+        }
+        
+        function getLanguageColor(language) {
+            const colors = {
+                'JavaScript': '#F7DF1E',
+                'TypeScript': '#3178C6',
+                'Python': '#3776AB',
+                'Java': '#007396',
+                'C++': '#00599C',
+                'C': '#A8B9CC',
+                'C#': '#239120',
+                'Ruby': '#CC342D',
+                'Go': '#00ADD8',
+                'Rust': '#DEA584',
+                'PHP': '#777BB4',
+                'Swift': '#F05138',
+                'Kotlin': '#A83336',
+                'Dart': '#0175C2',
+                'HTML': '#E34F26',
+                'CSS': '#1572B6',
+                'Shell': '#89E051',
+                'Vue': '#4FC08D',
+                'React': '#61DAFB',
+                'Default': '#8B949E'
+            };
+            return colors[language] || colors['Default'];
+        }
+        
+        fetchGitHubData();
+    </script>
+</body>
+</html>

@@ -24,10 +24,16 @@ jobs:
             dist/github-contribution-grid-snake-yellow.svg?palette=yellow
             dist/github-contribution-snake.svg
 
-      - name: Push output to "output" branch
-        uses: crazy-max/ghaction-github-pages@v4
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create output directory
+        run: mkdir -p output
+
+      - name: Copy files to output directory
+        run: cp dist/* output/
+
+      - name: Commit & Push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -A .
+          git commit -m "generated contribution snake" || exit 0
+          git push
