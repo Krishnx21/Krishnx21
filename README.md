@@ -73,7 +73,7 @@
 - **🌱 Continuous Learner** - Perpetually expanding knowledge and pushing technical boundaries
 - **✨ Creative Technologist** - Turning abstract ideas into concrete digital reality
 
-### 💪 What Drives Me
+### 💪 What Drives 
 - 🔥 **Innovation** - Always seeking better ways to solve problems
 - 🎯 **Excellence** - Committed to delivering high-quality, maintainable code
 - 🤝 **Collaboration** - Believing in the power of team synergy
