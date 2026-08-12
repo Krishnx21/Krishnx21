@@ -1,6 +1,6 @@
 <div align="center">
 
-<!-- 🚀 ULTRA-MODERN HERO SECTION -->
+
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient:90,000000,00D4FF&height=200&section=header&text=KRISHNX21&fontSize=80&fontColor=FFFFFF&animation=twinkling&fontAlignY=35&desc=Full-Stack%20Architect%20%7C%20AI%2FML%20Pioneer%20%7C%20Open%20Source%20Visionary&descSize=18&descColor=00D4FF&descAlignY=60" width="100%"/>
 
 <!-- ⚡ DYNAMIC TYPING EFFECT -->
