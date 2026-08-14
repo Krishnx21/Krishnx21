@@ -247,7 +247,7 @@
 ## 🚀 Featured Projects - Innovation Portfolio
 
 ### 🏆 Current Active Projects
-- **🤖 AI-Powered Analytics Dashboard** - Real-time data visualization with machine learning insights.
+- **🤖 AI-Powered Analytics Dashboard** - Real-time data visualization with machine learning .
 - **🛠️ Open Source Contribution Tools** - Automating GitHub workflows and development processes.
 - **🏪 Full-Stack E-commerce Platform** - Scalable microservices architecture with modern tech stack.
 - **📋 Smart Task Management System** - AI-enhanced productivity application with intelligent scheduling.
