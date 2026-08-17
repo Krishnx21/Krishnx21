@@ -96,7 +96,7 @@
 
 ---
 
-## 🛠️ Technical Arsenal - Expertise Map
+## 🛠️ Technical Arsenal - Expertise 
 
 ### 💻 Programming Languages & Core Skills
 <p align="center">
