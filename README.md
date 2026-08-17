@@ -65,7 +65,7 @@
 
 </div>
 
-### 🎯 Core Identity
+### 🎯  Identity
 - **🏗️ Full-Stack Architect** - Designing and building scalable, production-ready applicati
 - **🤖 AI/ML Pioneer** - Exploring the frontiers of artificial intelligence and machine learning
 - **🌟 Open Source Visionary** - Believing in the power of community-driven
