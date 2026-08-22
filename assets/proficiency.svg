@@ -1,0 +1,241 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img" aria-label="Animated proficiency matrix of Krishna Kumar Sharma's technical skills">
+  <title>Proficiency Matrix — live skill telemetry</title>
+
+  <defs>
+    <linearGradient id="pm-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B0F17"/>
+      <stop offset="100%" stop-color="#05060B"/>
+    </linearGradient>
+    <linearGradient id="pm-fill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#00D4FF"/>
+      <stop offset="55%"  stop-color="#4F8DF7"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="pm-sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#FFFFFF" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="pm-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="pm-grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0 H0 V44" fill="none" stroke="#0F1B2D" stroke-width="1"/>
+    </pattern>
+    <style>
+      .m { font-family:"JetBrains Mono","Cascadia Code","SF Mono","DejaVu Sans Mono",
+            "Liberation Mono",Consolas,Menlo,monospace; }
+      .nm  { fill:#E6EDF3; font-size:12.5px; }
+      .sub { fill:#475569; font-size:9.5px; letter-spacing:1px; }
+      .pct { fill:#00D4FF; font-size:11.5px; font-weight:700; }
+    </style>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="879" height="429" rx="12" fill="url(#pm-bg)" stroke="#1E293B"/>
+  <rect x="1" y="1" width="878" height="428" rx="12" fill="url(#pm-grid)" opacity="0.5"/>
+
+  <!-- header -->
+  <text class="m" x="30" y="40" font-size="15" font-weight="800" fill="#00D4FF" letter-spacing="4">
+    PROFICIENCY MATRIX
+  </text>
+  <text class="m" x="30" y="60" font-size="10.5" fill="#475569">
+    &gt; self-assessed · updated continuously · calibrated against production work
+  </text>
+  <line x1="30" y1="74" x2="850" y2="74" stroke="#1E293B"/>
+
+  <!-- legend -->
+  <g class="m" font-size="9.5">
+    <rect x="700" y="30" width="10" height="10" rx="2" fill="url(#pm-fill)"/>
+    <text x="716" y="39" fill="#64748B">daily driver</text>
+    <rect x="700" y="48" width="10" height="10" rx="2" fill="#1E293B"/>
+    <text x="716" y="57" fill="#64748B">headroom</text>
+  </g>
+
+  <!-- ================= BARS =================
+       Each row: label, tier tag, track, animated fill, sweep highlight, value.
+       Track: x=250 w=520  →  1% = 5.2px
+  ============================================ -->
+
+  <!-- ROW 1 · TypeScript / JavaScript · 93 -->
+  <g>
+    <text class="m nm"  x="30"  y="104">TypeScript / JavaScript</text>
+    <text class="m sub" x="30"  y="118">LANG · DAILY</text>
+    <rect x="250" y="94" width="520" height="13" rx="6.5" fill="#111827" stroke="#1E293B"/>
+    <rect x="250" y="94" width="0"   height="13" rx="6.5" fill="url(#pm-fill)">
+      <animate attributeName="width" dur="12s" repeatCount="indefinite"
+               values="0;484;484;0" keyTimes="0;0.12;0.90;1" calcMode="spline"
+               keySplines="0.22 1 0.36 1;0 0 1 1;0.6 0 0.4 1"/>
+    </rect>
+    <rect x="250" y="94" width="70" height="13" rx="6.5" fill="url(#pm-sweep)" opacity="0">
+      <animate attributeName="x" dur="12s" repeatCount="indefinite"
+               values="250;250;664;664" keyTimes="0;0.04;0.14;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+               values="0;0.9;0;0" keyTimes="0;0.09;0.15;1"/>
+    </rect>
+    <text class="m pct" x="850" y="105" text-anchor="end" opacity="0">93%
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+               values="0;0;1;1;0" keyTimes="0;0.10;0.14;0.90;0.96"/>
+    </text>
+  </g>
+
+  <!-- ROW 2 · React / Next.js · 90 -->
+  <g>
+    <text class="m nm"  x="30"  y="146">React / Next.js</text>
+    <text class="m sub" x="30"  y="160">FRONTEND · DAILY</text>
+    <rect x="250" y="136" width="520" height="13" rx="6.5" fill="#111827" stroke="#1E293B"/>
+    <rect x="250" y="136" width="0"  height="13" rx="6.5" fill="url(#pm-fill)">
+      <animate attributeName="width" dur="12s" repeatCount="indefinite"
+               values="0;468;468;0" keyTimes="0;0.16;0.90;1" calcMode="spline"
+               keySplines="0.22 1 0.36 1;0 0 1 1;0.6 0 0.4 1"/>
+    </rect>
+    <rect x="250" y="136" width="70" height="13" rx="6.5" fill="url(#pm-sweep)" opacity="0">
+      <animate attributeName="x" dur="12s" repeatCount="indefinite"
+               values="250;250;648;648" keyTimes="0;0.08;0.18;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+               values="0;0.9;0;0" keyTimes="0;0.13;0.19;1"/>
+    </rect>
+    <text class="m pct" x="850" y="147" text-anchor="end" opacity="0">90%
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+               values="0;0;1;1;0" keyTimes="0;0.14;0.18;0.90;0.96"/>
+    </text>
+  </g>
+
+  <!-- ROW 3 · Node.js / Express · 88 -->
+  <g>
+    <text class="m nm"  x="30"  y="188">Node.js / Express</text>
+    <text class="m sub" x="30"  y="202">BACKEND · DAILY</text>
+    <rect x="250" y="178" width="520" height="13" rx="6.5" fill="#111827" stroke="#1E293B"/>
+    <rect x="250" y="178" width="0"  height="13" rx="6.5" fill="url(#pm-fill)">
+      <animate attributeName="width" dur="12s" repeatCount="indefinite"
+               values="0;458;458;0" keyTimes="0;0.20;0.90;1" calcMode="spline"
+               keySplines="0.22 1 0.36 1;0 0 1 1;0.6 0 0.4 1"/>
+    </rect>
+    <rect x="250" y="178" width="70" height="13" rx="6.5" fill="url(#pm-sweep)" opacity="0">
+      <animate attributeName="x" dur="12s" repeatCount="indefinite"
+               values="250;250;638;638" keyTimes="0;0.12;0.22;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+               values="0;0.9;0;0" keyTimes="0;0.17;0.23;1"/>
+    </rect>
+    <text class="m pct" x="850" y="189" text-anchor="end" opacity="0">88%
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+               values="0;0;1;1;0" keyTimes="0;0.18;0.22;0.90;0.96"/>
+    </text>
+  </g>
+
+  <!-- ROW 4 · Python · 85 -->
+  <g>
+    <text class="m nm"  x="30"  y="230">Python</text>
+    <text class="m sub" x="30"  y="244">LANG · DATA / SCRIPTING</text>
+    <rect x="250" y="220" width="520" height="13" rx="6.5" fill="#111827" stroke="#1E293B"/>
+    <rect x="250" y="220" width="0"  height="13" rx="6.5" fill="url(#pm-fill)">
+      <animate attributeName="width" dur="12s" repeatCount="indefinite"
+               values="0;442;442;0" keyTimes="0;0.24;0.90;1" calcMode="spline"
+               keySplines="0.22 1 0.36 1;0 0 1 1;0.6 0 0.4 1"/>
+    </rect>
+    <rect x="250" y="220" width="70" height="13" rx="6.5" fill="url(#pm-sweep)" opacity="0">
+      <animate attributeName="x" dur="12s" repeatCount="indefinite"
+               values="250;250;622;622" keyTimes="0;0.16;0.26;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+               values="0;0.9;0;0" keyTimes="0;0.21;0.27;1"/>
+    </rect>
+    <text class="m pct" x="850" y="231" text-anchor="end" opacity="0">85%
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+               values="0;0;1;1;0" keyTimes="0;0.22;0.26;0.90;0.96"/>
+    </text>
+  </g>
+
+  <!-- ROW 5 · MongoDB / PostgreSQL · 82 -->
+  <g>
+    <text class="m nm"  x="30"  y="272">MongoDB / PostgreSQL</text>
+    <text class="m sub" x="30"  y="286">DATA · MODELLING + QUERY</text>
+    <rect x="250" y="262" width="520" height="13" rx="6.5" fill="#111827" stroke="#1E293B"/>
+    <rect x="250" y="262" width="0"  height="13" rx="6.5" fill="url(#pm-fill)">
+      <animate attributeName="width" dur="12s" repeatCount="indefinite"
+               values="0;426;426;0" keyTimes="0;0.28;0.90;1" calcMode="spline"
+               keySplines="0.22 1 0.36 1;0 0 1 1;0.6 0 0.4 1"/>
+    </rect>
+    <rect x="250" y="262" width="70" height="13" rx="6.5" fill="url(#pm-sweep)" opacity="0">
+      <animate attributeName="x" dur="12s" repeatCount="indefinite"
+               values="250;250;606;606" keyTimes="0;0.20;0.30;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+               values="0;0.9;0;0" keyTimes="0;0.25;0.31;1"/>
+    </rect>
+    <text class="m pct" x="850" y="273" text-anchor="end" opacity="0">82%
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+               values="0;0;1;1;0" keyTimes="0;0.26;0.30;0.90;0.96"/>
+    </text>
+  </g>
+
+  <!-- ROW 6 · Docker / CI-CD · 76 -->
+  <g>
+    <text class="m nm"  x="30"  y="314">Docker / CI-CD</text>
+    <text class="m sub" x="30"  y="328">PLATFORM · COMFORTABLE</text>
+    <rect x="250" y="304" width="520" height="13" rx="6.5" fill="#111827" stroke="#1E293B"/>
+    <rect x="250" y="304" width="0"  height="13" rx="6.5" fill="url(#pm-fill)">
+      <animate attributeName="width" dur="12s" repeatCount="indefinite"
+               values="0;395;395;0" keyTimes="0;0.32;0.90;1" calcMode="spline"
+               keySplines="0.22 1 0.36 1;0 0 1 1;0.6 0 0.4 1"/>
+    </rect>
+    <rect x="250" y="304" width="70" height="13" rx="6.5" fill="url(#pm-sweep)" opacity="0">
+      <animate attributeName="x" dur="12s" repeatCount="indefinite"
+               values="250;250;575;575" keyTimes="0;0.24;0.34;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+               values="0;0.9;0;0" keyTimes="0;0.29;0.35;1"/>
+    </rect>
+    <text class="m pct" x="850" y="315" text-anchor="end" opacity="0">76%
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+               values="0;0;1;1;0" keyTimes="0;0.30;0.34;0.90;0.96"/>
+    </text>
+  </g>
+
+  <!-- ROW 7 · System Design · 74 -->
+  <g>
+    <text class="m nm"  x="30"  y="356">System Design</text>
+    <text class="m sub" x="30"  y="370">ARCHITECTURE · GROWING</text>
+    <rect x="250" y="346" width="520" height="13" rx="6.5" fill="#111827" stroke="#1E293B"/>
+    <rect x="250" y="346" width="0"  height="13" rx="6.5" fill="url(#pm-fill)">
+      <animate attributeName="width" dur="12s" repeatCount="indefinite"
+               values="0;385;385;0" keyTimes="0;0.36;0.90;1" calcMode="spline"
+               keySplines="0.22 1 0.36 1;0 0 1 1;0.6 0 0.4 1"/>
+    </rect>
+    <rect x="250" y="346" width="70" height="13" rx="6.5" fill="url(#pm-sweep)" opacity="0">
+      <animate attributeName="x" dur="12s" repeatCount="indefinite"
+               values="250;250;565;565" keyTimes="0;0.28;0.38;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+               values="0;0.9;0;0" keyTimes="0;0.33;0.39;1"/>
+    </rect>
+    <text class="m pct" x="850" y="357" text-anchor="end" opacity="0">74%
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+               values="0;0;1;1;0" keyTimes="0;0.34;0.38;0.90;0.96"/>
+    </text>
+  </g>
+
+  <!-- ROW 8 · AI / ML Engineering · 70 -->
+  <g>
+    <text class="m nm"  x="30"  y="398">AI / ML Engineering</text>
+    <text class="m sub" x="30"  y="412">FRONTIER · ACTIVELY LEARNING</text>
+    <rect x="250" y="388" width="520" height="13" rx="6.5" fill="#111827" stroke="#1E293B"/>
+    <rect x="250" y="388" width="0"  height="13" rx="6.5" fill="url(#pm-fill)">
+      <animate attributeName="width" dur="12s" repeatCount="indefinite"
+               values="0;364;364;0" keyTimes="0;0.40;0.90;1" calcMode="spline"
+               keySplines="0.22 1 0.36 1;0 0 1 1;0.6 0 0.4 1"/>
+    </rect>
+    <rect x="250" y="388" width="70" height="13" rx="6.5" fill="url(#pm-sweep)" opacity="0">
+      <animate attributeName="x" dur="12s" repeatCount="indefinite"
+               values="250;250;544;544" keyTimes="0;0.32;0.42;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+               values="0;0.9;0;0" keyTimes="0;0.37;0.43;1"/>
+    </rect>
+    <text class="m pct" x="850" y="399" text-anchor="end" opacity="0">70%
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+               values="0;0;1;1;0" keyTimes="0;0.38;0.42;0.90;0.96"/>
+    </text>
+  </g>
+
+  <!-- roving scan indicator -->
+  <circle cx="250" cy="430" r="3" fill="#00D4FF" filter="url(#pm-glow)" opacity="0.8">
+    <animate attributeName="cx" dur="12s" repeatCount="indefinite"
+             values="250;770;250" keyTimes="0;0.5;1" calcMode="linear"/>
+  </circle>
+</svg>

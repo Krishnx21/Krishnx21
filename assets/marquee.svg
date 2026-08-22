@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 64" width="880" height="64" role="img" aria-label="Scrolling marquee of technologies Krishna works with">
+  <title>Tech stack marquee</title>
+  <defs>
+    <linearGradient id="mq-bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#05060B"/>
+      <stop offset="50%"  stop-color="#0B0F17"/>
+      <stop offset="100%" stop-color="#05060B"/>
+    </linearGradient>
+    <!-- soft fade at both edges so items slide in/out instead of popping -->
+    <linearGradient id="mq-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#000" stop-opacity="0"/>
+      <stop offset="9%"   stop-color="#fff" stop-opacity="1"/>
+      <stop offset="91%"  stop-color="#fff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="mq-mask">
+      <rect x="0" y="0" width="880" height="64" fill="url(#mq-fade)"/>
+    </mask>
+    <style>
+      .m  { font-family:"JetBrains Mono","Cascadia Code","SF Mono","DejaVu Sans Mono",
+             "Liberation Mono",Consolas,Menlo,monospace; font-size:13px; font-weight:700; }
+      .t  { fill:#E6EDF3; }
+      .d  { fill:#7C3AED; font-size:14px; }
+    </style>
+
+    <!-- one full strip, 1560px wide, reused twice for a seamless loop -->
+    <g id="mq-strip">
+      <text class="m t" x="0"    y="21">TypeScript</text>   <text class="m d" x="92"   y="21">◆</text>
+      <text class="m t" x="118"  y="21">React</text>        <text class="m d" x="178"  y="21">◆</text>
+      <text class="m t" x="204"  y="21">Next.js</text>      <text class="m d" x="272"  y="21">◆</text>
+      <text class="m t" x="298"  y="21">Node.js</text>      <text class="m d" x="366"  y="21">◆</text>
+      <text class="m t" x="392"  y="21">Express</text>      <text class="m d" x="460"  y="21">◆</text>
+      <text class="m t" x="486"  y="21">Python</text>       <text class="m d" x="546"  y="21">◆</text>
+      <text class="m t" x="572"  y="21">FastAPI</text>      <text class="m d" x="640"  y="21">◆</text>
+      <text class="m t" x="666"  y="21">MongoDB</text>      <text class="m d" x="746"  y="21">◆</text>
+      <text class="m t" x="772"  y="21">PostgreSQL</text>   <text class="m d" x="874"  y="21">◆</text>
+      <text class="m t" x="900"  y="21">Redis</text>        <text class="m d" x="960"  y="21">◆</text>
+      <text class="m t" x="986"  y="21">GraphQL</text>      <text class="m d" x="1054" y="21">◆</text>
+      <text class="m t" x="1080" y="21">Docker</text>       <text class="m d" x="1148" y="21">◆</text>
+      <text class="m t" x="1174" y="21">AWS</text>          <text class="m d" x="1218" y="21">◆</text>
+      <text class="m t" x="1244" y="21">Tailwind</text>     <text class="m d" x="1322" y="21">◆</text>
+      <text class="m t" x="1348" y="21">PyTorch</text>      <text class="m d" x="1416" y="21">◆</text>
+      <text class="m t" x="1442" y="21">Git</text>          <text class="m d" x="1478" y="21">◆</text>
+    </g>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="879" height="63" rx="10" fill="url(#mq-bg)" stroke="#1E293B"/>
+  <line x1="0" y1="0.5"  x2="880" y2="0.5"  stroke="#00D4FF" stroke-opacity="0.25"/>
+  <line x1="0" y1="63.5" x2="880" y2="63.5" stroke="#7C3AED" stroke-opacity="0.25"/>
+
+  <!-- row 1: scrolls left -->
+  <g mask="url(#mq-mask)">
+    <g transform="translate(0,10)">
+      <animateTransform attributeName="transform" type="translate"
+                        from="0 10" to="-1520 10" dur="26s" repeatCount="indefinite"/>
+      <use href="#mq-strip" x="0"/>
+      <use href="#mq-strip" x="1520"/>
+      <use href="#mq-strip" x="3040"/>
+    </g>
+  </g>
+
+  <!-- row 2: scrolls right, dimmer — creates a parallax feel -->
+  <g mask="url(#mq-mask)" opacity="0.32">
+    <g transform="translate(-1520,36)">
+      <animateTransform attributeName="transform" type="translate"
+                        from="-1520 36" to="0 36" dur="34s" repeatCount="indefinite"/>
+      <use href="#mq-strip" x="0"/>
+      <use href="#mq-strip" x="1520"/>
+      <use href="#mq-strip" x="3040"/>
+    </g>
+  </g>
+</svg>
