@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 190" role="img" aria-labelledby="title desc">
+  <title id="title">Animated contribution snake</title>
+  <desc id="desc">A green snake travels across a GitHub-style contribution grid.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop stop-color="#071a19" />
+      <stop offset="1" stop-color="#102b20" />
+    </linearGradient>
+    <linearGradient id="snake" x1="0" x2="1">
+      <stop stop-color="#39d353" />
+      <stop offset="1" stop-color="#b6f36b" />
+    </linearGradient>
+    <pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse">
+      <rect width="14" height="14" rx="3" fill="#1b442b" />
+      <rect width="14" height="14" rx="3" fill="#238636" opacity=".55" transform="translate(6 5)" />
+    </pattern>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="blur" /><feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+    <path id="route" d="M58 90 C120 25 170 155 235 90 S350 25 415 90 S530 155 595 90 S710 25 775 90 S850 145 902 90" />
+  </defs>
+  <rect width="960" height="190" rx="16" fill="url(#bg)" />
+  <rect x="28" y="28" width="904" height="134" rx="10" fill="url(#grid)" opacity=".9" />
+  <use href="#route" fill="none" stroke="#173b28" stroke-width="18" stroke-linecap="round" />
+  <use href="#route" fill="none" stroke="url(#snake)" stroke-width="10" stroke-linecap="round" stroke-dasharray="80 900" filter="url(#glow)">
+    <animate attributeName="stroke-dashoffset" from="0" to="-980" dur="5s" repeatCount="indefinite" />
+  </use>
+  <circle r="10" fill="#d9f99d" stroke="#39d353" stroke-width="5" filter="url(#glow)">
+    <animateMotion dur="5s" repeatCount="indefinite" rotate="auto"><mpath href="#route" /></animateMotion>
+  </circle>
+  <g fill="#9be564" font-family="monospace" font-size="12" opacity=".8">
+    <text x="38" y="178">LESS</text><text x="872" y="178">MORE</text>
+  </g>
+</svg>
