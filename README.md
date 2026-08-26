@@ -57,7 +57,7 @@
 
 ---
 
-## 👨‍💻 About Me - The Developer Story
+## 👨‍💻 About Me - The D
 
 <div align="center">
 
