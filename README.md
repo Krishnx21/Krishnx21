@@ -142,7 +142,7 @@
   <img src="https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg" alt="GraphQL" width="50" title="GraphQL"/>
 </p>
 
-### ☁️ Cloud & DevOps Engineering
+### ☁️ Cloud & DevOps Engineer
 <p align="center">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" width="50" title="AWS"/>&nbsp;&nbsp;&nbsp;
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" alt="Docker" width="50" title="Docker"/>&nbsp;&nbsp;&nbsp;
