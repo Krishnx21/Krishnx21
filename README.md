@@ -99,7 +99,7 @@
 
 ---
 
-## 🛠️ Technical Arsenal - 
+## 🛠️ Technical 
 
 ### 💻 Programming Languages & Core Skills
 <p align="center">
