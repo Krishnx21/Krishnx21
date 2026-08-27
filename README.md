@@ -178,8 +178,7 @@
 
 <br/>
 
-<!-- 🎯 LOCAL INTERACTIVE GITHUB STATS -->
-<iframe src="./github-stats.html" width="100%" height="320" frameborder="0" style="border: 1px solid #1E293B; border-radius: 12px; box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);"></iframe>
+
 
 <br/><br/>
 
