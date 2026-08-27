@@ -169,7 +169,7 @@
 
 ---
 
-## 📊 GitHub Analytics - Performance Dash
+## 📊 GitHub Analytics -
 
 <div align="center">
 
