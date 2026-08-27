@@ -231,7 +231,7 @@
 
 ## 🎯 Interactive Development Experience
 
-### 💻 TERMINAL SIMULATION
+### 💻 TERMINAL 
 <iframe src="./interactive-terminal.html" width="100%" height="380" frameborder="0" style="border: 1px solid #1E293B; border-radius: 12px; box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);"></iframe>
 
 ### 🌳 SKILL MASTERY TREE
