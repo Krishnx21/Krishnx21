@@ -201,7 +201,7 @@
 <br/><br/>
 
 <!-- 🌐 3D CONTRIBUTION VISUALIZATION -->
-<h3 style="color:#00D4FF;font-family:'Cascadia Code',monospace;letter-spacing:4px">// 3D_CONTRIBUTION_MATRIX // VISUALIZED</h3>
+<h3 style="color:#00D4;font-family:'Cascadia Code',monospace;letter-spacing:4px">// 3D_CONTRIBUTION_MATRIX // VISUALIZED</h3>
 <a href="./simple-3d-graph.html">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-rainbow.svg"/>
