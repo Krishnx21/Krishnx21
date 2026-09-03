@@ -101,7 +101,7 @@
 
 ## 🛠️ Technical 
 
-### 💻 Programming Languages & Core Skills
+### 💻 Programming Languages 
 <p align="center">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="50" title="JavaScript"/>&nbsp;&nbsp;&nbsp;
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="TypeScript" width="50" title="TypeScript"/>&nbsp;&nbsp;&nbsp;
