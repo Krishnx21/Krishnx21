@@ -70,7 +70,7 @@
 ### 🎯  Identity
 - **🏗️ Full-Stack Architect** - Designing and building scalable, production-ready applicati
 - **🤖 AI/ML Pioneer** - Exploring the frontiers of artificial intelligence and machine learning
-- **🌟 Open Source Visionary** - Believing in the power of community-driven
+- **🌟 Open Source Visionary** - Believing in the power 
 - **💡 Problem Solver** - Transforming complex challenges into elegant, efficient solution.
 - **🌱 Continuous Learner** - Perpetually expanding knowledge and pushing technical boundaries
 - **✨ Creative Technologist** - Turning abstract ideas into concrete digital 
