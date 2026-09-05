@@ -68,7 +68,7 @@
 </div>
 
 ### 🎯  Identity
-- **🏗️ Full-Stack Architect** - Designing and building scalable, production-ready applicati
+- **🏗️ Full-Stack Architect** - Designing and building scalable, production-ready 
 - **🤖 AI/ML Pioneer** - Exploring the frontiers of artificial intelligence and machine learning
 - **🌟 Open Source Visionary** - Believing in the power 
 - **💡 Problem Solver** - Transforming complex challenges into elegant, efficient solution.
