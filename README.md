@@ -62,7 +62,7 @@
 <div align="center">
 
 <p style="color:#E6EDF3;font-family:'Cascadia Code',monospace;font-size:16px;">
-  <i>🚀  Full-Stack Developer with a mission to build transformative digital solution</i>
+  <i>🚀  Full-Stack Developer with a mission to build  solution</i>
 </p>
 
 </div>
