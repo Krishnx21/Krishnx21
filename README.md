@@ -2,7 +2,6 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:1a1a2e,100:16213e&height=160&section=header&text=&animation=fadeIn" width="100%"/>
 
-<!-- Name + Role -->
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=38&duration=3000&pause=500&color=58A6FF&center=true&vCenter=true&width=700&lines=Krishna+Kumar" alt="Name" />
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=400&size=17&duration=2500&pause=1200&color=8B949E&center=true&vCenter=true&width=700&lines=Full-Stack+Developer+%E2%80%A2+AI%2FML+Explorer+%E2%80%A2+Open+Source;Building+products+that+actually+ship+%F0%9F%9A%80;TypeScript+%7C+Python+%7C+React+%7C+Node.js+%7C+Cloud" alt="Role" />
@@ -98,41 +97,70 @@
 
 ---
 
-### 📊 GitHub Stats
+### 🧠 What I'm About
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Krishnx21&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true" height="165"/>
-&nbsp;
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Krishnx21&layout=compact&theme=github_dark&hide_border=true&langs_count=8" height="165"/>
+```
+  SKILLS RADAR
+  ────────────────────────────────────────────
 
-<br/><br/>
+  Frontend       ████████████████░░░░   80%
+  Backend        ███████████████████░   95%
+  Databases      ████████████████░░░░   80%
+  Cloud / DevOps ██████████████░░░░░░   70%
+  AI / ML        ████████████░░░░░░░░   60%
+  System Design  █████████████░░░░░░░   65%
 
-<img src="https://streak-stats.demolab.com?user=Krishnx21&theme=github-dark-blue&hide_border=true&date_format=j%20M%5B%20Y%5D" width="55%"/>
-
-<br/><br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Krishnx21&theme=github-compact&hide_border=true&area=true&color=58a6ff&line=58a6ff&point=ffffff&area_color=58a6ff" width="100%"/>
+  ────────────────────────────────────────────
+  Always shipping. Never settling.
+```
 
 </div>
 
 ---
 
-### 🏆 Trophies
+### ⚡ Coding Vibe
 
 <div align="center">
-<img src="https://github-profile-trophy.vercel.app/?username=Krishnx21&theme=gitdimmed&no-frame=true&margin-w=8&column=7" width="100%"/>
+
+```
+  CURRENT STATUS
+  ─────────────────────────────────────────────────
+
+  🎧  Listening to  →  Lo-fi hip hop / Synthwave
+  💻  Editor        →  VS Code  ( dark theme, always )
+  🌐  Browser       →  Arc
+  ☕  Fuel          →  Black coffee, no sugar
+  🕐  Peak hours    →  10 PM → 2 AM  ( night owl 🦉 )
+  📍  Location      →  India 🇮🇳
+
+  ─────────────────────────────────────────────────
+  > git commit -m "another late night, another feature shipped"
+```
+
 </div>
 
 ---
 
-### 🐍 Contribution Trail
+### 🗺️ Dev Journey
 
 <div align="center">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./output/github-contribution-grid-snake.svg"/>
-  <img src="./output/github-contribution-grid-snake.svg" alt="snake" width="100%"/>
-</picture>
+
+```
+  2021 ──── Started coding  →  HTML, CSS, vanilla JS
+     │
+  2022 ──── Got serious     →  React, Node.js, MongoDB
+     │
+  2023 ──── Leveled up      →  TypeScript, Docker, AWS
+     │
+  2024 ──── Going deep      →  System Design, AI/ML, Cloud
+     │
+  2025 ──── Building real   →  CertiVault, AI tools, OSS
+     │
+  NOW  ──── Still learning. Still shipping. 🚀
+```
+
 </div>
 
 ---
