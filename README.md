@@ -56,14 +56,52 @@
 
 ---
 
-### 🚀 Projects
+### 🚀 Featured Projects
 
-| Project | Description |
-|---------|-------------|
-| **AI Analytics Dashboard** | Real-time ML-powered data visualization |
-| **E-commerce Platform** | Scalable microservices storefront |
-| **Smart Task Manager** | AI-based intelligent task scheduling |
-| **OSS Dev Tools** | GitHub workflow automation toolkit |
+> *Things I've built that I'm actually proud of.*
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🔐 CertiVault</h3>
+      <p>A secure <strong>cloud-native document vault</strong> for storing, verifying, sharing, and tracking documents with audit trails, smart search, role-based permissions, and scalable enterprise workflows.</p>
+      <p>
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+        <img src="https://img.shields.io/badge/Cloud_Native-232F3E?style=flat-square&logo=amazonaws&logoColor=white" />
+      </p>
+      <a href="https://github.com/Krishnx21/CertiVault">View Repo →</a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>☁️ Cloud File Sharing</h3>
+      <p>A secure backend system for <strong>uploading, storing, and sharing files</strong> with expirable links — built for reliability and simplicity.</p>
+      <p>
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
+        <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" />
+      </p>
+      <a href="https://github.com/Krishnx21/Cloud-File-Sharing-URL">View Repo →</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🤖 AI Resume Analyzer</h3>
+      <p>An <strong>AI-powered web app</strong> that analyzes resumes and gives actionable improvement suggestions — because your resume deserves better than a template.</p>
+      <p>
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
+        <img src="https://img.shields.io/badge/AI_Powered-FF6F00?style=flat-square&logo=openai&logoColor=white" />
+      </p>
+      <a href="https://github.com/Krishnx21/AI-Resume-Analyzer">View Repo →</a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🌤️ Weather App</h3>
+      <p>A clean <strong>weather forecasting web app</strong> that fetches real-time weather data using a public API — fast, accurate, and minimal.</p>
+      <p>
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
+        <img src="https://img.shields.io/badge/REST_API-0096FF?style=flat-square&logo=fastapi&logoColor=white" />
+      </p>
+      <a href="https://github.com/Krishnx21/Weather">View Repo →</a>
+    </td>
+  </tr>
+</table>
 
 ---
 
