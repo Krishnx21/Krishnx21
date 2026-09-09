@@ -1,9 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&amp;display=swap');
-      .mono { font-family: 'JetBrains Mono', monospace; }
-      
+      /* No @import: GitHub renders README images via <img>, which blocks external
+         font fetches. A local monospace stack is used so glyphs never fall back
+         to a proportional font and break alignment. */
+      .mono { font-family: 'JetBrains Mono','Cascadia Code','SF Mono','DejaVu Sans Mono',
+              'Liberation Mono',Consolas,Menlo,monospace; }
+
       @keyframes cursor {
         0%, 100% { opacity: 1; }
         50% { opacity: 0; }
@@ -59,25 +62,41 @@
   <g transform="translate(50, 100)">
     <text x="0" y="0" class="mono" font-size="14" fill="#8B949E">INITIALIZING...</text>
     
-    <!-- Progress Bar -->
+    <!-- Progress Bar (SMIL, not CSS: percentage widths on SVG rects resolve against
+         the viewport, not the parent, so CSS width:100% overshot the 700px track) -->
     <rect x="0" y="15" width="700" height="4" fill="#0B0F17" rx="2"/>
-    <rect x="0" y="15" width="700" height="4" fill="url(#accentGradient)" rx="2" class="load"/>
+    <rect x="0" y="15" width="0" height="4" fill="url(#accentGradient)" rx="2">
+      <animate attributeName="width" dur="12s" repeatCount="indefinite"
+               values="0;700;700;0" keyTimes="0;0.42;0.94;1" calcMode="linear"/>
+    </rect>
   </g>
 
-  <!-- Boot Items Zone -->
+  <!-- Boot Items Zone — now check in sequentially instead of all at once -->
   <g transform="translate(50, 150)">
-    <text x="0" y="0" class="mono" font-size="12" fill="#22C55E">[✓] IDENTITY MODULE</text>
-    <text x="0" y="25" class="mono" font-size="12" fill="#22C55E">[✓] ENGINEERING PROFILE</text>
-    <text x="0" y="50" class="mono" font-size="12" fill="#22C55E">[✓] PROJECT DATABASE</text>
-    <text x="0" y="75" class="mono" font-size="12" fill="#22C55E">[✓] TECHNOLOGY MATRIX</text>
-    <text x="0" y="100" class="mono" font-size="12" fill="#22C55E">[✓] OPEN SOURCE NETWORK</text>
-    <text x="0" y="125" class="mono" font-size="12" fill="#22C55E">[✓] GITHUB TELEMETRY</text>
+    <g opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+        values="0;0;1;1;0" keyTimes="0;0.07;0.09;0.94;0.98"/>
+      <text x="0" y="0" class="mono" font-size="12" fill="#22C55E">[✓] IDENTITY MODULE</text></g>
+    <g opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+        values="0;0;1;1;0" keyTimes="0;0.13;0.15;0.94;0.98"/>
+      <text x="0" y="25" class="mono" font-size="12" fill="#22C55E">[✓] ENGINEERING PROFILE</text></g>
+    <g opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+        values="0;0;1;1;0" keyTimes="0;0.19;0.21;0.94;0.98"/>
+      <text x="0" y="50" class="mono" font-size="12" fill="#22C55E">[✓] PROJECT DATABASE</text></g>
+    <g opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+        values="0;0;1;1;0" keyTimes="0;0.25;0.27;0.94;0.98"/>
+      <text x="0" y="75" class="mono" font-size="12" fill="#22C55E">[✓] TECHNOLOGY MATRIX</text></g>
+    <g opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+        values="0;0;1;1;0" keyTimes="0;0.31;0.33;0.94;0.98"/>
+      <text x="0" y="100" class="mono" font-size="12" fill="#22C55E">[✓] OPEN SOURCE NETWORK</text></g>
+    <g opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+        values="0;0;1;1;0" keyTimes="0;0.37;0.39;0.94;0.98"/>
+      <text x="0" y="125" class="mono" font-size="12" fill="#22C55E">[✓] GITHUB TELEMETRY</text></g>
   </g>
 
   <!-- System Ready Zone -->
   <g transform="translate(50, 310)">
     <text x="0" y="0" class="mono" font-size="14" font-weight="700" fill="#00D4FF">SYSTEM READY</text>
-    <text x="0" y="30" class="mono" font-size="12" fill="#E6EDF3">&gt; welcome, Krishna Kumar Sharma<span class="cursor">_</span></text>
+    <text x="0" y="30" class="mono" font-size="12" fill="#E6EDF3">&gt; welcome, Krishna Kumar Sharma<tspan class="cursor" fill="#00D4FF">_</tspan></text>
   </g>
 
   <!-- Status Zone -->
