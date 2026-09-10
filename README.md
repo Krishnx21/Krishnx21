@@ -34,7 +34,7 @@
 ║   Learning   →  System Design, LLMs, Cloud Arch          ║
 ║   Open to    →  Collabs, OSS, and good conversations     ║
 ║                                                          ║
-║   Fun fact   →  coffee.exe keeps me running ☕            ║
+║   Fun fact   →  coffee.exe keeps me running ☕          ║
 ║                                                          ║
 ╚══════════════════════════════════════════════════════════╝
 ```
